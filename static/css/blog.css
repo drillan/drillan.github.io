@@ -1,0 +1,94 @@
+body {
+    font-family:  "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Arial, "ＭＳ Ｐゴシック", sans-serif;
+    line-height: 1.7em;
+    padding: 1rem;
+    background-color: #fdf6e3;
+    color: #657b83;
+  }
+  
+  p {
+    margin: 0px;
+  }
+  
+  H1,H2,H3,H4,H5 {
+    /*  font-family: Georgia, "Bitstream Vera Serif", "New York", Palatino, serif; */
+      font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Arial, 'ＭＳ Ｐゴシック', sans-serif;
+      font-weight: bold;
+      line-height: 1.5em;
+      color: #586e75;
+      border-color: #657b83;
+    }
+
+  h3 {
+    color: #586e75;
+    border-color: #657b83;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .index-title {
+    /* background-color: #66BBB1; */
+    color: #586e75;
+    border-color: #657b83;
+    padding: 5px;
+  }
+  
+  .article-metadata {
+    margin: 3px 0px;
+    color: #d0d0d0;
+    font-size: 0.7rem;
+  }
+  
+  .article-date {
+    font-size: 0.9rem;
+  }
+  
+  .article-title {
+    text-decoration: none;
+    color: #C22A1c;
+    margin: 3px 0;
+  }
+  
+  .article-metadata span {
+    margin-left: 0rem;
+  }
+  
+  .article-body {
+    margin: 10px 0 2rem;
+  }
+  
+  .container {
+    margin: 10px;
+    width: 960px;
+    margin: 20px auto;
+  }
+  
+  .container-inner {
+    display: flex;
+    padding: 5px;
+  }
+  
+  .container-body {
+    width: 560px;
+  }
+  
+  .container-right {
+    width: 300px;
+  }
+  
+  .index-pagination {
+     font-size: 20px;
+  }
+  
+  .index-navi {
+    border-style: solid;
+    padding: 3px;
+  }
+  
+  .disabled-link {
+    pointer-events: none;
+    color: #d0d0d0;
+  }

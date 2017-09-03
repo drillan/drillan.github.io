@@ -1,2 +1,0 @@
-# drillan.github.io
-blog
