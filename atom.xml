@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>drillerの部屋</title><link href="http://localhost:8888/" rel="alternate"></link><link href="http://localhost:8888/atom.xml" rel="self"></link><id>http://localhost:8888/</id><updated>2017-09-03T00:00:00+09:00</updated><entry><title>このブログはMiyadaikuで作ってます</title><link href="http://localhost:8888/about_miyadaiku.html" rel="alternate"></link><published>2017-09-03T00:00:00+09:00</published><updated>2017-09-03T00:00:00+09:00</updated><id>tag:localhost,2017-09-03:/about_miyadaiku.html</id><summary type="html">&lt;p&gt;TBD: あとで作り方を書く&lt;/p&gt;</summary></entry><entry><title>Bokeh Sample</title><link href="http://localhost:8888/notebooks/bokeh_sample.html" rel="alternate"></link><published>2017-09-02T00:00:00+09:00</published><updated>2017-09-02T00:00:00+09:00</updated><id>tag:localhost,2017-09-02:/notebooks/bokeh_sample.html</id><summary type="html">&lt;div&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>drillerの部屋</title><link href="https://drillan.github.io/" rel="alternate"></link><link href="https://drillan.github.io/atom.xml" rel="self"></link><id>https://drillan.github.io/</id><updated>2017-09-03T00:00:00+09:00</updated><entry><title>このブログはMiyadaikuで作ってます</title><link href="https://drillan.github.io/about_miyadaiku.html" rel="alternate"></link><published>2017-09-03T00:00:00+09:00</published><updated>2017-09-03T00:00:00+09:00</updated><id>tag:drillan.github.io,2017-09-03:/about_miyadaiku.html</id><summary type="html">&lt;p&gt;TBD: あとで作り方を書く&lt;/p&gt;</summary></entry><entry><title>Bokeh Sample</title><link href="https://drillan.github.io/notebooks/bokeh_sample.html" rel="alternate"></link><published>2017-09-02T00:00:00+09:00</published><updated>2017-09-02T00:00:00+09:00</updated><id>tag:drillan.github.io,2017-09-02:/notebooks/bokeh_sample.html</id><summary type="html">&lt;div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -42,7 +42,7 @@
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="998767d1-0aa9-4afd-87e7-b57fbd29987c"&gt;&lt;/div&gt;
+&lt;div id="35504c6f-5710-420b-966d-0d3c73f77bb9"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 
 &lt;/div&gt;
