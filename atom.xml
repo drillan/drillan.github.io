@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>drillerの部屋</title><link href="https://drillan.github.io/" rel="alternate"></link><link href="https://drillan.github.io/atom.xml" rel="self"></link><id>https://drillan.github.io/</id><updated>2017-09-03T00:00:00+09:00</updated><entry><title>このブログはMiyadaikuで作ってます</title><link href="https://drillan.github.io/about_miyadaiku.html" rel="alternate"></link><published>2017-09-03T00:00:00+09:00</published><updated>2017-09-03T00:00:00+09:00</updated><id>tag:drillan.github.io,2017-09-03:/about_miyadaiku.html</id><summary type="html">&lt;p&gt;TBD: あとで作り方を書く&lt;/p&gt;</summary></entry><entry><title>Jupyter Notebookサンプル</title><link href="https://drillan.github.io/notebooks/bokeh_sample.html" rel="alternate"></link><published>2017-09-02T00:00:00+09:00</published><updated>2017-09-02T00:00:00+09:00</updated><id>tag:drillan.github.io,2017-09-02:/notebooks/bokeh_sample.html</id><summary type="html">&lt;div&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>drillerの部屋</title><link href="https://drillan.github.io/" rel="alternate"></link><link href="https://drillan.github.io/atom.xml" rel="self"></link><id>https://drillan.github.io/</id><updated>2017-09-03T00:00:00+09:00</updated><entry><title>ブログをリニューアルしました</title><link href="https://drillan.github.io/articles/renew_blog.html" rel="alternate"></link><published>2017-09-03T00:00:00+09:00</published><updated>2017-09-03T00:00:00+09:00</updated><id>tag:drillan.github.io,2017-09-03:/articles/renew_blog.html</id><summary type="html">&lt;div class="section" id="miyadaiku"&gt;
+&lt;div class="header_target" id="h_articles_renew_blog_2erst_1"&gt;&lt;/div&gt;&lt;h1&gt;Miyadaiku に乗り換えた理由&lt;/h1&gt;
+&lt;p&gt;これまでは静的サイトジェネレータとして &lt;a class="reference external" href="http://docs.getpelican.com"&gt;Pelican&lt;/a&gt; を使用していましたが &lt;a class="reference external" href="https://miyadaiku.github.io"&gt;Miyadaiku&lt;/a&gt; に乗り換えました。&lt;/p&gt;
+&lt;p&gt;Miyadaiku は Python 製の静的サイトジェネレータです。当初は ipynb ファイルが最初から扱える &lt;a class="reference external" href="https://getnikola.com"&gt;Nikola&lt;/a&gt; に乗り換える予定でしたが、下記のような理由で Miyadaiku を採用しました。&lt;/p&gt;
+&lt;dl class="simple"&gt;
+&lt;dt&gt;Jinja2 が使える&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Jinja2 は Python 製のテンプレートエンジンです。
+従来の静的サイトやブログでは記事の内容やテンプレートをベタ書きする必要がありました。
+共通部分をテンプレート化することで生産性が上がりそうです。&lt;/p&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/div&gt;</summary></entry><entry><title>Jupyter Notebookサンプル</title><link href="https://drillan.github.io/notebooks/bokeh_sample.html" rel="alternate"></link><published>2017-09-02T00:00:00+09:00</published><updated>2017-09-02T00:00:00+09:00</updated><id>tag:drillan.github.io,2017-09-02:/notebooks/bokeh_sample.html</id><summary type="html">&lt;div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -36,7 +44,7 @@
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="31fdc23b-cf82-4c5b-94f8-bb9e2468d3f5"&gt;&lt;/div&gt;
+&lt;div id="51956004-c714-48e4-b24b-a994016a959e"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 
 &lt;/div&gt;

@@ -1,0 +1,39 @@
+h1,
+.h1 {
+  font-size: 24px;
+}
+h2,
+.h2 {
+  font-size: 20px;
+}
+h3,
+.h3 {
+  font-size: 18px;
+}
+h4,
+.h4 {
+  font-size: 16px;
+}
+h5,
+.h5 {
+  font-size: 14px;
+}
+h6,
+.h6 {
+  font-size: 11px;
+}
+
+  .index-title {
+    font-size: 34px;
+  }
+  
+  .fa-hatebu:before {
+    content: "B!";
+    font-family: Verdana;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  .container-body {
+    width: 600px;
+  }
