@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>drillerの部屋</title><link href="https://drillan.github.io/" rel="alternate"></link><link href="https://drillan.github.io/atom.xml" rel="self"></link><id>https://drillan.github.io/</id><updated>2017-09-03T00:00:00+09:00</updated><entry><title>ブログをリニューアルしました</title><link href="https://drillan.github.io/articles/renew_blog.html" rel="alternate"></link><published>2017-09-03T00:00:00+09:00</published><updated>2017-09-03T00:00:00+09:00</updated><id>tag:drillan.github.io,2017-09-03:/articles/renew_blog.html</id><summary type="html">&lt;div class="section" id="miyadaiku"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>drillerの部屋</title><link href="https://drillan.github.io/" rel="alternate"></link><link href="https://drillan.github.io/atom.xml" rel="self"></link><id>https://drillan.github.io/</id><updated>2017-09-11T00:00:00+09:00</updated><entry><title>著者が語るJupyter本の読みどころ</title><link href="https://drillan.github.io/notebooks/jupyterbook01.html" rel="alternate"></link><published>2017-09-11T00:00:00+09:00</published><updated>2017-09-11T00:00:00+09:00</updated><id>tag:drillan.github.io,2017-09-11:/notebooks/jupyterbook01.html</id><summary type="html">&lt;div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;ご縁があって、 &lt;a href="http://amzn.to/2wRwPYB"&gt;PythonユーザのためのJupyter[実践]入門&lt;/a&gt; という書籍を共著で執筆させていただきました。&lt;/p&gt;
+&lt;p&gt;本記事では本書の読みどころなどについて、勢いに任せた乱筆ですがつらつらと語っていきたいと思います。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;div class="header_target" id="h_notebooks_jupyterbook01_2eipynb_1"&gt;&lt;/div&gt;&lt;h1 id="本書の目的"&gt;本書の目的&lt;a class="anchor-link" href="#本書の目的"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;本書の3ページ「はじめに」を全文掲載します。まさにここに書かれていることが本書を読む動機となると思います。書店などで本書を手にとってパラパラ見ていだければ雰囲気はつかめると思います。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;blockquote&gt;&lt;p&gt;本書は、「Jupyter Notebook」の使い方と「データの可視化」にフォーカスを当てた書籍です。 Jupyter NotebookはPythonで実装されたオープンソースソフトウェア（OSS）です。Jupyter Notebookはデータ分析ツールとして、あるいはPythonの学習環境として多くのユーザに利用されています。&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary></entry><entry><title>ブログをリニューアルしました</title><link href="https://drillan.github.io/articles/renew_blog.html" rel="alternate"></link><published>2017-09-03T00:00:00+09:00</published><updated>2017-09-03T00:00:00+09:00</updated><id>tag:drillan.github.io,2017-09-03:/articles/renew_blog.html</id><summary type="html">&lt;div class="section" id="miyadaiku"&gt;
 &lt;div class="header_target" id="h_articles_renew_blog_2erst_1"&gt;&lt;/div&gt;&lt;h1&gt;Miyadaiku に乗り換えた理由&lt;/h1&gt;
 &lt;p&gt;これまでは静的サイトジェネレータとして &lt;a class="reference external" href="http://docs.getpelican.com"&gt;Pelican&lt;/a&gt; を使用していましたが &lt;a class="reference external" href="https://miyadaiku.github.io"&gt;Miyadaiku&lt;/a&gt; に乗り換えました。&lt;/p&gt;
 &lt;p&gt;Miyadaiku は Python 製の静的サイトジェネレータです。当初は ipynb ファイルが最初から扱える &lt;a class="reference external" href="https://getnikola.com"&gt;Nikola&lt;/a&gt; に乗り換える予定でしたが、下記のような理由で Miyadaiku を採用しました。&lt;/p&gt;
@@ -44,7 +66,7 @@
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="74418f63-dd20-47c0-8d7f-8a2506bed604"&gt;&lt;/div&gt;
+&lt;div id="831cb82a-9658-4456-a729-c4d5edf73b37"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 
 &lt;/div&gt;
