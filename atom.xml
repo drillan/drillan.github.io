@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>drillerの部屋</title><link href="https://drillan.github.io/" rel="alternate"></link><link href="https://drillan.github.io/atom.xml" rel="self"></link><id>https://drillan.github.io/</id><updated>2017-09-11T00:00:00+09:00</updated><entry><title>著者が語るJupyter本の読みどころ</title><link href="https://drillan.github.io/notebooks/jupyterbook01.html" rel="alternate"></link><published>2017-09-11T00:00:00+09:00</published><updated>2017-09-11T00:00:00+09:00</updated><id>tag:drillan.github.io,2017-09-11:/notebooks/jupyterbook01.html</id><summary type="html">&lt;div&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>drillerの部屋</title><link href="https://drillan.github.io/" rel="alternate"></link><link href="https://drillan.github.io/atom.xml" rel="self"></link><id>https://drillan.github.io/</id><updated>2017-09-16T00:00:00+09:00</updated><entry><title>Jupyter本の没原稿集 #1 Bokehで凝った円グラフを描画する</title><link href="https://drillan.github.io/notebooks/jupyterbook_rejected01.html" rel="alternate"></link><published>2017-09-16T00:00:00+09:00</published><updated>2017-09-16T00:00:00+09:00</updated><id>tag:drillan.github.io,2017-09-16:/notebooks/jupyterbook_rejected01.html</id><summary type="html">&lt;div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;div class="header_target" id="h_notebooks_jupyterbook_rejected01_2eipynb_1"&gt;&lt;/div&gt;&lt;h2 id="ボツネタとは"&gt;ボツネタとは&lt;a class="anchor-link" href="#ボツネタとは"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href="http://amzn.to/2x48I6J"&gt;Jupyter本&lt;/a&gt; にはページ数の都合で入り切らなかった内容を紹介する企画第一弾です。&lt;br/&gt;
+涙をのみながらボツにした原稿を少しカジュアルにして本ブログで復活させます。&lt;/p&gt;
+&lt;div class="header_target" id="h_notebooks_jupyterbook_rejected01_2eipynb_2"&gt;&lt;/div&gt;&lt;h2 id="Bokeh-で凝った円グラフを描画する"&gt;Bokeh で凝った円グラフを描画する&lt;a class="anchor-link" href="#Bokeh-で凝った円グラフを描画する"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;今回は Bokeh を使用して、下記の要件を満たす円グラフを描画してみます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;要素数が多いため、上位のみを表示する&lt;/li&gt;
+&lt;li&gt;上位以外はテキストを表示せず、目立たない表示にする(徐々にグレイアウト)&lt;/li&gt;
+&lt;li&gt;テキストの書式を設定する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;テンプレどおりのグラフなんてつまらない、プレゼンで差をつけたい、なんて場合にはカスタマイズしたグラフに挑戦してみましょう。&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary></entry><entry><title>著者が語るJupyter本の読みどころ</title><link href="https://drillan.github.io/notebooks/jupyterbook01.html" rel="alternate"></link><published>2017-09-11T00:00:00+09:00</published><updated>2017-09-11T00:00:00+09:00</updated><id>tag:drillan.github.io,2017-09-11:/notebooks/jupyterbook01.html</id><summary type="html">&lt;div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -66,7 +79,7 @@
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="76e915f7-6524-467f-ae37-d8187dffa123"&gt;&lt;/div&gt;
+&lt;div id="bc968cca-8282-49cc-b800-d90b3eec3405"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 
 &lt;/div&gt;
