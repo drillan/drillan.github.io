@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>drillerの部屋</title><link>https://drillan.github.io/</link><description></description><lastBuildDate>Sat, 16 Sep 2017 00:00:00 +0900</lastBuildDate><item><title>Jupyter本の没原稿集 #1 Bokehで凝った円グラフを描画する</title><link>https://drillan.github.io/notebooks/jupyterbook_rejected01.html</link><description>&lt;div&gt;
+<rss version="2.0"><channel><title>drillerの部屋</title><link>https://drillan.github.io/</link><description></description><lastBuildDate>Sat, 23 Sep 2017 14:00:00 +0900</lastBuildDate><item><title>Jupyter本没原稿集#2.1 ipywidgets#1</title><link>https://drillan.github.io/articles/jupyterbook_reject02.html</link><description>&lt;p&gt;ボツネタ供養の第二弾です。ipywidgets のほぼ全てのウィジェットを大盤振る舞いして紹介しちゃいます。&lt;/p&gt;
+&lt;div class="header_target" id="h_articles_jupyterbook_reject02_2emd_1"&gt;&lt;/div&gt;&lt;h2&gt;ウィジェット一覧&lt;/h2&gt;
+&lt;p&gt;ipywidgets にはさまざまなウィジェットクラスが用意されています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Numeric ウィジェット&lt;/li&gt;
+&lt;li&gt;Boolean ウィジェット&lt;/li&gt;
+&lt;li&gt;Selection ウィジェット&lt;/li&gt;
+&lt;li&gt;String ウィジェット&lt;/li&gt;
+&lt;li&gt;Layout ウィジェット&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;今回は Numeric ウィジェットの説明と使い方の事例を紹介します。&lt;/p&gt;
+&lt;div class="header_target" id="h_articles_jupyterbook_reject02_2emd_2"&gt;&lt;/div&gt;&lt;h3&gt;Numeric ウィジェット&lt;/h3&gt;
+&lt;p&gt;数値型の値を扱うウィジェットです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IntSlider&lt;/li&gt;
+&lt;li&gt;FloatSlider&lt;/li&gt;&lt;/ul&gt;</description><pubDate>Sat, 23 Sep 2017 14:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2017-09-23:/articles/jupyterbook_reject02.html</guid></item><item><title>Jupyter本の没原稿集 #1 Bokehで凝った円グラフを描画する</title><link>https://drillan.github.io/notebooks/jupyterbook_rejected01.html</link><description>&lt;div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -79,7 +94,7 @@
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="bc968cca-8282-49cc-b800-d90b3eec3405"&gt;&lt;/div&gt;
+&lt;div id="895e5186-4c9f-42c7-98a6-80ee0d68e9c8"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 
 &lt;/div&gt;
