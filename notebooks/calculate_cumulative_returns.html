@@ -2,15 +2,15 @@
 <html lang="ja-JP">
 <head>
   
-
+  
   
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>index_tag - drillerの部屋</title>
+    <title>累積リターンをfor文を使わずに算出する冴えたやり方 - drillerの部屋</title>
   
   <link href="https://drillan.github.io/atom.xml" type="application/atom+xml" rel="alternate" title="Atom Feed" />
-  <link rel="stylesheet" href="static/css/article.css">
-  <link rel="stylesheet" href="static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/css/article.css">
+  <link rel="stylesheet" href="../static/css/font-awesome.min.css">
 
   <!-- set ipynb headers -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
@@ -11778,18 +11778,19 @@ div#notebook {
         }
     });
     </script>
-  <meta property="og:url" content="https://drillan.github.io/index_tag_tags_.html" />
+  <meta property="og:url" content="https://drillan.github.io/notebooks/calculate_cumulative_returns.html" />
 <meta property="og:locale" content="ja-JP" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="index_tag - drillerの部屋" />
+<meta property="og:title" content="累積リターンをfor文を使わずに算出する冴えたやり方 - drillerの部屋" />
 
-<meta name="description" content=""/>
-<meta property="og:description" content="" />
+<meta name="description" content="fin-pyもくもく会 #8 で for文を使って累積リターンを算出して遅いという話をしていたら、2casa さんより、対数収益率を計算した後に合計したらよいのではないかとアドバイスいただきました。 確かに「Pythonでfor文を使ったら負け」という格言があることですし、色々試してみました。 前提条件¶下記のように最初の株価を100円とし、1000日分の騰落率をランダムに与えてみます。 In [1]: import numpy as np n = 1000 # データ数 s0 = 100 # 最初の株価 np.random.seed"/>
+<meta property="og:description" content="fin-pyもくもく会 #8 で for文を使って累積リターンを算出して遅いという話をしていたら、2casa さんより、対数収益率を計算した後に合計したらよいのではないかとアドバイスいただきました。 確かに「Pythonでfor文を使ったら負け」という格言があることですし、色々試してみました。 前提条件¶下記のように最初の株価を100円とし、1000日分の騰落率をランダムに与えてみます。 In [1]: import numpy as np n = 1000 # データ数 s0 = 100 # 最初の株価 np.random.seed" />
 
-
-  <link rel="stylesheet" href="static/css/bootstrap-solarized-light.css">
-  <link rel="stylesheet" href="static/css/custom.css">
+<meta property="article:published_time" content="2017-10-01T00:00:00+09:00" />
+  <link rel="stylesheet" href="../static/css/bootstrap-solarized-light.css">
+  <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/css/custom.css">
 
 </head>
 
@@ -11797,74 +11798,29 @@ div#notebook {
   
 <div class="container">
   <h1 class="index-title">
-    <a href="index.html">drillerの部屋</a>
+    <a href="../index.html">drillerの部屋</a>
   </h1>
 
   <div class="container-inner">
     <div class="container-body">
       
+<div class="article-metadata">
+    <span class="article-date"> 2017-10-01 </span>
+    <span>  </span>
+    <span> python,numpy,matplotlib,finance </span>
+  </div>
+<h1 class="article-title">
+  累積リターンをfor文を使わずに算出する冴えたやり方
+</h1>
 
-  <div class="articles">
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-23 </span>
-    <span>  </span>
-    <span> python,jupyter,ipywidgets </span>
-  </div>
-      <h2 class="article-title"><a href="articles/jupyterbook_reject02.html">Jupyter本没原稿集#2.1 ipywidgets#1</a></h2>
-      <div class="article-body"><p>ボツネタ供養の第二弾です。ipywidgets のほぼ全てのウィジェットを大盤振る舞いして紹介しちゃいます。</p>
-<div class="header_target" id="h_articles_jupyterbook_reject02_2emd_1"></div><h2>ウィジェット一覧</h2>
-<p>ipywidgets にはさまざまなウィジェットクラスが用意されています。</p>
-<ul>
-<li>Numeric ウィジェット</li>
-<li>Boolean ウィジェット</li>
-<li>Selection ウィジェット</li>
-<li>String ウィジェット</li>
-<li>Layout ウィジェット</li>
-</ul>
-<p>今回は Numeric ウィジェットの説明と使い方の事例を紹介します。</p>
-<div class="header_target" id="h_articles_jupyterbook_reject02_2emd_2"></div><h3>Numeric ウィジェット</h3>
-<p>数値型の値を扱うウィジェットです。</p>
-<ul>
-<li>IntSlider</li>
-<li>FloatSlider</li></ul></div>
-      <a href="articles/jupyterbook_reject02.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-16 </span>
-    <span>  </span>
-    <span> python,jupyter,bokeh </span>
-  </div>
-      <h2 class="article-title"><a href="notebooks/jupyterbook_rejected01.html">Jupyter本の没原稿集 #1 Bokehで凝った円グラフを描画する</a></h2>
-      <div class="article-body"><div>
+<div class="article-body">
+  <div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_jupyterbook_rejected01_2eipynb_1"></div><h2 id="ボツネタとは">ボツネタとは<a class="anchor-link" href="#ボツネタとは">¶</a></h2><p><a href="http://amzn.to/2x48I6J">Jupyter本</a> にはページ数の都合で入り切らなかった内容を紹介する企画第一弾です。<br/>
-涙をのみながらボツにした原稿を少しカジュアルにして本ブログで復活させます。</p>
-<div class="header_target" id="h_notebooks_jupyterbook_rejected01_2eipynb_2"></div><h2 id="Bokeh-で凝った円グラフを描画する">Bokeh で凝った円グラフを描画する<a class="anchor-link" href="#Bokeh-で凝った円グラフを描画する">¶</a></h2><p>今回は Bokeh を使用して、下記の要件を満たす円グラフを描画してみます。</p>
-<ul>
-<li>要素数が多いため、上位のみを表示する</li>
-<li>上位以外はテキストを表示せず、目立たない表示にする(徐々にグレイアウト)</li>
-<li>テキストの書式を設定する</li>
-</ul>
-<p>テンプレどおりのグラフなんてつまらない、プレゼンで差をつけたい、なんて場合にはカスタマイズしたグラフに挑戦してみましょう。</p></div></div></div></div></div>
-      <a href="notebooks/jupyterbook_rejected01.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-11 </span>
-    <span>  </span>
-    <span> python,jupyter,matplotlib,bokeh </span>
-  </div>
-      <h2 class="article-title"><a href="notebooks/jupyterbook01.html">著者が語るJupyter本の読みどころ</a></h2>
-      <div class="article-body"><div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>ご縁があって、 <a href="http://amzn.to/2wRwPYB">PythonユーザのためのJupyter[実践]入門</a> という書籍を共著で執筆させていただきました。</p>
-<p>本記事では本書の読みどころなどについて、勢いに任せた乱筆ですがつらつらと語っていきたいと思います。</p>
+<p><a href="https://fin-py.connpass.com/event/66140/">fin-pyもくもく会 #8</a> で for文を使って累積リターンを算出して遅いという話をしていたら、<a href="https://twitter.com/moscow_II">2casa</a> さんより、対数収益率を計算した後に合計したらよいのではないかとアドバイスいただきました。</p>
+<p>確かに「Pythonでfor文を使ったら負け」という格言があることですし、色々試してみました。</p>
 </div>
 </div>
 </div>
@@ -11872,29 +11828,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_jupyterbook01_2eipynb_1"></div><h1 id="本書の目的">本書の目的<a class="anchor-link" href="#本書の目的">¶</a></h1><p>本書の3ページ「はじめに」を全文掲載します。まさにここに書かれていることが本書を読む動機となると思います。書店などで本書を手にとってパラパラ見ていだければ雰囲気はつかめると思います。</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>本書は、「Jupyter Notebook」の使い方と「データの可視化」にフォーカスを当てた書籍です。 Jupyter NotebookはPythonで実装されたオープンソースソフトウェア（OSS）です。Jupyter Notebookはデータ分析ツールとして、あるいはPythonの学習環境として多くのユーザに利用されています。</p></blockquote></div></div></div></div></div>
-      <a href="notebooks/jupyterbook01.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-02 </span>
-    <span>  </span>
-    <span> jupyter,bokeh </span>
-  </div>
-      <h2 class="article-title"><a href="notebooks/bokeh_sample.html">Jupyter Notebookサンプル</a></h2>
-      <div class="article-body"><div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://miyadaiku.github.io">Miyadaiku</a> では Jupyter Notebook の ipynb ファイルをそのままサイトまたはブログの記事として投稿できます。</p>
+<div class="header_target" id="h_notebooks_calculate_cumulative_returns_2eipynb_1"></div><h1 id="前提条件">前提条件<a class="anchor-link" href="#前提条件">¶</a></h1><p>下記のように最初の株価を100円とし、1000日分の騰落率をランダムに与えてみます。</p>
 </div>
 </div>
 </div>
@@ -11903,12 +11837,15 @@ div#notebook {
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="k">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">output_notebook</span><span class="p">,</span> <span class="n">show</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="n">output_notebook</span><span class="p">()</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">line</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-<span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span>  <span class="c1"># データ数</span>
+<span class="n">s0</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># 最初の株価</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">pct_change</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.01</span>  <span class="c1"># 騰落率</span>
+
+<span class="n">pct_change</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -11916,28 +11853,10 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div class="bk-root">
-<a class="bk-logo bk-logo-small bk-logo-notebook" href="http://bokeh.pydata.org" target="_blank"></a>
-<span id="b3dbc3e4-de9d-4d03-9ce6-b4573f4ee515">Loading BokehJS ...</span>
-</div>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div id="f202eed1-58a8-4924-9619-5423a338ea82"></div>
-<div class="output_subarea output_javascript ">
-
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div class="bk-root">
-<div class="bk-plotdiv" id="f62c60b9-5062-488c-8290-2cd645f3e770"></div>
-</div>
-
+<div class="prompt output_prompt">Out[1]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>array([  1.33158650e-02,   7.15278974e-03,  -1.54540029e-02,
+        -8.38384993e-05,   6.21335974e-03])</pre>
 </div>
 </div>
 </div>
@@ -11947,21 +11866,750 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>このようにJSが必要なnotebookもレンダリングされています。</p></div></div></div></div></div>
-      <a href="notebooks/bokeh_sample.html">続きを読む</a>
-    
-  </div>
+<p>上記の騰落率を使うと、2日目の株価は</p>
+<p>100 + 100 * 1.33158650e-02 = 101.3315865</p>
+<p>3日目の株価は</p>
+<p>101.3315865 + 101.3315865 * 7.15278974e-03 = 102.05639003225512</p>
+<p>となります。</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="header_target" id="h_notebooks_calculate_cumulative_returns_2eipynb_2"></div><h1 id="for文を使う">for文を使う<a class="anchor-link" href="#for文を使う">¶</a></h1><p>まずは古典的なfor文を使ってみます。</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+stock_price1 = []
+stock_price1.append(s0)
 
-  <div class="index-pagination">
-    
-      <span class="index-navi disabled-link">&larr;</span>
-    
-    
-    
-      <span class="index-navi disabled-link">&rarr;</span>
-    
-  </div>
+for x in pct_change:
+    stock_price1.append(stock_price1[-1] * (1 + x))    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CPU times: user 4 ms, sys: 0 ns, total: 4 ms
+Wall time: 2.73 ms
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>前述した計算とあっているか確認してみましょう。</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stock_price1</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[3]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>[100, 101.33158650412952, 102.05639003681789]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>あってそうですね。</p>
+<p>リストの <code>append()</code> を使う処理は重いので、<code>numpy.ndarray</code> を使ってみます。</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+stock_price2 = np.empty(n)
+stock_price2[0] = s0
 
+for i, x in enumerate(pct_change):
+    stock_price2[i + 1] = stock_price2[i] * (1 + x)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CPU times: user 0 ns, sys: 0 ns, total: 0 ns
+Wall time: 2.39 ms
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>速度に大きな改善はありませんでしたが、コードが少しスッキリしました。</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="header_target" id="h_notebooks_calculate_cumulative_returns_2eipynb_3"></div><h1 id="累積積から算出する">累積積から算出する<a class="anchor-link" href="#累積積から算出する">¶</a></h1><p><code>cumprod()</code> メソッドを使って累積積から算出します。<br/>
+for文を使わないのでさらにスッキリしました。処理速度も改善しています。</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+stock_price3 = np.ones(1000)
+stock_price3[1:] = (pct_change + 1).cumprod()
+stock_price3 = stock_price3 * s0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CPU times: user 0 ns, sys: 0 ns, total: 0 ns
+Wall time: 916 µs
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="header_target" id="h_notebooks_calculate_cumulative_returns_2eipynb_4"></div><h1 id="対数収益率にした合計から算出する">対数収益率にした合計から算出する<a class="anchor-link" href="#対数収益率にした合計から算出する">¶</a></h1><p>対数収益率を使うと、累積リターンは合計(sum)から算出できます。<br/>
+なんと、1行で書くことができました！</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+stock_price4 = np.exp(np.log(pct_change + 1).cumsum()) * s0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CPU times: user 0 ns, sys: 0 ns, total: 0 ns
+Wall time: 1.01 ms
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>対数収益率にする利点としては、最後の収益を出したいだけなら合計するだけで算出できることです。</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+np.exp(np.log(pct_change + 1).sum()) * s0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CPU times: user 0 ns, sys: 4 ms, total: 4 ms
+Wall time: 795 µs
+</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>82.202144112704218</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="header_target" id="h_notebooks_calculate_cumulative_returns_2eipynb_5"></div><h1 id="確認作業">確認作業<a class="anchor-link" href="#確認作業">¶</a></h1><p>それぞれの累積リターンの算出が合っているか確認してみます。</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">stock_price1</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stock_price2</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stock_price3</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stock_price4</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[82.459395779138532, 81.622977823346162, 81.352130133710887, 82.524168158920119, 82.202144112704332]
+[ 82.45939578  81.62297782  81.35213013  82.52416816  82.20214411]
+[ 82.45939578  81.62297782  81.35213013  82.52416816  82.20214411]
+[ 82.45939578  81.62297782  81.35213013  82.52416816  82.20214411]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="http://amzn.to/2fIhdjz">PythonユーザのためのJupyter[実践]入門</a> を参考に、算出した株価を可視化してみます。</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">rcParams</span>
+
+
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">'font.sans-serif'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Source Han Code JP'</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">stock_price1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'for文(append)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">stock_price2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'for文(numpy.ndarray)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">stock_price3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'cumprod'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">stock_price4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'cumsum'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+aUoTfSwAAAAASUVORK5CYII=
+"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>4つの方法で算出した結果が全て重なっているので、問題なさそうですね。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="sns">
+  <!-- twitter -->
+<a target="_blank" href='https://twitter.com/share?url=https://drillan.github.io/notebooks/calculate_cumulative_returns.html&amp;via=patraqushe&amp;text=累積リターンをfor文を使わずに算出する冴えたやり方'>
+    <i class="fa fa-twitter" aria-hidden="true"></i>
+</a>
+
+<!-- facebook -->
+<a target="_blank" href='https://www.facebook.com/sharer/sharer.php?u=https://drillan.github.io/notebooks/calculate_cumulative_returns.html'>
+    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+</a>
+
+<!-- google+ -->
+<a target="_blank" href='https://plus.google.com/share?url=https://drillan.github.io/notebooks/calculate_cumulative_returns.html'>
+    <i class="fa fa-google-plus" aria-hidden="true"></i>
+</a>
+
+<!-- hatena bookmark -->
+<a target="_blank" href='http://b.hatena.ne.jp/entry/https://drillan.github.io/notebooks/calculate_cumulative_returns.html'>
+    <i class="fa-hatebu"></i>
+</a>
+</div>
 
     </div>
     <aside class="container-right">
@@ -11986,49 +12634,49 @@ div#notebook {
         <ul class="nav sidenav">
         
             <li>
-                <a href="index_tag_tags_bokeh.html">
+                <a href="../index_tag_tags_bokeh.html">
                     bokeh
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_finance.html">
+                <a href="../index_tag_tags_finance.html">
                     finance
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_ipywidgets.html">
+                <a href="../index_tag_tags_ipywidgets.html">
                     ipywidgets
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_jupyter.html">
+                <a href="../index_tag_tags_jupyter.html">
                     jupyter
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_matplotlib.html">
+                <a href="../index_tag_tags_matplotlib.html">
                     matplotlib
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_miyadaiku.html">
+                <a href="../index_tag_tags_miyadaiku.html">
                     miyadaiku
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_numpy.html">
+                <a href="../index_tag_tags_numpy.html">
                     numpy
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_python.html">
+                <a href="../index_tag_tags_python.html">
                     python
                 </a>
             </li>

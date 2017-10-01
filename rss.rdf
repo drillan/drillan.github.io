@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>drillerの部屋</title><link>https://drillan.github.io/</link><description></description><lastBuildDate>Sat, 23 Sep 2017 14:00:00 +0900</lastBuildDate><item><title>Jupyter本没原稿集#2.1 ipywidgets#1</title><link>https://drillan.github.io/articles/jupyterbook_reject02.html</link><description>&lt;p&gt;ボツネタ供養の第二弾です。ipywidgets のほぼ全てのウィジェットを大盤振る舞いして紹介しちゃいます。&lt;/p&gt;
+<rss version="2.0"><channel><title>drillerの部屋</title><link>https://drillan.github.io/</link><description></description><lastBuildDate>Sun, 01 Oct 2017 00:00:00 +0900</lastBuildDate><item><title>累積リターンをfor文を使わずに算出する冴えたやり方</title><link>https://drillan.github.io/notebooks/calculate_cumulative_returns.html</link><description>&lt;div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;a href="https://fin-py.connpass.com/event/66140/"&gt;fin-pyもくもく会 #8&lt;/a&gt; で for文を使って累積リターンを算出して遅いという話をしていたら、&lt;a href="https://twitter.com/moscow_II"&gt;2casa&lt;/a&gt; さんより、対数収益率を計算した後に合計したらよいのではないかとアドバイスいただきました。&lt;/p&gt;
+&lt;p&gt;確かに「Pythonでfor文を使ったら負け」という格言があることですし、色々試してみました。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;div class="header_target" id="h_notebooks_calculate_cumulative_returns_2eipynb_1"&gt;&lt;/div&gt;&lt;h1 id="前提条件"&gt;前提条件&lt;a class="anchor-link" href="#前提条件"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;下記のように最初の株価を100円とし、1000日分の騰落率をランダムに与えてみます。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+
+
+&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;  &lt;span class="c1"&gt;# データ数&lt;/span&gt;
+&lt;span class="n"&gt;s0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;  &lt;span class="c1"&gt;# 最初の株価&lt;/span&gt;
+&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><pubDate>Sun, 01 Oct 2017 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2017-10-01:/notebooks/calculate_cumulative_returns.html</guid></item><item><title>Jupyter本没原稿集#2.1 ipywidgets#1</title><link>https://drillan.github.io/articles/jupyterbook_reject02.html</link><description>&lt;p&gt;ボツネタ供養の第二弾です。ipywidgets のほぼ全てのウィジェットを大盤振る舞いして紹介しちゃいます。&lt;/p&gt;
 &lt;div class="header_target" id="h_articles_jupyterbook_reject02_2emd_1"&gt;&lt;/div&gt;&lt;h2&gt;ウィジェット一覧&lt;/h2&gt;
 &lt;p&gt;ipywidgets にはさまざまなウィジェットクラスが用意されています。&lt;/p&gt;
 &lt;ul&gt;
@@ -94,7 +122,7 @@
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="895e5186-4c9f-42c7-98a6-80ee0d68e9c8"&gt;&lt;/div&gt;
+&lt;div id="f202eed1-58a8-4924-9619-5423a338ea82"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 
 &lt;/div&gt;
