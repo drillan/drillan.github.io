@@ -2,15 +2,15 @@
 <html lang="ja-JP">
 <head>
   
-  
+
   
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ブログをリニューアルしました - drillerの部屋</title>
+    <title>index - drillerの部屋</title>
   
   <link href="https://drillan.github.io/atom.xml" type="application/atom+xml" rel="alternate" title="Atom Feed" />
-  <link rel="stylesheet" href="../static/css/article.css">
-  <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="static/css/article.css">
+  <link rel="stylesheet" href="static/css/font-awesome.min.css">
 
   <!-- set ipynb headers -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
@@ -11778,19 +11778,18 @@ div#notebook {
         }
     });
     </script>
-  <meta property="og:url" content="https://drillan.github.io/articles/renew_blog.html" />
+  <meta property="og:url" content="https://drillan.github.io/index.html" />
 <meta property="og:locale" content="ja-JP" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="ブログをリニューアルしました - drillerの部屋" />
+<meta property="og:title" content="index - drillerの部屋" />
 
-<meta name="description" content="Miyadaiku に乗り換えた理由 これまでは静的サイトジェネレータとして Pelican を使用していましたが Miyadaiku に乗り換えました。 Miyadaiku は Python 製の静的サイトジェネレータです。当初は ipynb ファイルが最初から扱える Nikola に乗り換える予定でしたが、下記のような理由で Miyadaiku を採用しました。 Jinja2 が使える Jinja2 は Python 製のテンプレートエンジンです。 従来の静的サイトやブログでは記事の内容やテンプレートをベタ書きする必要がありました。 共通部分をテンプレート化することで生産性が上がりそうです。"/>
-<meta property="og:description" content="Miyadaiku に乗り換えた理由 これまでは静的サイトジェネレータとして Pelican を使用していましたが Miyadaiku に乗り換えました。 Miyadaiku は Python 製の静的サイトジェネレータです。当初は ipynb ファイルが最初から扱える Nikola に乗り換える予定でしたが、下記のような理由で Miyadaiku を採用しました。 Jinja2 が使える Jinja2 は Python 製のテンプレートエンジンです。 従来の静的サイトやブログでは記事の内容やテンプレートをベタ書きする必要がありました。 共通部分をテンプレート化することで生産性が上がりそうです。" />
+<meta name="description" content=""/>
+<meta property="og:description" content="" />
 
-<meta property="article:published_time" content="2017-09-03T00:00:00+09:00" />
-  <link rel="stylesheet" href="../static/css/bootstrap-solarized-light.css">
-  <link rel="stylesheet" href="../static/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../static/css/custom.css">
+
+  <link rel="stylesheet" href="static/css/bootstrap-solarized-light.css">
+  <link rel="stylesheet" href="static/css/custom.css">
 
 </head>
 
@@ -11798,23 +11797,22 @@ div#notebook {
   
 <div class="container">
   <h1 class="index-title">
-    <a href="../index.html">drillerの部屋</a>
+    <a href="index.html">drillerの部屋</a>
   </h1>
 
   <div class="container-inner">
     <div class="container-body">
       
-<div class="article-metadata">
+
+  <div class="articles">
+    
+      <div class="article-metadata">
     <span class="article-date"> 2017-09-03 </span>
     <span>  </span>
     <span> python,miyadaiku </span>
   </div>
-<h1 class="article-title">
-  ブログをリニューアルしました
-</h1>
-
-<div class="article-body">
-  <div class="section" id="miyadaiku">
+      <h2 class="article-title"><a href="articles/renew_blog.html">ブログをリニューアルしました</a></h2>
+      <div class="article-body"><div class="section" id="miyadaiku">
 <div class="header_target" id="h_articles_renew_blog_2erst_1"></div><h1>Miyadaiku に乗り換えた理由</h1>
 <p>これまでは静的サイトジェネレータとして <a class="reference external" href="http://docs.getpelican.com">Pelican</a> を使用していましたが <a class="reference external" href="https://miyadaiku.github.io">Miyadaiku</a> に乗り換えました。</p>
 <p>Miyadaiku は Python 製の静的サイトジェネレータです。当初は ipynb ファイルが最初から扱える <a class="reference external" href="https://getnikola.com">Nikola</a> に乗り換える予定でしたが、下記のような理由で Miyadaiku を採用しました。</p>
@@ -11822,74 +11820,89 @@ div#notebook {
 <dt>Jinja2 が使える</dt>
 <dd><p>Jinja2 は Python 製のテンプレートエンジンです。
 従来の静的サイトやブログでは記事の内容やテンプレートをベタ書きする必要がありました。
-共通部分をテンプレート化することで生産性が上がりそうです。</p>
-</dd>
-<dt>Jupyter Notebook に対応</dt>
-<dd><p>コンテンツをreStructuredText, Markdown, HTML, YAMLなど、さまざまな形式で記述できます。
-Miyadaiku を使う一番の後押しとなったのは ipynb ファイルに対応したことが決め手となりました。
-元々、この機能はなかったのですが、私が作者の石本さんにお願いしたところ、早速実装していただきました。石本さん、ありがとうございます。
-Jupyter Notebook を記事にすると <a class="reference external" href="../notebooks/bokeh_sample.html">こんな感じ</a> になります</p>
-</dd>
-<dt>国産</dt>
-<dd><p>OSSの世界において、メイドインジャパンである必要はないと言われて喧しいですが、下記の点は私のような英語が不自由な者にとっては大変ありがたいです。</p>
-<ul class="simple">
-<li><p>日本語のドキュメントが最初から用意されている</p></li>
-<li><p>日本語で問い合わせやリクエストができる</p></li>
-<li><p>マルチバイトの心配が少ない</p></li>
-</ul>
-</dd>
-<dt>Python 3.6以降に対応</dt>
-<dd><p>後発のツールということもあり、後方互換を気にしなくてよいというのは意外に大きな利点じゃないかと思っています。
-複数のバージョンに対応するには開発コストがかかるだけでなく、潜在的なバグを生むリスクが潜んでいます。
-ソースコードをチラ見したところ、Python 3.6以降でしか使えないような f-strings などが使われており、いい意味で開き直っていてコードリーディングも捗りそうです。</p>
-</dd>
-<dt>テーマが扱いやすい</dt>
-<dd><p>pip からテーマをインストールできます。Python ユーザにとって最も簡明な方法ではないでしょうか？
-Jinja2 を利用してテーマを継承できるため、カスタマイズも容易です。</p>
-</dd>
-</dl>
-<p>ちなみに、石本さんが管理されている <a class="reference external" href="https://python.jp">python.jp</a> も Pelican から Miyadaiku ベースになっています。移行した理由については <a class="reference external" href="http://atsuoishimoto.hatenablog.com/entry/2017/08/09/133346">ブログ</a> に記載されているので、ご一読をおすすめします。</p>
+共通部分をテンプレート化することで生産性が上がりそうです。</p></dd></dl></div></div>
+      <a href="articles/renew_blog.html">続きを読む</a>
+    
+      <div class="article-metadata">
+    <span class="article-date"> 2017-09-02 </span>
+    <span>  </span>
+    <span> jupyter,bokeh </span>
+  </div>
+      <h2 class="article-title"><a href="notebooks/bokeh_sample.html">Jupyter Notebookサンプル</a></h2>
+      <div class="article-body"><div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
-<div class="section" id="id5">
-<div class="header_target" id="h_articles_renew_blog_2erst_2"></div><h1>Miyadaiku の名前</h1>
-<div class="line-block">
-<div class="line">Miyadaiku の名前の由来は、Jinja2 (神社)を使うことから、Miyadaiku (宮大工)と命名されたのではないかなと思われます。</div>
-<div class="line">モジュール名にも <cite>muneage</cite> (棟上げ)や <cite>zichinsai</cite> (地鎮祭)など、専門用語が散りばめられています。</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://miyadaiku.github.io">Miyadaiku</a> では Jupyter Notebook の ipynb ファイルをそのままサイトまたはブログの記事として投稿できます。</p>
 </div>
 </div>
-<div class="section" id="id6">
-<div class="header_target" id="h_articles_renew_blog_2erst_3"></div><h1>Miyadaiku のテーマ</h1>
-<p>Miyadaiku はリリースされたばかりのパッケージということもあり、他の静的サイトジェネレータと比較してテーマが少ない状況です。特に、ブログに関してはテーマがデフォルトのものしかなく、ブログを新規に構築する際にはテーマをかなりいじることになりました。</p>
-<p>テーマのバリエーションについては時間が解決すると思いまが、私が新規に実装した機能としてはSNSのシェアボタン[ <a class="footnote-reference brackets" href="#f" id="id7">1</a> ]などです。外に出せるようなテーマができたら <a class="reference external" href="https://pypi.python.org">PyPI</a> に登録する未来があるかもしれません。</p>
-<dl class="footnote brackets">
-<dt class="label" id="f"><span class="brackets"><a class="fn-backref" href="#id7">1</a></span></dt>
-<dd><p>まだちゃんと動作確認していないため、どなたかポチッと試していただけると助かります。</p>
-</dd>
-</dl>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="k">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">output_notebook</span><span class="p">,</span> <span class="n">show</span>
+
+<span class="n">output_notebook</span><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">line</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<div class="bk-root">
+<a class="bk-logo bk-logo-small bk-logo-notebook" href="http://bokeh.pydata.org" target="_blank"></a>
+<span id="b3dbc3e4-de9d-4d03-9ce6-b4573f4ee515">Loading BokehJS ...</span>
+</div>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div id="b1b025ed-833d-4db0-ac7a-a776e7f9482e"></div>
+<div class="output_subarea output_javascript ">
+
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<div class="bk-root">
+<div class="bk-plotdiv" id="f62c60b9-5062-488c-8290-2cd645f3e770"></div>
 </div>
 
-<div class="sns">
-  <!-- twitter -->
-<a target="_blank" href='https://twitter.com/share?url=https://drillan.github.io/articles/renew_blog.html&amp;via=patraqushe&amp;text=ブログをリニューアルしました'>
-    <i class="fa fa-twitter" aria-hidden="true"></i>
-</a>
-
-<!-- facebook -->
-<a target="_blank" href='https://www.facebook.com/sharer/sharer.php?u=https://drillan.github.io/articles/renew_blog.html'>
-    <i class="fa fa-facebook-official" aria-hidden="true"></i>
-</a>
-
-<!-- google+ -->
-<a target="_blank" href='https://plus.google.com/share?url=https://drillan.github.io/articles/renew_blog.html'>
-    <i class="fa fa-google-plus" aria-hidden="true"></i>
-</a>
-
-<!-- hatena bookmark -->
-<a target="_blank" href='http://b.hatena.ne.jp/entry/https://drillan.github.io/articles/renew_blog.html'>
-    <i class="fa-hatebu"></i>
-</a>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>このようにJSが必要なnotebookもレンダリングされています。</p></div></div></div></div></div>
+      <a href="notebooks/bokeh_sample.html">続きを読む</a>
+    
+  </div>
+
+  <div class="index-pagination">
+    
+      <a class="index-navi"
+         href="index.html">&larr;</a>
+    
+    
+    
+      <span class="index-navi disabled-link">&rarr;</span>
+    
+  </div>
+
 
     </div>
     <aside class="container-right">
@@ -11914,55 +11927,55 @@ Jinja2 を利用してテーマを継承できるため、カスタマイズも�
         <ul class="nav sidenav">
         
             <li>
-                <a href="../index_tag_tags_bokeh.html">
+                <a href="index_tag_tags_bokeh.html">
                     bokeh
                 </a>
             </li>
         
             <li>
-                <a href="../index_tag_tags_docker.html">
+                <a href="index_tag_tags_docker.html">
                     docker
                 </a>
             </li>
         
             <li>
-                <a href="../index_tag_tags_finance.html">
+                <a href="index_tag_tags_finance.html">
                     finance
                 </a>
             </li>
         
             <li>
-                <a href="../index_tag_tags_ipywidgets.html">
+                <a href="index_tag_tags_ipywidgets.html">
                     ipywidgets
                 </a>
             </li>
         
             <li>
-                <a href="../index_tag_tags_jupyter.html">
+                <a href="index_tag_tags_jupyter.html">
                     jupyter
                 </a>
             </li>
         
             <li>
-                <a href="../index_tag_tags_matplotlib.html">
+                <a href="index_tag_tags_matplotlib.html">
                     matplotlib
                 </a>
             </li>
         
             <li>
-                <a href="../index_tag_tags_miyadaiku.html">
+                <a href="index_tag_tags_miyadaiku.html">
                     miyadaiku
                 </a>
             </li>
         
             <li>
-                <a href="../index_tag_tags_numpy.html">
+                <a href="index_tag_tags_numpy.html">
                     numpy
                 </a>
             </li>
         
             <li>
-                <a href="../index_tag_tags_python.html">
+                <a href="index_tag_tags_python.html">
                     python
                 </a>
             </li>
