@@ -12239,7 +12239,10 @@ return a}function mr(t){for(var e=-1,n=t?t.length:0,r=-1,i=[];++e<n;){var o=t[e]
 <span class="n">rows</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'row '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
 <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'col '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">)]</span>
 
-<span class="n">lgn</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">mat_data</span><span class="p">,</span> <span class="n">row_labels</span><span class="o">=</span><span class="n">rows</span><span class="p">,</span> <span class="n">column_labels</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span> <span class="n">numbers</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">lgn</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">mat_data</span><span class="p">,</span>
+           <span class="n">row_labels</span><span class="o">=</span><span class="n">rows</span><span class="p">,</span>
+           <span class="n">column_labels</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span>
+           <span class="n">numbers</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -12295,7 +12298,7 @@ return a}function mr(t){for(var e=-1,n=t?t.length:0,r=-1,i=[];++e<n;){var o=t[e]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_jupyter_advent_calendar_2017_2eipynb_7"></div><h3 id="地図">地図<a class="anchor-link" href="#地図">¶</a></h3><p>世界地図(国ごと)と米国(州ごと)のデータを濃淡をつけて可視化できます。</p>
+<div class="header_target" id="h_notebooks_jupyter_advent_calendar_2017_2eipynb_7"></div><h3 id="地図">地図<a class="anchor-link" href="#地図">¶</a></h3><p>世界地図(国ごと)と米国(州ごと)のデータを地図上に濃淡をつけて可視化できます。</p>
 </div>
 </div>
 </div>
@@ -12366,7 +12369,7 @@ return a}function mr(t){for(var e=-1,n=t?t.length:0,r=-1,i=[];++e<n;){var o=t[e]
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="header_target" id="h_notebooks_jupyter_advent_calendar_2017_2eipynb_8"></div><h1 id="Plotly">Plotly<a class="anchor-link" href="#Plotly">¶</a></h1><p><a href="https://plot.ly">https://plot.ly</a></p>
 <p>商用でも利用されているだけあって、機能が豊富です。<br/>
-今回はpandasのDataFrameから直接プロットできるものの一部を紹介します。</p>
+今回はpandasのDataFrameから直接プロットできるものを少し紹介します。</p>
 </div>
 </div>
 </div>
@@ -12457,7 +12460,7 @@ return a}function mr(t){for(var e=-1,n=t?t.length:0,r=-1,i=[];++e<n;){var o=t[e]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_jupyter_advent_calendar_2017_2eipynb_11"></div><h3 id="cufflinksでpandasのDataFrameをそのまま描画">cufflinksでpandasのDataFrameをそのまま描画<a class="anchor-link" href="#cufflinksでpandasのDataFrameをそのまま描画">¶</a></h3><p>cufflinksを使うと、pandasのDataFrameに <code>iplot</code> というメソッドが使えるようになります。<br/>
+<div class="header_target" id="h_notebooks_jupyter_advent_calendar_2017_2eipynb_11"></div><h3 id="pandasのDataFrameから直接描画">pandasのDataFrameから直接描画<a class="anchor-link" href="#pandasのDataFrameから直接描画">¶</a></h3><p>cufflinksを使うと、pandasのDataFrameから <code>iplot</code> というメソッドが使えるようになります。<br/>
 cufflinksはpipでインスールできます。</p>
 <pre><code>pip install cufflinks</code></pre>
 </div>
@@ -12478,7 +12481,7 @@ cufflinksはpipでインスールできます。</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_jupyter_advent_calendar_2017_2eipynb_12"></div><h3 id="折れ線グラフ">折れ線グラフ<a class="anchor-link" href="#折れ線グラフ">¶</a></h3><p>なんとなく株価っぽいデータを作成して時系列データを描画してみます。</p>
+<div class="header_target" id="h_notebooks_jupyter_advent_calendar_2017_2eipynb_12"></div><h3 id="折れ線グラフ">折れ線グラフ<a class="anchor-link" href="#折れ線グラフ">¶</a></h3><p>なんとなく株価っぽいデータを作成し、時系列データを描画してみます。</p>
 </div>
 </div>
 </div>
@@ -12523,7 +12526,7 @@ cufflinksはpipでインスールできます。</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>マウスカーソルを当てるとツールチップが出てきます。かなり見やすくて個人的に気に入ってるところです。</p>
+<p>マウスカーソルを当てるとツールチップが出てきます。かなり見やすくて個人的に気に入ってる機能です。</p>
 </div>
 </div>
 </div>
@@ -12560,7 +12563,7 @@ cufflinksはpipでインスールできます。</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_jupyter_advent_calendar_2017_2eipynb_14"></div><h3 id="バブルチャート">バブルチャート<a class="anchor-link" href="#バブルチャート">¶</a></h3><p>キーワード引数 <code>size</code> に3次元目のデータを与えます</p>
+<div class="header_target" id="h_notebooks_jupyter_advent_calendar_2017_2eipynb_14"></div><h3 id="バブルチャート">バブルチャート<a class="anchor-link" href="#バブルチャート">¶</a></h3><p>キーワード引数 <code>size</code> に3次元目のデータを渡します。</p>
 </div>
 </div>
 </div>
@@ -12632,7 +12635,7 @@ cufflinksはpipでインスールできます。</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_jupyter_advent_calendar_2017_2eipynb_16"></div><h3 id="箱ひげ図">箱ひげ図<a class="anchor-link" href="#箱ひげ図">¶</a></h3><p>boxplotはpandasと同じくらい簡単に書けます。四分位値がツールチップに出てくるのが親切ですね。</p>
+<div class="header_target" id="h_notebooks_jupyter_advent_calendar_2017_2eipynb_16"></div><h3 id="箱ひげ図">箱ひげ図<a class="anchor-link" href="#箱ひげ図">¶</a></h3><p>boxplotはpandasと同じくらい簡単に書けます。四分位値がツールチップに出てくるのが親切です。</p>
 </div>
 </div>
 </div>
@@ -12662,7 +12665,7 @@ cufflinksはpipでインスールできます。</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="header_target" id="h_notebooks_jupyter_advent_calendar_2017_2eipynb_17"></div><h2 id="python-highcharts">python-highcharts<a class="anchor-link" href="#python-highcharts">¶</a></h2><p><a href="https://github.com/kyper-data/python-highcharts">https://github.com/kyper-data/python-highcharts</a></p>
-<p>highchartsのPythonラッパです。Plotlyと同じく商用でも利用されています。<br/>
+<p>highchartsのPythonラッパです。highchartsはPlotlyと同じく商用でも利用されています。<br/>
 highchartsのほとんどの機能をPythonで実装できるというスグレモノなのですが、なぜか流行ってません。</p>
 </div>
 </div>
@@ -12746,7 +12749,7 @@ highchartsのほとんどの機能をPythonで実装できるというスグレ�
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>細かい説明は省きますが、色々クリックしたりドラッグすると時系列のスコープが変化します。<br/>
-特になにも設定しなくても、Highstockはいい感じに時系列データをインタラクティブに処理できるため、個人的には非常に重宝しています。</p>
+特になにも設定しなくても、Highstockはいい感じに時系列データをインタラクティブに操作できるため、個人的には非常に重宝しています。</p>
 </div>
 </div>
 </div>
