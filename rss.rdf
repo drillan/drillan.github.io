@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>drillerの部屋</title><link>https://drillan.github.io/</link><description></description><lastBuildDate>Fri, 01 Dec 2017 00:00:00 +0900</lastBuildDate><item><title>Optimized Pythonを試す</title><link>https://drillan.github.io/articles/optimized_python.html</link><description>&lt;p&gt;&lt;a class="reference external" href="https://qiita.com/advent-calendar/2017/python"&gt;「python Advent Calendar 2017 10日目」&lt;/a&gt; の記事です。&lt;/p&gt;
+<rss version="2.0"><channel><title>drillerの部屋</title><link>https://drillan.github.io/</link><description></description><lastBuildDate>Wed, 20 Dec 2017 00:00:00 +0900</lastBuildDate><item><title>あまり紹介されていない可視化ツールを試す</title><link>https://drillan.github.io/notebooks/jupyter_advent_calendar_2017.html</link><description>&lt;div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;a href="https://qiita.com/advent-calendar/2017/jupyter"&gt;「Jupyter Advent Calendar 2017 10日目」&lt;/a&gt; の記事です。&lt;/p&gt;
+&lt;p&gt;今回はJupyter上から可視化できるツールのなかで、あまり日の当たってないものにスポットライトを当ててみたいと思います。&lt;br/&gt;
+これはと思うものがあれば試してみていただけると幸甚です。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;div class="header_target" id="h_notebooks_jupyter_advent_calendar_2017_2eipynb_1"&gt;&lt;/div&gt;&lt;h2 id="Lightning"&gt;Lightning&lt;a class="anchor-link" href="#Lightning"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href="http://lightning-viz.org"&gt;http://lightning-viz.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;APIベースの可視化ツールです、herokuやdockerからなどから環境を構築できます。&lt;br/&gt;
+今回はJupyter上からの事例を紹介しますが、サーバを建てたほうが威力をはっきするかもしれません。&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><pubDate>Wed, 20 Dec 2017 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2017-12-20:/notebooks/jupyter_advent_calendar_2017.html</guid></item><item><title>Optimized Pythonを試す</title><link>https://drillan.github.io/articles/optimized_python.html</link><description>&lt;p&gt;&lt;a class="reference external" href="https://qiita.com/advent-calendar/2017/python"&gt;「python Advent Calendar 2017 10日目」&lt;/a&gt; の記事です。&lt;/p&gt;
 &lt;p&gt;TwitterのTLをぼーっと眺めていたら気になるサイトを見つけました。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://www.revsys.com/tidbits/optimized-python/"&gt;Check This Out – Optimized Python&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;なんと、このdockerイメージを使うと、公式のPythonのイメージと比較して、19%の高速化と75%の軽量化がされているようです。
@@ -127,7 +144,7 @@
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="b1b025ed-833d-4db0-ac7a-a776e7f9482e"&gt;&lt;/div&gt;
+&lt;div id="38694c57-4e50-42ae-9d8d-c98ada285e69"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 
 &lt;/div&gt;
