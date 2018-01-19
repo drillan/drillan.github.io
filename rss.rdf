@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>drillerの部屋</title><link>https://drillan.github.io/</link><description></description><lastBuildDate>Fri, 19 Jan 2018 18:00:00 +0900</lastBuildDate><item><title>Jupyter本没原稿集#2.2 ipywidgets#2</title><link>https://drillan.github.io/articles/jupyterbook_reject03.html</link><description>&lt;p&gt;ボツネタ供養の第三弾です。&lt;a href="https://drillan.github.io/articles/jupyterbook_reject02.html"&gt;前回&lt;/a&gt;から大分間が空いてしまいました。申し訳ありません...&lt;br/&gt;
-今回は残りすべてのウィジェットを紹介します。&lt;/p&gt;
-&lt;div class="header_target" id="h_articles_jupyterbook_reject03_2emd_1"&gt;&lt;/div&gt;&lt;h3&gt;ToggleButton&lt;/h3&gt;
+<rss version="2.0"><channel><title>drillerの部屋</title><link>https://drillan.github.io/</link><description></description><lastBuildDate>Fri, 19 Jan 2018 00:00:00 +0900</lastBuildDate><item><title>Jupyter本没原稿集#2.2 ipywidgets#2</title><link>https://drillan.github.io/articles/jupyterbook_reject03.html</link><description>&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;ボツネタ供養の第三弾です。&lt;a class="reference external" href="https://drillan.github.io/articles/jupyterbook_reject02.html"&gt;前回&lt;/a&gt;から大分間が空いてしまいました。申し訳ありません...&lt;/div&gt;
+&lt;div class="line"&gt;今回は残りすべてのウィジェットを紹介します。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="togglebutton"&gt;
+&lt;div class="header_target" id="h_articles_jupyterbook_reject03_2erst_1"&gt;&lt;/div&gt;&lt;h1&gt;ToggleButton&lt;/h1&gt;
 &lt;p&gt;トグルボタンです。ボタンをクリックすると真偽値が切り替わり、状態が保持されます。以下のコードでは2つの値の論理積を出力しています。&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;from ipywidgets import ToggleButton
+&lt;pre class="code python literal-block"&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;ipywidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;ToggleButton&lt;/span&gt;
 
 
-def x_and_y(change):
-    clear_output()
-    print(toggle_button_x.value &amp;amp; toggle_button_y.va&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Fri, 19 Jan 2018 18:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2018-01-19:/articles/jupyterbook_reject03.html</guid></item><item><title>あまり紹介されていない可視化ツールを試す</title><link>https://drillan.github.io/notebooks/jupyter_advent_calendar_2017.html</link><description>&lt;div&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;x_and_y&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;change&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;clear_output&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;toggle_button_x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;toggle_button_y&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Fri, 19 Jan 2018 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2018-01-19:/articles/jupyterbook_reject03.html</guid></item><item><title>あまり紹介されていない可視化ツールを試す</title><link>https://drillan.github.io/notebooks/jupyter_advent_calendar_2017.html</link><description>&lt;div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -153,7 +156,7 @@ def x_and_y(change):
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="62581668-acdd-44fb-93ff-60dba7780bd1"&gt;&lt;/div&gt;
+&lt;div id="1f44eae9-59ad-4ed9-8976-d2768ba8639b"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 
 &lt;/div&gt;
