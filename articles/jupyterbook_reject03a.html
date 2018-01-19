@@ -6,7 +6,7 @@
   
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jupyter Notebookサンプル - drillerの部屋</title>
+    <title>Jupyter本没原稿集#2.2 ipywidgets#2 - drillerの部屋</title>
   
   <link href="https://drillan.github.io/atom.xml" type="application/atom+xml" rel="alternate" title="Atom Feed" />
   <link rel="stylesheet" href="../static/css/article.css">
@@ -11778,16 +11778,16 @@ div#notebook {
         }
     });
     </script>
-  <meta property="og:url" content="https://drillan.github.io/notebooks/bokeh_sample.html" />
+  <meta property="og:url" content="https://drillan.github.io/articles/jupyterbook_reject03a.html" />
 <meta property="og:locale" content="ja-JP" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="Jupyter Notebookサンプル - drillerの部屋" />
+<meta property="og:title" content="Jupyter本没原稿集#2.2 ipywidgets#2 - drillerの部屋" />
 
-<meta name="description" content="Miyadaiku では Jupyter Notebook の ipynb ファイルをそのままサイトまたはブログの記事として投稿できます。 In [1]: from bokeh.plotting import figure, output_notebook, show output_notebook() p = figure(plot_width=200, plot_height=200) p.line([1, 2, 3], [3, 2, 1]) show(p) Loading BokehJS ... このようにJSが必要なnotebookもレンダリングされています。"/>
-<meta property="og:description" content="Miyadaiku では Jupyter Notebook の ipynb ファイルをそのままサイトまたはブログの記事として投稿できます。 In [1]: from bokeh.plotting import figure, output_notebook, show output_notebook() p = figure(plot_width=200, plot_height=200) p.line([1, 2, 3], [3, 2, 1]) show(p) Loading BokehJS ... このようにJSが必要なnotebookもレンダリングされています。" />
+<meta name="description" content="ボツネタ供養の第三弾です。前回から大分間が空いてしまいました。申し訳ありません... 今回は残りすべてのウィジェットを紹介します。 ToggleButton トグルボタンです。ボタンをクリックすると真偽値が切り替わり、状態が保持されます。以下のコードでは2つの値の論理積を出力しています。 from ipywidgets import ToggleButton def x_and_y(change): clear_output() print(toggle_button_x.value &amp; toggle_button_y.value"/>
+<meta property="og:description" content="ボツネタ供養の第三弾です。前回から大分間が空いてしまいました。申し訳ありません... 今回は残りすべてのウィジェットを紹介します。 ToggleButton トグルボタンです。ボタンをクリックすると真偽値が切り替わり、状態が保持されます。以下のコードでは2つの値の論理積を出力しています。 from ipywidgets import ToggleButton def x_and_y(change): clear_output() print(toggle_button_x.value &amp; toggle_button_y.value" />
 
-<meta property="article:published_time" content="2017-09-02T00:00:00+09:00" />
+<meta property="article:published_time" content="2018-01-19T00:00:00+09:00" />
   <link rel="stylesheet" href="../static/css/bootstrap-solarized-light.css">
   <link rel="stylesheet" href="../static/css/font-awesome.min.css">
   <link rel="stylesheet" href="../static/css/custom.css">
@@ -11805,384 +11805,403 @@ div#notebook {
     <div class="container-body">
       
 <div class="article-metadata">
-    <span class="article-date"> 2017-09-02 </span>
+    <span class="article-date"> 2018-01-19 </span>
     <span>  </span>
-    <span> jupyter,bokeh </span>
+    <span> python,jupyter,ipywidgets,bokeh </span>
   </div>
 <h1 class="article-title">
-  Jupyter Notebookサンプル
+  Jupyter本没原稿集#2.2 ipywidgets#2
 </h1>
 
 <div class="article-body">
-  <div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+  <div class="line-block">
+<div class="line">ボツネタ供養の第三弾です。<a class="reference external" href="https://drillan.github.io/articles/jupyterbook_reject02.html">前回</a>から大分間が空いてしまいました。申し訳ありません...</div>
+<div class="line">今回は残りすべてのウィジェットを紹介します。</div>
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://miyadaiku.github.io">Miyadaiku</a> では Jupyter Notebook の ipynb ファイルをそのままサイトまたはブログの記事として投稿できます。</p>
+<div class="section" id="togglebutton">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_1"></div><h1>ToggleButton</h1>
+<p>トグルボタンです。ボタンをクリックすると真偽値が切り替わり、状態が保持されます。以下のコードでは2つの値の論理積を出力しています。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">ToggleButton</span>
+
+
+<span class="k">def</span> <span class="nf">x_and_y</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+    <span class="n">clear_output</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">toggle_button_x</span><span class="o">.</span><span class="n">value</span> <span class="o">&amp;</span> <span class="n">toggle_button_y</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+
+<span class="n">toggle_button_x</span> <span class="o">=</span> <span class="n">ToggleButton</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">'x'</span><span class="p">)</span>
+<span class="n">toggle_button_y</span> <span class="o">=</span> <span class="n">ToggleButton</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">'y'</span><span class="p">)</span>
+<span class="n">toggle_button_x</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">x_and_y</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">'value'</span><span class="p">)</span>
+<span class="n">toggle_button_y</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">x_and_y</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">'value'</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">toggle_button_x</span><span class="p">,</span> <span class="n">toggle_button_y</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="ToggleButton のサンプルコード" src="./img/ToggleButton-sample-out.png"/>
+<p class="caption">ToggleButton のサンプルコード</p>
 </div>
 </div>
+<div class="section" id="checkbox">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_2"></div><h1>Checkbox</h1>
+<p>チェックボックスです。チェックをした状態が
+<span class="docutils literal">True</span>、チェックを外した状態が <span class="docutils literal">Fales</span>
+となります。以下のコードでは2つの値の論理積を出力しています。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">Checkbox</span>
+
+
+<span class="k">def</span> <span class="nf">x_and_y</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+    <span class="n">clear_output</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">checkbox_x</span><span class="o">.</span><span class="n">value</span> <span class="o">&amp;</span> <span class="n">checkbox_y</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+
+<span class="n">checkbox_x</span> <span class="o">=</span> <span class="n">Checkbox</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">'x'</span><span class="p">)</span>
+<span class="n">checkbox_y</span> <span class="o">=</span> <span class="n">Checkbox</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">'y'</span><span class="p">)</span>
+<span class="n">checkbox_x</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">x_and_y</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">'value'</span><span class="p">)</span>
+<span class="n">checkbox_y</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">x_and_y</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">'value'</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">checkbox_x</span><span class="p">,</span> <span class="n">checkbox_y</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="Checkbox のサンプルコード" src="./img/Checkbox-sample-out.png"/>
+<p class="caption">Checkbox のサンプルコード</p>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [1]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="k">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">output_notebook</span><span class="p">,</span> <span class="n">show</span>
+</div>
+<div class="section" id="valid">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_3"></div><h1>Valid</h1>
+<p>真偽値の状態を示すインジケータです。このインスタンスに対して変更はできません。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">Valid</span>
+
+
+<span class="k">def</span> <span class="nf">is_valid</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+    <span class="n">valid</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">change</span><span class="p">[</span><span class="s1">'new'</span><span class="p">]</span>
+
+
+<span class="n">checkbox_valid</span> <span class="o">=</span> <span class="n">Checkbox</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">'valid'</span><span class="p">)</span>
+<span class="n">valid</span> <span class="o">=</span> <span class="n">Valid</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">checkbox_valid</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">is_valid</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">'value'</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">checkbox_valid</span><span class="p">,</span> <span class="n">valid</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="widgets\_name のサンプルコード" src="./img/widgets_name-sample-out.png"/>
+<p class="caption">widgets_name のサンプルコード</p>
+</div>
+</div>
+<div class="section" id="dropdown">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_4"></div><h1>Dropdown</h1>
+<p>ドロップダウンから値を選択します。以下のコードはキャラクター名を選択するとそのキャラクターの正体が出力されます。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">Dropdown</span>
+
+
+<span class="k">def</span> <span class="nf">sos</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+    <span class="n">clear_output</span><span class="p">()</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'朝比奈'</span><span class="p">:</span> <span class="s1">'未来人'</span><span class="p">,</span> <span class="s1">'長門'</span><span class="p">:</span> <span class="s1">'宇宙人'</span><span class="p">,</span> <span class="s1">'古泉'</span><span class="p">:</span> <span class="s1">'超能力者'</span><span class="p">}</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">ans</span><span class="p">[</span><span class="n">change</span><span class="p">[</span><span class="s1">'new'</span><span class="p">]])</span>
+
+
+<span class="n">dropdown</span> <span class="o">=</span> <span class="n">Dropdown</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">'朝比奈'</span><span class="p">,</span> <span class="s1">'長門'</span><span class="p">,</span> <span class="s1">'古泉'</span><span class="p">])</span>
+<span class="n">dropdown</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">sos</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">'value'</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">dropdown</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="Dropdown のサンプルコード" src="./img/Dropdown-sample-out.png"/>
+<p class="caption">Dropdown のサンプルコード</p>
+</div>
+</div>
+<div class="section" id="radiobuttons">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_5"></div><h1>RadioButtons</h1>
+<p>ラジオボタンから値を選択します。以下のコードはキャラクター名を選択するとそのキャラクターの正体が出力されます。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">RadioButtons</span>
+
+<span class="n">radio_buttons</span> <span class="o">=</span> <span class="n">RadioButtons</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">'朝比奈'</span><span class="p">,</span> <span class="s1">'長門'</span><span class="p">,</span> <span class="s1">'古泉'</span><span class="p">])</span>
+<span class="n">radio_buttons</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">sos</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">'value'</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">radio_buttons</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="Dropdown のサンプルコード" src="./img/RadioButtons-sample-out.png"/>
+<p class="caption">Dropdown のサンプルコード</p>
+</div>
+</div>
+<div class="section" id="select">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_6"></div><h1>Select</h1>
+<p>リストボックスから値を選択します。以下のコードはキャラクター名を選択するとそのキャラクターの正体が出力されます。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">Select</span>
+
+<span class="n">select</span> <span class="o">=</span> <span class="n">Select</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">'朝比奈'</span><span class="p">,</span> <span class="s1">'長門'</span><span class="p">,</span> <span class="s1">'古泉'</span><span class="p">])</span>
+<span class="n">select</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">sos</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">'value'</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">select</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="Select のサンプルコード" src="./img/Select-sample-out.png"/>
+<p class="caption">Select のサンプルコード</p>
+</div>
+</div>
+<div class="section" id="selectionslider">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_7"></div><h1>SelectionSlider</h1>
+<p>スライダから値を選択します。以下のコードはキャラクター名を選択するとそのキャラクターの正体が出力されます。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">SelectionSlider</span>
+
+<span class="n">selection_slider</span> <span class="o">=</span> <span class="n">SelectionSlider</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">'朝比奈'</span><span class="p">,</span> <span class="s1">'長門'</span><span class="p">,</span> <span class="s1">'古泉'</span><span class="p">])</span>
+<span class="n">selection_slider</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">sos</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">'value'</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">selection_slider</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="SelectionSlider のサンプルコード" src="./img/SelectionSlider-sample-out.png"/>
+<p class="caption">SelectionSlider のサンプルコード</p>
+</div>
+</div>
+<div class="section" id="togglebuttons">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_8"></div><h1>ToggleButtons</h1>
+<p>トグルボタンから値を選択します。以下のコードはキャラクター名を選択するとそのキャラクターの正体が出力されます。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">ToggleButtons</span>
+
+<span class="n">toggle_buttons</span> <span class="o">=</span> <span class="n">ToggleButtons</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">'朝比奈'</span><span class="p">,</span> <span class="s1">'長門'</span><span class="p">,</span> <span class="s1">'古泉'</span><span class="p">])</span>
+<span class="n">toggle_buttons</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">sos</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">'value'</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">toggle_buttons</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="ToggleButtons のサンプルコード" src="./img/ToggleButtons-sample-out.png"/>
+<p class="caption">ToggleButtons のサンプルコード</p>
+</div>
+</div>
+<div class="section" id="selectmultiple">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_9"></div><h1>SelectMultiple</h1>
+<p><span class="docutils literal">Ctrl</span> キーまたは <span class="docutils literal">Shift</span>
+キーを押しながら複数の値を選択できます。以下のコードは定義した辞書から組み合わせに応じた結果が出力されます。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">SelectMultiple</span>
+
+
+<span class="k">def</span> <span class="nf">relation</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+    <span class="n">clear_output</span><span class="p">()</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="p">{(</span><span class="s1">'岡部倫太郎'</span><span class="p">,):</span> <span class="s1">'鳳凰院凶真'</span><span class="p">,</span> <span class="p">(</span><span class="s1">'阿万音鈴羽'</span><span class="p">,):</span> <span class="s1">'未来人'</span><span class="p">,</span> <span class="p">(</span><span class="s1">'橋田至'</span><span class="p">,):</span> <span class="s1">'スーパーハカー'</span><span class="p">,</span>
+           <span class="p">(</span><span class="s1">'岡部倫太郎'</span><span class="p">,</span> <span class="s1">'阿万音鈴羽'</span><span class="p">):</span> <span class="s1">'バイト戦士'</span><span class="p">,</span> <span class="p">(</span><span class="s1">'岡部倫太郎'</span><span class="p">,</span> <span class="s1">'橋田至'</span><span class="p">):</span> <span class="s1">'ダル'</span><span class="p">,</span>
+          <span class="p">(</span><span class="s1">'阿万音鈴羽'</span><span class="p">,</span> <span class="s1">'橋田至'</span><span class="p">):</span> <span class="s1">'親子'</span><span class="p">,</span> <span class="p">(</span><span class="s1">'岡部倫太郎'</span><span class="p">,</span> <span class="s1">'阿万音鈴羽'</span><span class="p">,</span> <span class="s1">'橋田至'</span><span class="p">):</span> <span class="s1">'ラボメン'</span><span class="p">}</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">ans</span><span class="p">[</span><span class="n">change</span><span class="p">[</span><span class="s1">'new'</span><span class="p">]])</span>
+
+
+<span class="n">select_multiple</span> <span class="o">=</span> <span class="n">SelectMultiple</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">'岡部倫太郎'</span><span class="p">,</span> <span class="s1">'阿万音鈴羽'</span><span class="p">,</span> <span class="s1">'橋田至'</span><span class="p">])</span>
+<span class="n">select_multiple</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">relation</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">'value'</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">select_multiple</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="SelectMultiple のサンプルコード" src="./img/SelectMultiple-sample-out.png"/>
+<p class="caption">SelectMultiple のサンプルコード</p>
+</div>
+</div>
+<div class="section" id="text">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_10"></div><h1>Text</h1>
+<p>テキストボックスです。以下のコードでは入力した文字列を式として評価した結果を出力します。<span class="docutils literal">.on_submit()</span>
+メソッドはテキストボックス上で <span class="docutils literal">Enter</span>
+キーが入力されたイベントをハンドリングします。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">Text</span>
+
+<span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">submit</span><span class="p">):</span>
+    <span class="n">clear_output</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="n">submit</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">'Error'</span><span class="p">)</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="n">Text</span><span class="p">()</span>
+<span class="n">text</span><span class="o">.</span><span class="n">on_submit</span><span class="p">(</span><span class="n">calc</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">text</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="Text のサンプルコード" src="./img/Text-sample-out.png"/>
+<p class="caption">Text のサンプルコード</p>
+</div>
+</div>
+<div class="section" id="textarea">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_11"></div><h1>Textarea</h1>
+<p>複数行を入力できるテキストボックスです。以下のコードでは入力した文字数をカウントした結果を出力します。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">Textarea</span>
+
+<span class="k">def</span> <span class="nf">wc</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+    <span class="n">clear_output</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">change</span><span class="p">[</span><span class="s1">'new'</span><span class="p">]))</span>
+
+<span class="n">textarea</span> <span class="o">=</span> <span class="n">Textarea</span><span class="p">()</span>
+<span class="n">textarea</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">wc</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">'value'</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">textarea</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="Textarea のサンプルコード" src="./img/Textarea-sample-out.png"/>
+<p class="caption">Textarea のサンプルコード</p>
+</div>
+</div>
+<div class="section" id="label">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_12"></div><h1>Label</h1>
+<p>ラベルを表示します。このインスタンスに対して入力は受け付けません。以下のコードでは
+LaTeX 書式にて記述しています。数式の記述については
+<a class="reference external" href="https://www.amazon.co.jp/Python%E3%83%A6%E3%83%BC%E3%82%B6%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEJupyter-%E5%AE%9F%E8%B7%B5-%E5%85%A5%E9%96%80-%E6%B1%A0%E5%86%85-%E5%AD%9D%E5%95%93/dp/4774192236/ref=as_li_ss_tl?ref_=nav_signin&amp;&amp;linkCode=ll1&amp;tag=eleshis-22&amp;linkId=12c20401ddd3c71f971ac2330621cdd6">書籍</a>
+にて解説します。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">Label</span>
+
+<span class="n">Label</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s1">'$E=mc^2$'</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="Label のサンプルコード" src="./img/Label-sample-out.png"/>
+<p class="caption">Label のサンプルコード</p>
+</div>
+</div>
+<div class="section" id="html">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_13"></div><h1>HTML</h1>
+<p>値を HTML として出力します。以下のコードでは簡易的な HTML
+エディタを作成しています。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="k">def</span> <span class="nf">html_editor</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+    <span class="n">html</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="n">change</span><span class="p">[</span><span class="s1">'new'</span><span class="p">]</span>
+
+<span class="n">html</span> <span class="o">=</span> <span class="n">HTML</span><span class="p">()</span>
+<span class="n">textarea</span> <span class="o">=</span> <span class="n">Textarea</span><span class="p">()</span>
+<span class="n">textarea</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">html_editor</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">'value'</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">textarea</span><span class="p">,</span> <span class="n">html</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="HTML のサンプルコード" src="./img/HTML-sample-out.png"/>
+<p class="caption">HTML のサンプルコード</p>
+</div>
+</div>
+<div class="section" id="htmlmath">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_14"></div><h1>HTMLMath</h1>
+<p>値を HTML として出力します。数式を含むことができます。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">HTMLMath</span>
+
+<span class="n">HTMLMath</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s1">'&lt;b&gt;ものすごく&lt;/b&gt;有名な式:&lt;br&gt; $E=mc^2$'</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="HTMLMath のサンプルコード" src="./img/HTMLMath-sample-out.png"/>
+<p class="caption">HTMLMath のサンプルコード</p>
+</div>
+</div>
+<div class="section" id="image">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_15"></div><h1>Image</h1>
+<p>画像ファイルを表示します。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s1">'https://www.python.org/static/img/python-logo.png'</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="n">width</span><span class="o">=</span><span class="mi">290</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">82</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="Image のサンプルコード" src="./img/Image-sample-out.png"/>
+<p class="caption">Image のサンプルコード</p>
+</div>
+</div>
+<div class="section" id="button">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_16"></div><h1>Button</h1>
+<p>ボタンです。ボタンが押された際に、<span class="docutils literal">on_click()</span>
+メソッドがイベントハンドラとなります。以下のコードでは乱数で生成した値を出力しています。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">Button</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+
+
+<span class="k">def</span> <span class="nf">omikuji</span><span class="p">(</span><span class="n">submit</span><span class="p">):</span>
+    <span class="n">clear_output</span><span class="p">()</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">'ハルヒ'</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">'長門'</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">'朝比奈さん'</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s1">'小泉'</span><span class="p">}</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)])</span>
+
+
+<span class="n">button</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">'誰と組む？'</span><span class="p">)</span>
+<span class="n">button</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">omikuji</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">button</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="Button のサンプルコード" src="./img/Button-sample-out.png"/>
+<p class="caption">Button のサンプルコード</p>
+</div>
+</div>
+<div class="section" id="play">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_17"></div><h1>Play</h1>
+<p>アニメーションを制御します。再生、一時停止、停止ボタンが用意されています。以下のコードでは
+<a class="reference external" href="https://www.amazon.co.jp/Python%E3%83%A6%E3%83%BC%E3%82%B6%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEJupyter-%E5%AE%9F%E8%B7%B5-%E5%85%A5%E9%96%80-%E6%B1%A0%E5%86%85-%E5%AD%9D%E5%95%93/dp/4774192236/ref=as_li_ss_tl?ref_=nav_signin&amp;&amp;linkCode=ll1&amp;tag=eleshis-22&amp;linkId=12c20401ddd3c71f971ac2330621cdd6">書籍の7章</a>
+で紹介したアニメーションをウィジェットで制御しています。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">Play</span><span class="p">,</span> <span class="n">Layout</span>
+<span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">figure</span>
+<span class="kn">from</span> <span class="nn">bokeh.io</span> <span class="kn">import</span> <span class="n">output_notebook</span><span class="p">,</span> <span class="n">show</span><span class="p">,</span> <span class="n">push_notebook</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">arange</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">pi</span>
 
 <span class="n">output_notebook</span><span class="p">()</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">line</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-<span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div class="bk-root">
-<a class="bk-logo bk-logo-small bk-logo-notebook" href="http://bokeh.pydata.org" target="_blank"></a>
-<span id="b3dbc3e4-de9d-4d03-9ce6-b4573f4ee515">Loading BokehJS ...</span>
-</div>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div id="19630141-9c91-4dd9-ae47-f5a5f122755b"></div>
-<div class="output_subarea output_javascript ">
-<script type="text/javascript">
-var element = $('#19630141-9c91-4dd9-ae47-f5a5f122755b');
-
-(function(global) {
-  function now() {
-    return new Date();
-  }
-
-  var force = true;
-
-  if (typeof (window._bokeh_onload_callbacks) === "undefined" || force === true) {
-    window._bokeh_onload_callbacks = [];
-    window._bokeh_is_loading = undefined;
-  }
 
 
-  
-  if (typeof (window._bokeh_timeout) === "undefined" || force === true) {
-    window._bokeh_timeout = Date.now() + 5000;
-    window._bokeh_failed_load = false;
-  }
+<span class="k">def</span> <span class="nf">calc_sin</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">i</span> <span class="o">/</span> <span class="mf">10.0</span><span class="p">)</span>
 
-  var NB_LOAD_WARNING = {'data': {'text/html':
-     "<div style='background-color: #fdd'>\n"+
-     "<p>\n"+
-     "BokehJS does not appear to have successfully loaded. If loading BokehJS from CDN, this \n"+
-     "may be due to a slow or bad network connection. Possible fixes:\n"+
-     "</p>\n"+
-     "<ul>\n"+
-     "<li>re-rerun `output_notebook()` to attempt to load from CDN again, or</li>\n"+
-     "<li>use INLINE resources instead, as so:</li>\n"+
-     "</ul>\n"+
-     "<code>\n"+
-     "from bokeh.resources import INLINE\n"+
-     "output_notebook(resources=INLINE)\n"+
-     "</code>\n"+
-     "</div>"}};
 
-  function display_loaded() {
-    if (window.Bokeh !== undefined) {
-      var el = document.getElementById("b3dbc3e4-de9d-4d03-9ce6-b4573f4ee515");
-      el.textContent = "BokehJS " + Bokeh.version + " successfully loaded.";
-    } else if (Date.now() < window._bokeh_timeout) {
-      setTimeout(display_loaded, 100)
-    }
-  }
+<span class="k">def</span> <span class="nf">update_graph</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+    <span class="n">r</span><span class="o">.</span><span class="n">data_source</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'x'</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="s1">'y'</span><span class="p">:</span> <span class="n">calc_sin</span><span class="p">(</span><span class="n">change</span><span class="p">[</span><span class="s1">'new'</span><span class="p">])}</span>
+    <span class="n">push_notebook</span><span class="p">(</span><span class="n">handle</span><span class="o">=</span><span class="n">t</span><span class="p">)</span>
 
-  function run_callbacks() {
-    try {
-      window._bokeh_onload_callbacks.forEach(function(callback) { callback() });
-    }
-    finally {
-      delete window._bokeh_onload_callbacks
-    }
-    console.info("Bokeh: all callbacks have finished");
-  }
 
-  function load_libs(js_urls, callback) {
-    window._bokeh_onload_callbacks.push(callback);
-    if (window._bokeh_is_loading > 0) {
-      console.log("Bokeh: BokehJS is being loaded, scheduling callback at", now());
-      return null;
-    }
-    if (js_urls == null || js_urls.length === 0) {
-      run_callbacks();
-      return null;
-    }
-    console.log("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
-    window._bokeh_is_loading = js_urls.length;
-    for (var i = 0; i < js_urls.length; i++) {
-      var url = js_urls[i];
-      var s = document.createElement('script');
-      s.src = url;
-      s.async = false;
-      s.onreadystatechange = s.onload = function() {
-        window._bokeh_is_loading--;
-        if (window._bokeh_is_loading === 0) {
-          console.log("Bokeh: all BokehJS libraries loaded");
-          run_callbacks()
-        }
-      };
-      s.onerror = function() {
-        console.warn("failed to load library " + url);
-      };
-      console.log("Bokeh: injecting script tag for BokehJS library: ", url);
-      document.getElementsByTagName("head")[0].appendChild(s);
-    }
-  };var element = document.getElementById("b3dbc3e4-de9d-4d03-9ce6-b4573f4ee515");
-  if (element == null) {
-    console.log("Bokeh: ERROR: autoload.js configured with elementid 'b3dbc3e4-de9d-4d03-9ce6-b4573f4ee515' but no matching script tag was found. ")
-    return false;
-  }
+<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">calc_sin</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 
-  var js_urls = ["https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.js", "https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.6.min.js"];
 
-  var inline_js = [
-    function(Bokeh) {
-      Bokeh.set_log_level("info");
-    },
-    
-    function(Bokeh) {
-      
-    },
-    
-    function(Bokeh) {
-      
-      document.getElementById("b3dbc3e4-de9d-4d03-9ce6-b4573f4ee515").textContent = "BokehJS is loading...";
-    },
-    function(Bokeh) {
-      console.log("Bokeh: injecting CSS: https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.css");
-      Bokeh.embed.inject_css("https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.css");
-      console.log("Bokeh: injecting CSS: https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.6.min.css");
-      Bokeh.embed.inject_css("https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.6.min.css");
-    }
-  ];
+<span class="n">play</span> <span class="o">=</span> <span class="n">Play</span><span class="p">(</span><span class="n">layout</span><span class="o">=</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s1">'20%'</span><span class="p">))</span>
+<span class="n">slider</span> <span class="o">=</span> <span class="n">IntSlider</span><span class="p">()</span>
+<span class="n">play</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">update_graph</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">'value'</span><span class="p">)</span>
 
-  function run_inline_js() {
-    
-    if ((window.Bokeh !== undefined) || (force === true)) {
-      for (var i = 0; i < inline_js.length; i++) {
-        inline_js[i](window.Bokeh);
-      }if (force === true) {
-        display_loaded();
-      }} else if (Date.now() < window._bokeh_timeout) {
-      setTimeout(run_inline_js, 100);
-    } else if (!window._bokeh_failed_load) {
-      console.log("Bokeh: BokehJS failed to load within specified timeout.");
-      window._bokeh_failed_load = true;
-    } else if (force !== true) {
-      var cell = $(document.getElementById("b3dbc3e4-de9d-4d03-9ce6-b4573f4ee515")).parents('.cell').data().cell;
-      cell.output_area.append_execute_result(NB_LOAD_WARNING)
-    }
+<span class="n">t</span> <span class="o">=</span> <span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">notebook_handle</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">play</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="Play のサンプルコード" src="./img/Play-sample-out.png"/>
+<p class="caption">Play のサンプルコード</p>
+</div>
+</div>
+<div class="section" id="datepicker">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_18"></div><h1>DatePicker</h1>
+<p>カレンダーから日付を入力します。以下のコードでは入力された日付とコンピュータの日付の差分を日数で出力しています。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">DatePicker</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
-  }
 
-  if (window._bokeh_is_loading === 0) {
-    console.log("Bokeh: BokehJS loaded, going straight to plotting");
-    run_inline_js();
-  } else {
-    load_libs(js_urls, function() {
-      console.log("Bokeh: BokehJS plotting callback run at", now());
-      run_inline_js();
-    });
-  }
-}(this));
-</script>
+<span class="k">def</span> <span class="nf">weekday</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+    <span class="n">clear_output</span><span class="p">()</span>
+    <span class="n">days_diff</span> <span class="o">=</span> <span class="p">(</span><span class="n">change</span><span class="p">[</span><span class="s1">'new'</span><span class="p">]</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">())</span><span class="o">.</span><span class="n">days</span>
+    <span class="k">if</span> <span class="n">days_diff</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">'{}日後'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">days_diff</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">'{}日前'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">days_diff</span><span class="p">)))</span>
+
+
+<span class="n">date_picker</span> <span class="o">=</span> <span class="n">DatePicker</span><span class="p">()</span>
+<span class="n">date_picker</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">weekday</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">'value'</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">date_picker</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="DatePicker のサンプルコード" src="./img/DatePicker-sample-out.png"/>
+<p class="caption">DatePicker のサンプルコード</p>
 </div>
 </div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div class="bk-root">
-<div class="bk-plotdiv" id="f62c60b9-5062-488c-8290-2cd645f3e770"></div>
-</div>
-<script type="text/javascript">
-  
-  (function(global) {
-    function now() {
-      return new Date();
-    }
-  
-    var force = false;
-  
-    if (typeof (window._bokeh_onload_callbacks) === "undefined" || force === true) {
-      window._bokeh_onload_callbacks = [];
-      window._bokeh_is_loading = undefined;
-    }
-  
-  
-    
-    if (typeof (window._bokeh_timeout) === "undefined" || force === true) {
-      window._bokeh_timeout = Date.now() + 0;
-      window._bokeh_failed_load = false;
-    }
-  
-    var NB_LOAD_WARNING = {'data': {'text/html':
-       "<div style='background-color: #fdd'>\n"+
-       "<p>\n"+
-       "BokehJS does not appear to have successfully loaded. If loading BokehJS from CDN, this \n"+
-       "may be due to a slow or bad network connection. Possible fixes:\n"+
-       "</p>\n"+
-       "<ul>\n"+
-       "<li>re-rerun `output_notebook()` to attempt to load from CDN again, or</li>\n"+
-       "<li>use INLINE resources instead, as so:</li>\n"+
-       "</ul>\n"+
-       "<code>\n"+
-       "from bokeh.resources import INLINE\n"+
-       "output_notebook(resources=INLINE)\n"+
-       "</code>\n"+
-       "</div>"}};
-  
-    function display_loaded() {
-      if (window.Bokeh !== undefined) {
-        var el = document.getElementById("f62c60b9-5062-488c-8290-2cd645f3e770");
-        el.textContent = "BokehJS " + Bokeh.version + " successfully loaded.";
-      } else if (Date.now() < window._bokeh_timeout) {
-        setTimeout(display_loaded, 100)
-      }
-    }
-  
-    function run_callbacks() {
-      try {
-        window._bokeh_onload_callbacks.forEach(function(callback) { callback() });
-      }
-      finally {
-        delete window._bokeh_onload_callbacks
-      }
-      console.info("Bokeh: all callbacks have finished");
-    }
-  
-    function load_libs(js_urls, callback) {
-      window._bokeh_onload_callbacks.push(callback);
-      if (window._bokeh_is_loading > 0) {
-        console.log("Bokeh: BokehJS is being loaded, scheduling callback at", now());
-        return null;
-      }
-      if (js_urls == null || js_urls.length === 0) {
-        run_callbacks();
-        return null;
-      }
-      console.log("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
-      window._bokeh_is_loading = js_urls.length;
-      for (var i = 0; i < js_urls.length; i++) {
-        var url = js_urls[i];
-        var s = document.createElement('script');
-        s.src = url;
-        s.async = false;
-        s.onreadystatechange = s.onload = function() {
-          window._bokeh_is_loading--;
-          if (window._bokeh_is_loading === 0) {
-            console.log("Bokeh: all BokehJS libraries loaded");
-            run_callbacks()
-          }
-        };
-        s.onerror = function() {
-          console.warn("failed to load library " + url);
-        };
-        console.log("Bokeh: injecting script tag for BokehJS library: ", url);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      }
-    };var element = document.getElementById("f62c60b9-5062-488c-8290-2cd645f3e770");
-    if (element == null) {
-      console.log("Bokeh: ERROR: autoload.js configured with elementid 'f62c60b9-5062-488c-8290-2cd645f3e770' but no matching script tag was found. ")
-      return false;
-    }
-  
-    var js_urls = [];
-  
-    var inline_js = [
-      function(Bokeh) {
-        (function() {
-          var fn = function() {
-            var docs_json = {"37e2183f-9263-4fb1-bc75-03672da6fd64":{"roots":{"references":[{"attributes":{"formatter":{"id":"15629645-d4d1-47b4-ba06-16d18fd37284","type":"BasicTickFormatter"},"plot":{"id":"64f53146-3933-436b-9b59-3d549f02e7db","subtype":"Figure","type":"Plot"},"ticker":{"id":"9c904177-20c0-4360-b102-e4bfc3e79601","type":"BasicTicker"}},"id":"7f3d6030-fa5f-4007-9eab-8ea1df9a9839","type":"LinearAxis"},{"attributes":{},"id":"9c904177-20c0-4360-b102-e4bfc3e79601","type":"BasicTicker"},{"attributes":{"dimension":1,"plot":{"id":"64f53146-3933-436b-9b59-3d549f02e7db","subtype":"Figure","type":"Plot"},"ticker":{"id":"9c904177-20c0-4360-b102-e4bfc3e79601","type":"BasicTicker"}},"id":"760e39ef-ef94-48d5-aead-32dc018e231b","type":"Grid"},{"attributes":{},"id":"8dc04405-53e6-42ad-9cad-4844f6e1f2b9","type":"BasicTickFormatter"},{"attributes":{"plot":null,"text":""},"id":"746806ae-254d-422b-8088-9a8f0c93123e","type":"Title"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"plot":null,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"ac9e8961-2d0b-4048-a847-e545e62b432d","type":"BoxAnnotation"},{"attributes":{"callback":null},"id":"8ef882f7-1ffa-4b75-925c-aea0bb859919","type":"DataRange1d"},{"attributes":{"data_source":{"id":"0308c1fe-a15a-4f87-a265-ae6e4314dfd3","type":"ColumnDataSource"},"glyph":{"id":"1514ff88-c7b4-4d2c-898d-bb66fa7d1e80","type":"Line"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"04cd4079-766b-4f98-b05e-4480004a6fa1","type":"Line"},"selection_glyph":null},"id":"e9b83f8d-f503-4c90-8738-ef1dd433c9a1","type":"GlyphRenderer"},{"attributes":{},"id":"15629645-d4d1-47b4-ba06-16d18fd37284","type":"BasicTickFormatter"},{"attributes":{"plot":{"id":"64f53146-3933-436b-9b59-3d549f02e7db","subtype":"Figure","type":"Plot"}},"id":"81765b08-ddec-4093-8ce6-330d74177467","type":"PanTool"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"81765b08-ddec-4093-8ce6-330d74177467","type":"PanTool"},{"id":"82551ace-0a63-43b8-b6bb-a645fbe677fa","type":"WheelZoomTool"},{"id":"1989872e-ccd2-4d01-9f05-bf0de148307b","type":"BoxZoomTool"},{"id":"d7badbef-82b3-4434-b377-de196923e6b8","type":"SaveTool"},{"id":"0f748fe1-ae19-46cf-8821-c11c97e2cab7","type":"ResetTool"},{"id":"4e4a92c1-ddd3-4d02-bc83-d6aa97915a79","type":"HelpTool"}]},"id":"39ff36eb-0538-42f7-beb3-8fe006bebe58","type":"Toolbar"},{"attributes":{"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"x":{"field":"x"},"y":{"field":"y"}},"id":"04cd4079-766b-4f98-b05e-4480004a6fa1","type":"Line"},{"attributes":{"plot":{"id":"64f53146-3933-436b-9b59-3d549f02e7db","subtype":"Figure","type":"Plot"}},"id":"82551ace-0a63-43b8-b6bb-a645fbe677fa","type":"WheelZoomTool"},{"attributes":{"below":[{"id":"f53a2ed2-9dab-463b-88b2-ac82d7d6e765","type":"LinearAxis"}],"left":[{"id":"7f3d6030-fa5f-4007-9eab-8ea1df9a9839","type":"LinearAxis"}],"plot_height":200,"plot_width":200,"renderers":[{"id":"f53a2ed2-9dab-463b-88b2-ac82d7d6e765","type":"LinearAxis"},{"id":"224db89f-9f2e-46c7-b3ee-7e31698486da","type":"Grid"},{"id":"7f3d6030-fa5f-4007-9eab-8ea1df9a9839","type":"LinearAxis"},{"id":"760e39ef-ef94-48d5-aead-32dc018e231b","type":"Grid"},{"id":"ac9e8961-2d0b-4048-a847-e545e62b432d","type":"BoxAnnotation"},{"id":"e9b83f8d-f503-4c90-8738-ef1dd433c9a1","type":"GlyphRenderer"}],"title":{"id":"746806ae-254d-422b-8088-9a8f0c93123e","type":"Title"},"tool_events":{"id":"d631be77-f384-48d2-a107-0cd2ba0d1f71","type":"ToolEvents"},"toolbar":{"id":"39ff36eb-0538-42f7-beb3-8fe006bebe58","type":"Toolbar"},"x_range":{"id":"8ef882f7-1ffa-4b75-925c-aea0bb859919","type":"DataRange1d"},"x_scale":{"id":"a1d4b264-064f-418f-bd55-f77c52e812cd","type":"LinearScale"},"y_range":{"id":"e96e6dbf-7389-471d-bca8-d0f6886f662e","type":"DataRange1d"},"y_scale":{"id":"d9924aab-1b90-4c12-bbde-b37549dd9148","type":"LinearScale"}},"id":"64f53146-3933-436b-9b59-3d549f02e7db","subtype":"Figure","type":"Plot"},{"attributes":{"callback":null},"id":"e96e6dbf-7389-471d-bca8-d0f6886f662e","type":"DataRange1d"},{"attributes":{"overlay":{"id":"ac9e8961-2d0b-4048-a847-e545e62b432d","type":"BoxAnnotation"},"plot":{"id":"64f53146-3933-436b-9b59-3d549f02e7db","subtype":"Figure","type":"Plot"}},"id":"1989872e-ccd2-4d01-9f05-bf0de148307b","type":"BoxZoomTool"},{"attributes":{"plot":{"id":"64f53146-3933-436b-9b59-3d549f02e7db","subtype":"Figure","type":"Plot"}},"id":"d7badbef-82b3-4434-b377-de196923e6b8","type":"SaveTool"},{"attributes":{},"id":"a1d4b264-064f-418f-bd55-f77c52e812cd","type":"LinearScale"},{"attributes":{"callback":null,"column_names":["x","y"],"data":{"x":[1,2,3],"y":[3,2,1]}},"id":"0308c1fe-a15a-4f87-a265-ae6e4314dfd3","type":"ColumnDataSource"},{"attributes":{"line_color":{"value":"#1f77b4"},"x":{"field":"x"},"y":{"field":"y"}},"id":"1514ff88-c7b4-4d2c-898d-bb66fa7d1e80","type":"Line"},{"attributes":{"plot":{"id":"64f53146-3933-436b-9b59-3d549f02e7db","subtype":"Figure","type":"Plot"}},"id":"0f748fe1-ae19-46cf-8821-c11c97e2cab7","type":"ResetTool"},{"attributes":{"plot":{"id":"64f53146-3933-436b-9b59-3d549f02e7db","subtype":"Figure","type":"Plot"}},"id":"4e4a92c1-ddd3-4d02-bc83-d6aa97915a79","type":"HelpTool"},{"attributes":{},"id":"d9924aab-1b90-4c12-bbde-b37549dd9148","type":"LinearScale"},{"attributes":{},"id":"d631be77-f384-48d2-a107-0cd2ba0d1f71","type":"ToolEvents"},{"attributes":{"formatter":{"id":"8dc04405-53e6-42ad-9cad-4844f6e1f2b9","type":"BasicTickFormatter"},"plot":{"id":"64f53146-3933-436b-9b59-3d549f02e7db","subtype":"Figure","type":"Plot"},"ticker":{"id":"d09dbfd7-1c53-4a59-98ed-9093d117bf21","type":"BasicTicker"}},"id":"f53a2ed2-9dab-463b-88b2-ac82d7d6e765","type":"LinearAxis"},{"attributes":{},"id":"d09dbfd7-1c53-4a59-98ed-9093d117bf21","type":"BasicTicker"},{"attributes":{"plot":{"id":"64f53146-3933-436b-9b59-3d549f02e7db","subtype":"Figure","type":"Plot"},"ticker":{"id":"d09dbfd7-1c53-4a59-98ed-9093d117bf21","type":"BasicTicker"}},"id":"224db89f-9f2e-46c7-b3ee-7e31698486da","type":"Grid"}],"root_ids":["64f53146-3933-436b-9b59-3d549f02e7db"]},"title":"Bokeh Application","version":"0.12.6"}};
-            var render_items = [{"docid":"37e2183f-9263-4fb1-bc75-03672da6fd64","elementid":"f62c60b9-5062-488c-8290-2cd645f3e770","modelid":"64f53146-3933-436b-9b59-3d549f02e7db"}];
-            
-            Bokeh.embed.embed_items(docs_json, render_items);
-          };
-          if (document.readyState != "loading") fn();
-          else document.addEventListener("DOMContentLoaded", fn);
-        })();
-      },
-      function(Bokeh) {
-      }
-    ];
-  
-    function run_inline_js() {
-      
-      if ((window.Bokeh !== undefined) || (force === true)) {
-        for (var i = 0; i < inline_js.length; i++) {
-          inline_js[i](window.Bokeh);
-        }if (force === true) {
-          display_loaded();
-        }} else if (Date.now() < window._bokeh_timeout) {
-        setTimeout(run_inline_js, 100);
-      } else if (!window._bokeh_failed_load) {
-        console.log("Bokeh: BokehJS failed to load within specified timeout.");
-        window._bokeh_failed_load = true;
-      } else if (force !== true) {
-        var cell = $(document.getElementById("f62c60b9-5062-488c-8290-2cd645f3e770")).parents('.cell').data().cell;
-        cell.output_area.append_execute_result(NB_LOAD_WARNING)
-      }
-  
-    }
-  
-    if (window._bokeh_is_loading === 0) {
-      console.log("Bokeh: BokehJS loaded, going straight to plotting");
-      run_inline_js();
-    } else {
-      load_libs(js_urls, function() {
-        console.log("Bokeh: BokehJS plotting callback run at", now());
-        run_inline_js();
-      });
-    }
-  }(this));
-</script>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>このようにJSが必要なnotebookもレンダリングされています。</p>
-<p>やり方は非常に簡単で <a href="https://miyadaiku.github.io/ja/guide/article.html#h_ja_guide_article_2erst_12">公式ドキュメント</a> に記載されているとおりです。</p>
-</div>
-</div>
+<div class="section" id="colorpicker">
+<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_19"></div><h1>ColorPicker</h1>
+<p>見本リストから色を選択します。値は16進数のRGB表記です。以下のコードでは選択された色を10進数のRGB表記に変換し、HTML
+で表示しています。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">ColorPicker</span><span class="p">,</span> <span class="n">jslink</span>
+
+
+<span class="k">def</span> <span class="nf">change_color</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+    <span class="n">color16</span> <span class="o">=</span> <span class="n">change</span><span class="p">[</span><span class="s1">'new'</span><span class="p">]</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">color16</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">color16</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">color16</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span>
+    <span class="n">html_text</span> <span class="o">=</span> <span class="s1">'&lt;font color={0}&gt;R:{1}, G:{2}, B:{3}&lt;/font&gt;'</span>
+    <span class="n">html_text</span> <span class="o">=</span> <span class="n">html_text</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">color16</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="n">color_text</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">html_text</span>
+
+
+<span class="n">color_picker</span> <span class="o">=</span> <span class="n">ColorPicker</span><span class="p">()</span>
+<span class="n">color_text</span> <span class="o">=</span> <span class="n">HTML</span><span class="p">()</span>
+<span class="n">color_picker</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">change_color</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">'value'</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">color_picker</span><span class="p">,</span> <span class="n">color_text</span><span class="p">)</span></code></pre>
+<div class="figure">
+<img alt="DatePicker のサンプルコード" src="./img/ColorPicker-sample-out.png"/>
+<p class="caption">DatePicker のサンプルコード</p>
 </div>
 </div>
 </div>
 
 <div class="sns">
   <!-- twitter -->
-<a target="_blank" href='https://twitter.com/share?url=https://drillan.github.io/notebooks/bokeh_sample.html&amp;via=patraqushe&amp;text=Jupyter Notebookサンプル'>
+<a target="_blank" href='https://twitter.com/share?url=https://drillan.github.io/articles/jupyterbook_reject03a.html&amp;via=patraqushe&amp;text=Jupyter本没原稿集#2.2 ipywidgets#2'>
     <i class="fa fa-twitter" aria-hidden="true"></i>
 </a>
 
 <!-- facebook -->
-<a target="_blank" href='https://www.facebook.com/sharer/sharer.php?u=https://drillan.github.io/notebooks/bokeh_sample.html'>
+<a target="_blank" href='https://www.facebook.com/sharer/sharer.php?u=https://drillan.github.io/articles/jupyterbook_reject03a.html'>
     <i class="fa fa-facebook-official" aria-hidden="true"></i>
 </a>
 
 <!-- google+ -->
-<a target="_blank" href='https://plus.google.com/share?url=https://drillan.github.io/notebooks/bokeh_sample.html'>
+<a target="_blank" href='https://plus.google.com/share?url=https://drillan.github.io/articles/jupyterbook_reject03a.html'>
     <i class="fa fa-google-plus" aria-hidden="true"></i>
 </a>
 
 <!-- hatena bookmark -->
-<a target="_blank" href='http://b.hatena.ne.jp/entry/https://drillan.github.io/notebooks/bokeh_sample.html'>
+<a target="_blank" href='http://b.hatena.ne.jp/entry/https://drillan.github.io/articles/jupyterbook_reject03a.html'>
     <i class="fa-hatebu"></i>
 </a>
 </div>
