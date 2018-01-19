@@ -11807,6 +11807,24 @@ div#notebook {
   <div class="articles">
     
       <div class="article-metadata">
+    <span class="article-date"> 2018-01-19 </span>
+    <span>  </span>
+    <span> python,jupyter,ipywidgets </span>
+  </div>
+      <h2 class="article-title"><a href="articles/jupyterbook_reject03.html">Jupyter本没原稿集#2.2 ipywidgets#2</a></h2>
+      <div class="article-body"><p>ボツネタ供養の第三弾です。<a href="https://drillan.github.io/articles/jupyterbook_reject02.html">前回</a>から大分間が空いてしまいました。申し訳ありません...<br/>
+今回は残りすべてのウィジェットを紹介します。</p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_1"></div><h3>ToggleButton</h3>
+<p>トグルボタンです。ボタンをクリックすると真偽値が切り替わり、状態が保持されます。以下のコードでは2つの値の論理積を出力しています。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import ToggleButton
+
+
+def x_and_y(change):
+    clear_output()
+    print(toggle_button_x.value &amp; toggle_button_y.va</pre></div></div>
+      <a href="articles/jupyterbook_reject03.html">続きを読む</a>
+    
+      <div class="article-metadata">
     <span class="article-date"> 2017-12-01 </span>
     <span>  </span>
     <span> python,docker </span>
@@ -11903,54 +11921,6 @@ div#notebook {
 <p>テンプレどおりのグラフなんてつまらない、プレゼンで差をつけたい、なんて場合にはカスタマイズしたグラフに挑戦してみましょう。</p></div></div></div></div></div>
       <a href="notebooks/jupyterbook_rejected01.html">続きを読む</a>
     
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-11 </span>
-    <span>  </span>
-    <span> python,jupyter,matplotlib,bokeh </span>
-  </div>
-      <h2 class="article-title"><a href="notebooks/jupyterbook01.html">著者が語るJupyter本の読みどころ</a></h2>
-      <div class="article-body"><div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>ご縁があって、 <a href="http://amzn.to/2wRwPYB">PythonユーザのためのJupyter[実践]入門</a> という書籍を共著で執筆させていただきました。</p>
-<p>本記事では本書の読みどころなどについて、勢いに任せた乱筆ですがつらつらと語っていきたいと思います。</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_jupyterbook01_2eipynb_1"></div><h1 id="本書の目的">本書の目的<a class="anchor-link" href="#本書の目的">¶</a></h1><p>本書の3ページ「はじめに」を全文掲載します。まさにここに書かれていることが本書を読む動機となると思います。書店などで本書を手にとってパラパラ見ていだければ雰囲気はつかめると思います。</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>本書は、「Jupyter Notebook」の使い方と「データの可視化」にフォーカスを当てた書籍です。 Jupyter NotebookはPythonで実装されたオープンソースソフトウェア（OSS）です。Jupyter Notebookはデータ分析ツールとして、あるいはPythonの学習環境として多くのユーザに利用されています。</p></blockquote></div></div></div></div></div>
-      <a href="notebooks/jupyterbook01.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-03 </span>
-    <span>  </span>
-    <span> python,miyadaiku </span>
-  </div>
-      <h2 class="article-title"><a href="articles/renew_blog.html">ブログをリニューアルしました</a></h2>
-      <div class="article-body"><div class="section" id="miyadaiku">
-<div class="header_target" id="h_articles_renew_blog_2erst_1"></div><h1>Miyadaiku に乗り換えた理由</h1>
-<p>これまでは静的サイトジェネレータとして <a class="reference external" href="http://docs.getpelican.com">Pelican</a> を使用していましたが <a class="reference external" href="https://miyadaiku.github.io">Miyadaiku</a> に乗り換えました。</p>
-<p>Miyadaiku は Python 製の静的サイトジェネレータです。当初は ipynb ファイルが最初から扱える <a class="reference external" href="https://getnikola.com">Nikola</a> に乗り換える予定でしたが、下記のような理由で Miyadaiku を採用しました。</p>
-<dl class="simple">
-<dt>Jinja2 が使える</dt>
-<dd><p>Jinja2 は Python 製のテンプレートエンジンです。
-従来の静的サイトやブログでは記事の内容やテンプレートをベタ書きする必要がありました。
-共通部分をテンプレート化することで生産性が上がりそうです。</p></dd></dl></div></div>
-      <a href="articles/renew_blog.html">続きを読む</a>
-    
   </div>
 
   <div class="index-pagination">
@@ -11959,7 +11929,8 @@ div#notebook {
     
     
     
-      <span class="index-navi disabled-link">&rarr;</span>
+      <a class="index-navi"
+         href="index_tag_tags_python_2.html">&rarr;</a>
     
   </div>
 

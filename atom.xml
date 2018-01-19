@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>drillerの部屋</title><link href="https://drillan.github.io/" rel="alternate"></link><link href="https://drillan.github.io/atom.xml" rel="self"></link><id>https://drillan.github.io/</id><updated>2017-12-20T00:00:00+09:00</updated><entry><title>あまり紹介されていない可視化ツールを試す</title><link href="https://drillan.github.io/notebooks/jupyter_advent_calendar_2017.html" rel="alternate"></link><published>2017-12-20T00:00:00+09:00</published><updated>2017-12-20T00:00:00+09:00</updated><id>tag:drillan.github.io,2017-12-20:/notebooks/jupyter_advent_calendar_2017.html</id><summary type="html">&lt;div&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>drillerの部屋</title><link href="https://drillan.github.io/" rel="alternate"></link><link href="https://drillan.github.io/atom.xml" rel="self"></link><id>https://drillan.github.io/</id><updated>2018-01-19T18:00:00+09:00</updated><entry><title>Jupyter本没原稿集#2.2 ipywidgets#2</title><link href="https://drillan.github.io/articles/jupyterbook_reject03.html" rel="alternate"></link><published>2018-01-19T18:00:00+09:00</published><updated>2018-01-19T18:00:00+09:00</updated><id>tag:drillan.github.io,2018-01-19:/articles/jupyterbook_reject03.html</id><summary type="html">&lt;p&gt;ボツネタ供養の第三弾です。&lt;a href="https://drillan.github.io/articles/jupyterbook_reject02.html"&gt;前回&lt;/a&gt;から大分間が空いてしまいました。申し訳ありません...&lt;br/&gt;
+今回は残りすべてのウィジェットを紹介します。&lt;/p&gt;
+&lt;div class="header_target" id="h_articles_jupyterbook_reject03_2emd_1"&gt;&lt;/div&gt;&lt;h3&gt;ToggleButton&lt;/h3&gt;
+&lt;p&gt;トグルボタンです。ボタンをクリックすると真偽値が切り替わり、状態が保持されます。以下のコードでは2つの値の論理積を出力しています。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;from ipywidgets import ToggleButton
+
+
+def x_and_y(change):
+    clear_output()
+    print(toggle_button_x.value &amp;amp; toggle_button_y.va&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>あまり紹介されていない可視化ツールを試す</title><link href="https://drillan.github.io/notebooks/jupyter_advent_calendar_2017.html" rel="alternate"></link><published>2017-12-20T00:00:00+09:00</published><updated>2017-12-20T00:00:00+09:00</updated><id>tag:drillan.github.io,2017-12-20:/notebooks/jupyter_advent_calendar_2017.html</id><summary type="html">&lt;div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -144,7 +153,7 @@
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="5b503501-b4ee-4700-bdf9-73e830b3b6c7"&gt;&lt;/div&gt;
+&lt;div id="62581668-acdd-44fb-93ff-60dba7780bd1"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 
 &lt;/div&gt;

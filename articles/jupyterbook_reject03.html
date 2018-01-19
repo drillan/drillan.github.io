@@ -2,15 +2,15 @@
 <html lang="ja-JP">
 <head>
   
-
+  
   
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>index_tag - drillerの部屋</title>
+    <title>Jupyter本没原稿集#2.2 ipywidgets#2 - drillerの部屋</title>
   
   <link href="https://drillan.github.io/atom.xml" type="application/atom+xml" rel="alternate" title="Atom Feed" />
-  <link rel="stylesheet" href="static/css/article.css">
-  <link rel="stylesheet" href="static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/css/article.css">
+  <link rel="stylesheet" href="../static/css/font-awesome.min.css">
 
   <!-- set ipynb headers -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
@@ -11778,18 +11778,19 @@ div#notebook {
         }
     });
     </script>
-  <meta property="og:url" content="https://drillan.github.io/index_tag_tags_.html" />
+  <meta property="og:url" content="https://drillan.github.io/articles/jupyterbook_reject03.html" />
 <meta property="og:locale" content="ja-JP" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="index_tag - drillerの部屋" />
+<meta property="og:title" content="Jupyter本没原稿集#2.2 ipywidgets#2 - drillerの部屋" />
 
-<meta name="description" content=""/>
-<meta property="og:description" content="" />
+<meta name="description" content="ボツネタ供養の第三弾です。前回から大分間が空いてしまいました。申し訳ありません... 今回は残りすべてのウィジェットを紹介します。 ToggleButton トグルボタンです。ボタンをクリックすると真偽値が切り替わり、状態が保持されます。以下のコードでは2つの値の論理積を出力しています。 from ipywidgets import ToggleButton def x_and_y(change): clear_output() print(toggle_button_x.value &amp; toggle_button_y.va"/>
+<meta property="og:description" content="ボツネタ供養の第三弾です。前回から大分間が空いてしまいました。申し訳ありません... 今回は残りすべてのウィジェットを紹介します。 ToggleButton トグルボタンです。ボタンをクリックすると真偽値が切り替わり、状態が保持されます。以下のコードでは2つの値の論理積を出力しています。 from ipywidgets import ToggleButton def x_and_y(change): clear_output() print(toggle_button_x.value &amp; toggle_button_y.va" />
 
-
-  <link rel="stylesheet" href="static/css/bootstrap-solarized-light.css">
-  <link rel="stylesheet" href="static/css/custom.css">
+<meta property="article:published_time" content="2018-01-19T18:00:00+09:00" />
+  <link rel="stylesheet" href="../static/css/bootstrap-solarized-light.css">
+  <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/css/custom.css">
 
 </head>
 
@@ -11797,147 +11798,322 @@ div#notebook {
   
 <div class="container">
   <h1 class="index-title">
-    <a href="index.html">drillerの部屋</a>
+    <a href="../index.html">drillerの部屋</a>
   </h1>
 
   <div class="container-inner">
     <div class="container-body">
       
+<div class="article-metadata">
+    <span class="article-date"> 2018-01-19 </span>
+    <span>  </span>
+    <span> python,jupyter,ipywidgets </span>
+  </div>
+<h1 class="article-title">
+  Jupyter本没原稿集#2.2 ipywidgets#2
+</h1>
 
-  <div class="articles">
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-16 </span>
-    <span>  </span>
-    <span> python,jupyter,bokeh </span>
-  </div>
-      <h2 class="article-title"><a href="notebooks/jupyterbook_rejected01.html">Jupyter本の没原稿集 #1 Bokehで凝った円グラフを描画する</a></h2>
-      <div class="article-body"><div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_jupyterbook_rejected01_2eipynb_1"></div><h2 id="ボツネタとは">ボツネタとは<a class="anchor-link" href="#ボツネタとは">¶</a></h2><p><a href="http://amzn.to/2x48I6J">Jupyter本</a> にはページ数の都合で入り切らなかった内容を紹介する企画第一弾です。<br/>
-涙をのみながらボツにした原稿を少しカジュアルにして本ブログで復活させます。</p>
-<div class="header_target" id="h_notebooks_jupyterbook_rejected01_2eipynb_2"></div><h2 id="Bokeh-で凝った円グラフを描画する">Bokeh で凝った円グラフを描画する<a class="anchor-link" href="#Bokeh-で凝った円グラフを描画する">¶</a></h2><p>今回は Bokeh を使用して、下記の要件を満たす円グラフを描画してみます。</p>
-<ul>
-<li>要素数が多いため、上位のみを表示する</li>
-<li>上位以外はテキストを表示せず、目立たない表示にする(徐々にグレイアウト)</li>
-<li>テキストの書式を設定する</li>
-</ul>
-<p>テンプレどおりのグラフなんてつまらない、プレゼンで差をつけたい、なんて場合にはカスタマイズしたグラフに挑戦してみましょう。</p></div></div></div></div></div>
-      <a href="notebooks/jupyterbook_rejected01.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-11 </span>
-    <span>  </span>
-    <span> python,jupyter,matplotlib,bokeh </span>
-  </div>
-      <h2 class="article-title"><a href="notebooks/jupyterbook01.html">著者が語るJupyter本の読みどころ</a></h2>
-      <div class="article-body"><div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>ご縁があって、 <a href="http://amzn.to/2wRwPYB">PythonユーザのためのJupyter[実践]入門</a> という書籍を共著で執筆させていただきました。</p>
-<p>本記事では本書の読みどころなどについて、勢いに任せた乱筆ですがつらつらと語っていきたいと思います。</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_jupyterbook01_2eipynb_1"></div><h1 id="本書の目的">本書の目的<a class="anchor-link" href="#本書の目的">¶</a></h1><p>本書の3ページ「はじめに」を全文掲載します。まさにここに書かれていることが本書を読む動機となると思います。書店などで本書を手にとってパラパラ見ていだければ雰囲気はつかめると思います。</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>本書は、「Jupyter Notebook」の使い方と「データの可視化」にフォーカスを当てた書籍です。 Jupyter NotebookはPythonで実装されたオープンソースソフトウェア（OSS）です。Jupyter Notebookはデータ分析ツールとして、あるいはPythonの学習環境として多くのユーザに利用されています。</p></blockquote></div></div></div></div></div>
-      <a href="notebooks/jupyterbook01.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-02 </span>
-    <span>  </span>
-    <span> jupyter,bokeh </span>
-  </div>
-      <h2 class="article-title"><a href="notebooks/bokeh_sample.html">Jupyter Notebookサンプル</a></h2>
-      <div class="article-body"><div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://miyadaiku.github.io">Miyadaiku</a> では Jupyter Notebook の ipynb ファイルをそのままサイトまたはブログの記事として投稿できます。</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [1]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="k">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">output_notebook</span><span class="p">,</span> <span class="n">show</span>
+<div class="article-body">
+  <p>ボツネタ供養の第三弾です。<a href="https://drillan.github.io/articles/jupyterbook_reject02.html">前回</a>から大分間が空いてしまいました。申し訳ありません...<br/>
+今回は残りすべてのウィジェットを紹介します。</p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_1"></div><h3>ToggleButton</h3>
+<p>トグルボタンです。ボタンをクリックすると真偽値が切り替わり、状態が保持されます。以下のコードでは2つの値の論理積を出力しています。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import ToggleButton
 
-<span class="n">output_notebook</span><span class="p">()</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">line</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-<span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+def x_and_y(change):
+    clear_output()
+    print(toggle_button_x.value &amp; toggle_button_y.value)
+
+
+toggle_button_x = ToggleButton(description='x')
+toggle_button_y = ToggleButton(description='y')
+toggle_button_x.observe(x_and_y, names='value')
+toggle_button_y.observe(x_and_y, names='value')
+display(toggle_button_x, toggle_button_y)
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div class="bk-root">
-<a class="bk-logo bk-logo-small bk-logo-notebook" href="http://bokeh.pydata.org" target="_blank"></a>
-<span id="b3dbc3e4-de9d-4d03-9ce6-b4573f4ee515">Loading BokehJS ...</span>
-</div>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div id="62581668-acdd-44fb-93ff-60dba7780bd1"></div>
-<div class="output_subarea output_javascript ">
+<p><img alt="ToggleButton のサンプルコード" src="./img/ToggleButton-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_2"></div><h3>Checkbox</h3>
+<p>チェックボックスです。チェックをした状態が <code>True</code>、チェックを外した状態が <code>Fales</code> となります。以下のコードでは2つの値の論理積を出力しています。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import Checkbox
 
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div class="bk-root">
-<div class="bk-plotdiv" id="f62c60b9-5062-488c-8290-2cd645f3e770"></div>
+
+def x_and_y(change):
+    clear_output()
+    print(checkbox_x.value &amp; checkbox_y.value)
+
+
+checkbox_x = Checkbox(description='x')
+checkbox_y = Checkbox(description='y')
+checkbox_x.observe(x_and_y, names='value')
+checkbox_y.observe(x_and_y, names='value')
+display(checkbox_x, checkbox_y)
+</pre></div>
+<p><img alt="Checkbox のサンプルコード" src="./img/Checkbox-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_3"></div><h3>Valid</h3>
+<p>真偽値の状態を示すインジケータです。このインスタンスに対して変更はできません。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import Valid
+
+
+def is_valid(change):
+    valid.value = change['new']
+
+
+checkbox_valid = Checkbox(description='valid')
+valid = Valid(value=False)
+checkbox_valid.observe(is_valid, names='value')
+display(checkbox_valid, valid)
+</pre></div>
+<p><img alt="widgets_name のサンプルコード" src="./img/widgets_name-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_4"></div><h3>Dropdown</h3>
+<p>ドロップダウンから値を選択します。以下のコードはキャラクター名を選択するとそのキャラクターの正体が出力されます。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import Dropdown
+
+
+def sos(change):
+    clear_output()
+    ans = &amp;#123;'朝比奈': '未来人', '長門': '宇宙人', '古泉': '超能力者'&amp;#125;
+    print(ans[change['new']])
+
+
+dropdown = Dropdown(options=['朝比奈', '長門', '古泉'])
+dropdown.observe(sos, names='value')
+display(dropdown)
+</pre></div>
+<p><img alt="Dropdown のサンプルコード" src="./img/Dropdown-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_5"></div><h3>RadioButtons</h3>
+<p>ラジオボタンから値を選択します。以下のコードはキャラクター名を選択するとそのキャラクターの正体が出力されます。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import RadioButtons
+
+radio_buttons = RadioButtons(options=['朝比奈', '長門', '古泉'])
+radio_buttons.observe(sos, names='value')
+display(radio_buttons)
+</pre></div>
+<p><img alt="Dropdown のサンプルコード" src="./img/RadioButtons-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_6"></div><h3>Select</h3>
+<p>リストボックスから値を選択します。以下のコードはキャラクター名を選択するとそのキャラクターの正体が出力されます。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import Select
+
+select = Select(options=['朝比奈', '長門', '古泉'])
+select.observe(sos, names='value')
+display(select)
+</pre></div>
+<p><img alt="Select のサンプルコード" src="./img/Select-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_7"></div><h3>SelectionSlider</h3>
+<p>スライダから値を選択します。以下のコードはキャラクター名を選択するとそのキャラクターの正体が出力されます。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import SelectionSlider
+
+selection_slider = SelectionSlider(options=['朝比奈', '長門', '古泉'])
+selection_slider.observe(sos, names='value')
+display(selection_slider)
+</pre></div>
+<p><img alt="SelectionSlider のサンプルコード" src="./img/SelectionSlider-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_8"></div><h3>ToggleButtons</h3>
+<p>トグルボタンから値を選択します。以下のコードはキャラクター名を選択するとそのキャラクターの正体が出力されます。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import ToggleButtons
+
+toggle_buttons = ToggleButtons(options=['朝比奈', '長門', '古泉'])
+toggle_buttons.observe(sos, names='value')
+display(toggle_buttons)
+</pre></div>
+<p><img alt="ToggleButtons のサンプルコード" src="./img/ToggleButtons-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_9"></div><h3>SelectMultiple</h3>
+<p><code>Ctrl</code> キーまたは <code>Shift</code> キーを押しながら複数の値を選択できます。以下のコードは定義した辞書から組み合わせに応じた結果が出力されます。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import SelectMultiple
+
+
+def relation(change):
+    clear_output()
+    ans = &amp;#123;('岡部倫太郎',): '鳳凰院凶真', ('阿万音鈴羽',): '未来人', ('橋田至',): 'スーパーハカー',
+           ('岡部倫太郎', '阿万音鈴羽'): 'バイト戦士', ('岡部倫太郎', '橋田至'): 'ダル',
+          ('阿万音鈴羽', '橋田至'): '親子', ('岡部倫太郎', '阿万音鈴羽', '橋田至'): 'ラボメン'&amp;#125;
+    print(ans[change['new']])
+
+
+select_multiple = SelectMultiple(options=['岡部倫太郎', '阿万音鈴羽', '橋田至'])
+select_multiple.observe(relation, names='value')
+display(select_multiple)
+</pre></div>
+<p><img alt="SelectMultiple のサンプルコード" src="./img/SelectMultiple-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_10"></div><h3>Text</h3>
+<p>テキストボックスです。以下のコードでは入力した文字列を式として評価した結果を出力します。<code>.on_submit()</code> メソッドはテキストボックス上で <code>Enter</code> キーが入力されたイベントをハンドリングします。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import Text
+
+def calc(submit):
+    clear_output()
+    try:
+        print(eval(submit.value))
+    except Exception:
+        print('Error')
+
+text = Text()
+text.on_submit(calc)
+display(text)
+</pre></div>
+<p><img alt="Text のサンプルコード" src="./img/Text-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_11"></div><h3>Textarea</h3>
+<p>複数行を入力できるテキストボックスです。以下のコードでは入力した文字数をカウントした結果を出力します。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import Textarea
+
+def wc(change):
+    clear_output()
+    print(len(change['new']))
+
+textarea = Textarea()
+textarea.observe(wc, names='value')
+display(textarea)
+</pre></div>
+<p><img alt="Textarea のサンプルコード" src="./img/Textarea-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_12"></div><h3>Label</h3>
+<p>ラベルを表示します。このインスタンスに対して入力は受け付けません。以下のコードでは LaTeX 書式にて記述しています。数式の記述については <a href="https://www.amazon.co.jp/Python%E3%83%A6%E3%83%BC%E3%82%B6%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEJupyter-%E5%AE%9F%E8%B7%B5-%E5%85%A5%E9%96%80-%E6%B1%A0%E5%86%85-%E5%AD%9D%E5%95%93/dp/4774192236/ref=as_li_ss_tl?ref_=nav_signin&amp;&amp;linkCode=ll1&amp;tag=eleshis-22&amp;linkId=12c20401ddd3c71f971ac2330621cdd6">書籍</a> にて解説します。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import Label
+
+Label(value='$E=mc^2$')
+</pre></div>
+<p><img alt="Label のサンプルコード" src="./img/Label-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_13"></div><h3>HTML</h3>
+<p>値を HTML として出力します。以下のコードでは簡易的な HTML エディタを作成しています。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import HTML
+
+def html_editor(change):
+    html.value=change['new']
+
+html = HTML()
+textarea = Textarea()
+textarea.observe(html_editor, names='value')
+display(textarea, html)
+</pre></div>
+<p><img alt="HTML のサンプルコード" src="./img/HTML-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_14"></div><h3>HTMLMath</h3>
+<p>値を HTML として出力します。数式を含むことができます。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import HTMLMath
+
+HTMLMath(value='&lt;b&gt;ものすごく&lt;/b&gt;有名な式:&lt;br&gt; $E=mc^2$')
+</pre></div>
+<p><img alt="HTMLMath のサンプルコード" src="./img/HTMLMath-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_15"></div><h3>Image</h3>
+<p>画像ファイルを表示します。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import Image
+from urllib.request import urlopen
+
+url = 'https://www.python.org/static/img/python-logo.png'
+res = urlopen(url)
+Image(value=res.read(), width=290, height=82)
+</pre></div>
+<p><img alt="Image のサンプルコード" src="./img/Image-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_16"></div><h3>Button</h3>
+<p>ボタンです。ボタンが押された際に、<code>on_click()</code> メソッドがイベントハンドラとなります。以下のコードでは乱数で生成した値を出力しています。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import Button
+from random import randint
+
+
+def omikuji(submit):
+    clear_output()
+    data = &amp;#123;0: 'ハルヒ', 1: '長門', 2: '朝比奈さん', 3: '小泉'&amp;#125;
+    print(data[randint(1, 3)])
+
+
+button = Button(description='誰と組む？')
+button.on_click(omikuji)
+display(button)
+</pre></div>
+<p><img alt="Button のサンプルコード" src="./img/Button-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_17"></div><h3>Play</h3>
+<p>アニメーションを制御します。再生、一時停止、停止ボタンが用意されています。以下のコードでは <a href="https://www.amazon.co.jp/Python%E3%83%A6%E3%83%BC%E3%82%B6%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEJupyter-%E5%AE%9F%E8%B7%B5-%E5%85%A5%E9%96%80-%E6%B1%A0%E5%86%85-%E5%AD%9D%E5%95%93/dp/4774192236/ref=as_li_ss_tl?ref_=nav_signin&amp;&amp;linkCode=ll1&amp;tag=eleshis-22&amp;linkId=12c20401ddd3c71f971ac2330621cdd6">書籍の7章</a> で紹介したアニメーションをウィジェットで制御しています。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import Play, Layout
+from bokeh.plotting import figure
+from bokeh.io import output_notebook, show, push_notebook
+from numpy import arange, sin, pi
+
+output_notebook()
+
+
+def calc_sin(i):
+    return sin(x + i / 10.0)
+
+
+def update_graph(change):
+    r.data_source.data = &amp;#123;'x': x, 'y': calc_sin(change['new'])&amp;#125;
+    push_notebook(handle=t)
+
+
+p = figure(plot_width=400, plot_height=200)
+x = arange(0, 2 * pi, 0.01)
+r = p.line(x, calc_sin(0))
+
+
+play = Play(layout=Layout(width='20%'))
+slider = IntSlider()
+play.observe(update_graph, names='value')
+
+t = show(p, notebook_handle=True)
+display(play)
+</pre></div>
+<p><img alt="Play のサンプルコード" src="./img/Play-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_18"></div><h3>DatePicker</h3>
+<p>カレンダーから日付を入力します。以下のコードでは入力された日付とコンピュータの日付の差分を日数で出力しています。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import DatePicker
+from datetime import datetime
+
+
+def weekday(change):
+    clear_output()
+    days_diff = (change['new'] - datetime.now()).days + 1
+    if days_diff &gt;= 0:
+        print('&amp;#123;&amp;#125;日後'.format(days_diff))
+    else:
+        print('&amp;#123;&amp;#125;日前'.format(abs(days_diff)))
+
+
+date_picker = DatePicker()
+date_picker.observe(weekday, names='value')
+display(date_picker)
+</pre></div>
+<p><img alt="DatePicker のサンプルコード" src="./img/DatePicker-sample-out.png"/></p>
+<div class="header_target" id="h_articles_jupyterbook_reject03_2emd_19"></div><h3>ColorPicker</h3>
+<p>見本リストから色を選択します。値は16進数のRGB表記です。以下のコードでは選択された色を10進数のRGB表記に変換し、HTML で表示しています。</p>
+<div class="codehilite"><pre><span></span>from ipywidgets import ColorPicker, jslink
+
+
+def change_color(change):
+    color16 = change['new']
+    r = int(color16[1:3], 16)
+    g = int(color16[3:5], 16)
+    b = int(color16[5:7], 16)
+    html_text = '&lt;font color=&amp;#123;0&amp;#125;&gt;R:&amp;#123;1&amp;#125;, G:&amp;#123;2&amp;#125;, B:&amp;#123;3&amp;#125;&lt;/font&gt;'
+    html_text = html_text.format(color16, r, g, b)
+    color_text.value = html_text
+
+
+color_picker = ColorPicker()
+color_text = HTML()
+color_picker.observe(change_color, names='value')
+display(color_picker, color_text)
+</pre></div>
+<p><img alt="DatePicker のサンプルコード" src="./img/ColorPicker-sample-out.png"/></p>
 </div>
 
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>このようにJSが必要なnotebookもレンダリングされています。</p></div></div></div></div></div>
-      <a href="notebooks/bokeh_sample.html">続きを読む</a>
-    
-  </div>
+<div class="sns">
+  <!-- twitter -->
+<a target="_blank" href='https://twitter.com/share?url=https://drillan.github.io/articles/jupyterbook_reject03.html&amp;via=patraqushe&amp;text=Jupyter本没原稿集#2.2 ipywidgets#2'>
+    <i class="fa fa-twitter" aria-hidden="true"></i>
+</a>
 
-  <div class="index-pagination">
-    
-      <span class="index-navi disabled-link">&larr;</span>
-    
-    
-    
-      <span class="index-navi disabled-link">&rarr;</span>
-    
-  </div>
+<!-- facebook -->
+<a target="_blank" href='https://www.facebook.com/sharer/sharer.php?u=https://drillan.github.io/articles/jupyterbook_reject03.html'>
+    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+</a>
 
+<!-- google+ -->
+<a target="_blank" href='https://plus.google.com/share?url=https://drillan.github.io/articles/jupyterbook_reject03.html'>
+    <i class="fa fa-google-plus" aria-hidden="true"></i>
+</a>
+
+<!-- hatena bookmark -->
+<a target="_blank" href='http://b.hatena.ne.jp/entry/https://drillan.github.io/articles/jupyterbook_reject03.html'>
+    <i class="fa-hatebu"></i>
+</a>
+</div>
 
     </div>
     <aside class="container-right">
@@ -11962,73 +12138,73 @@ div#notebook {
         <ul class="nav sidenav">
         
             <li>
-                <a href="index_tag_tags_bokeh.html">
+                <a href="../index_tag_tags_bokeh.html">
                     bokeh
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_docker.html">
+                <a href="../index_tag_tags_docker.html">
                     docker
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_finance.html">
+                <a href="../index_tag_tags_finance.html">
                     finance
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_highcharts.html">
+                <a href="../index_tag_tags_highcharts.html">
                     highcharts
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_ipywidgets.html">
+                <a href="../index_tag_tags_ipywidgets.html">
                     ipywidgets
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_jupyter.html">
+                <a href="../index_tag_tags_jupyter.html">
                     jupyter
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_lightning.html">
+                <a href="../index_tag_tags_lightning.html">
                     lightning
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_matplotlib.html">
+                <a href="../index_tag_tags_matplotlib.html">
                     matplotlib
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_miyadaiku.html">
+                <a href="../index_tag_tags_miyadaiku.html">
                     miyadaiku
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_numpy.html">
+                <a href="../index_tag_tags_numpy.html">
                     numpy
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_plotly.html">
+                <a href="../index_tag_tags_plotly.html">
                     plotly
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_python.html">
+                <a href="../index_tag_tags_python.html">
                     python
                 </a>
             </li>
