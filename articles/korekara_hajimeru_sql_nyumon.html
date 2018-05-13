@@ -2,15 +2,15 @@
 <html lang="ja-JP">
 <head>
   
-
+  
   
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>index_tag - drillerの部屋</title>
+    <title>これからはじめる SQL 入門 - drillerの部屋</title>
   
   <link href="https://drillan.github.io/atom.xml" type="application/atom+xml" rel="alternate" title="Atom Feed" />
-  <link rel="stylesheet" href="static/css/article.css">
-  <link rel="stylesheet" href="static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/css/article.css">
+  <link rel="stylesheet" href="../static/css/font-awesome.min.css">
 
   <!-- set ipynb headers -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
@@ -11778,18 +11778,19 @@ div#notebook {
         }
     });
     </script>
-  <meta property="og:url" content="https://drillan.github.io/index_tag_tags_.html" />
+  <meta property="og:url" content="https://drillan.github.io/articles/korekara_hajimeru_sql_nyumon.html" />
 <meta property="og:locale" content="ja-JP" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="index_tag - drillerの部屋" />
+<meta property="og:title" content="これからはじめる SQL 入門 - drillerの部屋" />
 
-<meta name="description" content=""/>
-<meta property="og:description" content="" />
+<meta name="description" content="Jupyter本 の共著者である 池内さん よりご恵贈いただきました。池内さんありがとうございます。 誰に向けての本か タイトルのとおり、これからSQLを学びたいかたにとってはぴったりな内容です。 本書のはじめににも書かれておりますが、SQLは営業やマーケティング部門も扱うようになってきました。 SQLを学ぶ上で専門用語がハードルとなりそうですが、本書では平易な表現で解説されており、ITになじみがないかたでも理解しやすい内容になっているのではないでしょうか。 すでにある程度SQLに通じているかたでも、基礎から復習したい場合にもよさそうです。私自身、SQLは少々触っていますが、SQL文を記述するに当たってのお作法など、学びになった点が随所にありました。"/>
+<meta property="og:description" content="Jupyter本 の共著者である 池内さん よりご恵贈いただきました。池内さんありがとうございます。 誰に向けての本か タイトルのとおり、これからSQLを学びたいかたにとってはぴったりな内容です。 本書のはじめににも書かれておりますが、SQLは営業やマーケティング部門も扱うようになってきました。 SQLを学ぶ上で専門用語がハードルとなりそうですが、本書では平易な表現で解説されており、ITになじみがないかたでも理解しやすい内容になっているのではないでしょうか。 すでにある程度SQLに通じているかたでも、基礎から復習したい場合にもよさそうです。私自身、SQLは少々触っていますが、SQL文を記述するに当たってのお作法など、学びになった点が随所にありました。" />
 
-
-  <link rel="stylesheet" href="static/css/bootstrap-solarized-light.css">
-  <link rel="stylesheet" href="static/css/custom.css">
+<meta property="article:published_time" content="2018-05-13T00:00:00+09:00" />
+  <link rel="stylesheet" href="../static/css/bootstrap-solarized-light.css">
+  <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/css/custom.css">
 
 </head>
 
@@ -11797,218 +11798,89 @@ div#notebook {
   
 <div class="container">
   <h1 class="index-title">
-    <a href="index.html">drillerの部屋</a>
+    <a href="../index.html">drillerの部屋</a>
   </h1>
 
   <div class="container-inner">
     <div class="container-body">
       
-
-  <div class="articles">
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2018-01-19 </span>
+<div class="article-metadata">
+    <span class="article-date"> 2018-05-13 </span>
     <span>  </span>
-    <span> python,jupyter,ipywidgets,bokeh </span>
+    <span> sql </span>
   </div>
-      <h2 class="article-title"><a href="articles/jupyterbook_reject03a.html">Jupyter本没原稿集#2.2 ipywidgets#2</a></h2>
-      <div class="article-body"><div class="line-block">
-<div class="line">ボツネタ供養の第三弾です。<a class="reference external" href="https://drillan.github.io/articles/jupyterbook_reject02.html">前回</a>から大分間が空いてしまいました。申し訳ありません...</div>
-<div class="line">今回は残りすべてのウィジェットを紹介します。</div>
-</div>
-<div class="section" id="togglebutton">
-<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_1"></div><h1>ToggleButton</h1>
-<p>トグルボタンです。ボタンをクリックすると真偽値が切り替わり、状態が保持されます。以下のコードでは2つの値の論理積を出力しています。</p>
-<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">ToggleButton</span>
+<h1 class="article-title">
+  これからはじめる SQL 入門
+</h1>
 
-
-<span class="k">def</span> <span class="nf">x_and_y</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
-    <span class="n">clear_output</span><span class="p">()</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">toggle_button_x</span><span class="o">.</span><span class="n">value</span> <span class="o">&amp;</span> <span class="n">toggle_button_y</span><span class="o">.</span><span class="n">value</span></code></pre></div></div>
-      <a href="articles/jupyterbook_reject03a.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-12-20 </span>
-    <span>  </span>
-    <span> jupyter,lightning,plotly,highcharts </span>
-  </div>
-      <h2 class="article-title"><a href="notebooks/jupyter_advent_calendar_2017.html">あまり紹介されていない可視化ツールを試す</a></h2>
-      <div class="article-body"><div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://qiita.com/advent-calendar/2017/jupyter">「Jupyter Advent Calendar 2017 10日目」</a> の記事です。</p>
-<p>今回はJupyter上から可視化できるツールのなかで、あまり日の当たってないものにスポットライトを当ててみたいと思います。<br/>
-これはと思うものがあれば試してみていただけると幸甚です。</p>
+<div class="article-body">
+  <p><a class="reference external" href="https://amzn.to/2KfiNmE">Jupyter本</a> の共著者である <a class="reference external" href="https://twitter.com/iktakahiro">池内さん</a> よりご恵贈いただきました。池内さんありがとうございます。</p>
+<a class="reference external image-reference" href="https://amzn.to/2wxP5Hr"><img alt="http://image.gihyo.co.jp/assets/images/cover/2018/9784774196879.jpg" src="http://image.gihyo.co.jp/assets/images/cover/2018/9784774196879.jpg" style="width: 50%;"/></a>
+<div class="section" id="id2">
+<div class="header_target" id="h_articles_korekara_hajimeru_sql_nyumon_2erst_1"></div><h1>誰に向けての本か</h1>
+<div class="line-block">
+<div class="line">タイトルのとおり、これからSQLを学びたいかたにとってはぴったりな内容です。</div>
+<div class="line">本書のはじめににも書かれておりますが、SQLは営業やマーケティング部門も扱うようになってきました。</div>
+<div class="line">SQLを学ぶ上で専門用語がハードルとなりそうですが、本書では平易な表現で解説されており、ITになじみがないかたでも理解しやすい内容になっているのではないでしょうか。</div>
+<div class="line"><br/></div>
+<div class="line">すでにある程度SQLに通じているかたでも、基礎から復習したい場合にもよさそうです。私自身、SQLは少々触っていますが、SQL文を記述するに当たってのお作法など、学びになった点が随所にありました。</div>
+<div class="line"><br/></div>
+<div class="line">本書はPostgreSQLを元にしていますが、他のRDBMSの場合についてもある程度触れているため、私のようなMySQLなどのユーザにとっても特に抵抗なく読める内容となっています。</div>
 </div>
 </div>
+<div class="section" id="id3">
+<div class="header_target" id="h_articles_korekara_hajimeru_sql_nyumon_2erst_2"></div><h1>環境構築</h1>
+<div class="line-block">
+<div class="line">SQLを学ぶに当たって、最初に乗り越えないといけない壁が環境構築です。プラットフォームやOSのバージョンなどによって導入手順がことなることがあるため、書籍で解説しようとすると非常に悩ましところですが、本書では仮想マシン(VirtualBos)を採用することで手順を統一化しています。</div>
+<div class="line"><br/></div>
+<div class="line">ほかにもDocker環境が準備されており、 <a class="reference external" href="https://github.com/iktakahiro/sql-basic-book">著者のGitHubリポジトリ</a> で導入方法が解説されています。</div>
+<div class="line">私は後者のDocker環境で導入しましたが、いくつかはまりどころがあったためフィードバックする予定です。</div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_jupyter_advent_calendar_2017_2eipynb_1"></div><h2 id="Lightning">Lightning<a class="anchor-link" href="#Lightning">¶</a></h2><p><a href="http://lightning-viz.org">http://lightning-viz.org</a></p>
-<p>APIベースの可視化ツールです、herokuやdockerからなどから環境を構築できます。<br/>
-今回はJupyter上からの事例を紹介しますが、サーバを建てたほうが威力をはっきするかもしれません。</p></div></div></div></div></div>
-      <a href="notebooks/jupyter_advent_calendar_2017.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-23 </span>
-    <span>  </span>
-    <span> python,jupyter,ipywidgets </span>
-  </div>
-      <h2 class="article-title"><a href="articles/jupyterbook_reject02.html">Jupyter本没原稿集#2.1 ipywidgets#1</a></h2>
-      <div class="article-body"><p>ボツネタ供養の第二弾です。ipywidgets のほぼ全てのウィジェットを大盤振る舞いして紹介しちゃいます。</p>
-<div class="header_target" id="h_articles_jupyterbook_reject02_2emd_1"></div><h2>ウィジェット一覧</h2>
-<p>ipywidgets にはさまざまなウィジェットクラスが用意されています。</p>
-<ul>
-<li>Numeric ウィジェット</li>
-<li>Boolean ウィジェット</li>
-<li>Selection ウィジェット</li>
-<li>String ウィジェット</li>
-<li>Layout ウィジェット</li>
+<div class="section" id="id4">
+<div class="header_target" id="h_articles_korekara_hajimeru_sql_nyumon_2erst_3"></div><h1>本書の魅力</h1>
+<p>さいごに本書を通読して、個人的に参考になった点を挙げてみます。読者によっては別な視点での学びがあると思います。SQLを学びたいかた、復習したいかたはぜひ本書を手にとって見てください。</p>
+<div class="section" id="id5">
+<div class="header_target" id="h_articles_korekara_hajimeru_sql_nyumon_2erst_4"></div><h2>SQL文のお作法</h2>
+<p>はじめの内は下記のようなSQLを書いてしまうことはままありますが、注意する点や推奨する書き方が解説されていたので参考になりました。</p>
+<ul class="simple">
+<li><p>可読性の低下</p></li>
+<li><p>意図しないクエリ</p></li>
+<li><p>無駄なコスト</p></li>
 </ul>
-<p>今回は Numeric ウィジェットの説明と使い方の事例を紹介します。</p>
-<div class="header_target" id="h_articles_jupyterbook_reject02_2emd_2"></div><h3>Numeric ウィジェット</h3>
-<p>数値型の値を扱うウィジェットです。</p>
-<ul>
-<li>IntSlider</li>
-<li>FloatSlider</li></ul></div>
-      <a href="articles/jupyterbook_reject02.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-16 </span>
-    <span>  </span>
-    <span> python,jupyter,bokeh </span>
-  </div>
-      <h2 class="article-title"><a href="notebooks/jupyterbook_rejected01.html">Jupyter本の没原稿集 #1 Bokehで凝った円グラフを描画する</a></h2>
-      <div class="article-body"><div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_jupyterbook_rejected01_2eipynb_1"></div><h2 id="ボツネタとは">ボツネタとは<a class="anchor-link" href="#ボツネタとは">¶</a></h2><p><a href="http://amzn.to/2x48I6J">Jupyter本</a> にはページ数の都合で入り切らなかった内容を紹介する企画第一弾です。<br/>
-涙をのみながらボツにした原稿を少しカジュアルにして本ブログで復活させます。</p>
-<div class="header_target" id="h_notebooks_jupyterbook_rejected01_2eipynb_2"></div><h2 id="Bokeh-で凝った円グラフを描画する">Bokeh で凝った円グラフを描画する<a class="anchor-link" href="#Bokeh-で凝った円グラフを描画する">¶</a></h2><p>今回は Bokeh を使用して、下記の要件を満たす円グラフを描画してみます。</p>
-<ul>
-<li>要素数が多いため、上位のみを表示する</li>
-<li>上位以外はテキストを表示せず、目立たない表示にする(徐々にグレイアウト)</li>
-<li>テキストの書式を設定する</li>
-</ul>
-<p>テンプレどおりのグラフなんてつまらない、プレゼンで差をつけたい、なんて場合にはカスタマイズしたグラフに挑戦してみましょう。</p></div></div></div></div></div>
-      <a href="notebooks/jupyterbook_rejected01.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-11 </span>
-    <span>  </span>
-    <span> python,jupyter,matplotlib,bokeh </span>
-  </div>
-      <h2 class="article-title"><a href="notebooks/jupyterbook01.html">著者が語るJupyter本の読みどころ</a></h2>
-      <div class="article-body"><div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="section" id="id6">
+<div class="header_target" id="h_articles_korekara_hajimeru_sql_nyumon_2erst_5"></div><h2>データ型の使い分け</h2>
+<p>データ型について紙面を割いて丁寧に解説されています。特にJSON型については知らなかったため、今後使ってみようと思いました。</p>
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>ご縁があって、 <a href="http://amzn.to/2wRwPYB">PythonユーザのためのJupyter[実践]入門</a> という書籍を共著で執筆させていただきました。</p>
-<p>本記事では本書の読みどころなどについて、勢いに任せた乱筆ですがつらつらと語っていきたいと思います。</p>
+<div class="section" id="id7">
+<div class="header_target" id="h_articles_korekara_hajimeru_sql_nyumon_2erst_6"></div><h2>複雑なクエリ</h2>
+<p>本書の後半ではJOINやサブクエリなど、SQL文が複雑になってきます。使いこなせば便利なのはわかっているが、なかなか使いこなせないというケースはままありそうです。本書では長いSQL文を分割して実行し、解説されているため、いままで挫折した人も改めて挑戦してもよいのではないでしょうか。</p>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_jupyterbook01_2eipynb_1"></div><h1 id="本書の目的">本書の目的<a class="anchor-link" href="#本書の目的">¶</a></h1><p>本書の3ページ「はじめに」を全文掲載します。まさにここに書かれていることが本書を読む動機となると思います。書店などで本書を手にとってパラパラ見ていだければ雰囲気はつかめると思います。</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>本書は、「Jupyter Notebook」の使い方と「データの可視化」にフォーカスを当てた書籍です。 Jupyter NotebookはPythonで実装されたオープンソースソフトウェア（OSS）です。Jupyter Notebookはデータ分析ツールとして、あるいはPythonの学習環境として多くのユーザに利用されています。</p></blockquote></div></div></div></div></div>
-      <a href="notebooks/jupyterbook01.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-02 </span>
-    <span>  </span>
-    <span> jupyter,bokeh </span>
-  </div>
-      <h2 class="article-title"><a href="notebooks/bokeh_sample.html">Jupyter Notebookサンプル</a></h2>
-      <div class="article-body"><div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://miyadaiku.github.io">Miyadaiku</a> では Jupyter Notebook の ipynb ファイルをそのままサイトまたはブログの記事として投稿できます。</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [1]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="k">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">output_notebook</span><span class="p">,</span> <span class="n">show</span>
-
-<span class="n">output_notebook</span><span class="p">()</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">line</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-<span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div class="bk-root">
-<a class="bk-logo bk-logo-small bk-logo-notebook" href="http://bokeh.pydata.org" target="_blank"></a>
-<span id="b3dbc3e4-de9d-4d03-9ce6-b4573f4ee515">Loading BokehJS ...</span>
-</div>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div id="5891edfb-da42-42b6-bdac-e6d540c891cb"></div>
-<div class="output_subarea output_javascript ">
-
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div class="bk-root">
-<div class="bk-plotdiv" id="f62c60b9-5062-488c-8290-2cd645f3e770"></div>
 </div>
 
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>このようにJSが必要なnotebookもレンダリングされています。</p></div></div></div></div></div>
-      <a href="notebooks/bokeh_sample.html">続きを読む</a>
-    
-  </div>
+<div class="sns">
+  <!-- twitter -->
+<a target="_blank" href='https://twitter.com/share?url=https://drillan.github.io/articles/korekara_hajimeru_sql_nyumon.html&amp;via=patraqushe&amp;text=これからはじめる SQL 入門'>
+    <i class="fa fa-twitter" aria-hidden="true"></i>
+</a>
 
-  <div class="index-pagination">
-    
-      <span class="index-navi disabled-link">&larr;</span>
-    
-    
-    
-      <span class="index-navi disabled-link">&rarr;</span>
-    
-  </div>
+<!-- facebook -->
+<a target="_blank" href='https://www.facebook.com/sharer/sharer.php?u=https://drillan.github.io/articles/korekara_hajimeru_sql_nyumon.html'>
+    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+</a>
 
+<!-- google+ -->
+<a target="_blank" href='https://plus.google.com/share?url=https://drillan.github.io/articles/korekara_hajimeru_sql_nyumon.html'>
+    <i class="fa fa-google-plus" aria-hidden="true"></i>
+</a>
+
+<!-- hatena bookmark -->
+<a target="_blank" href='http://b.hatena.ne.jp/entry/https://drillan.github.io/articles/korekara_hajimeru_sql_nyumon.html'>
+    <i class="fa-hatebu"></i>
+</a>
+</div>
 
     </div>
     <aside class="container-right">
@@ -12033,79 +11905,79 @@ div#notebook {
         <ul class="nav sidenav">
         
             <li>
-                <a href="index_tag_tags_bokeh.html">
+                <a href="../index_tag_tags_bokeh.html">
                     bokeh
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_docker.html">
+                <a href="../index_tag_tags_docker.html">
                     docker
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_finance.html">
+                <a href="../index_tag_tags_finance.html">
                     finance
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_highcharts.html">
+                <a href="../index_tag_tags_highcharts.html">
                     highcharts
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_ipywidgets.html">
+                <a href="../index_tag_tags_ipywidgets.html">
                     ipywidgets
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_jupyter.html">
+                <a href="../index_tag_tags_jupyter.html">
                     jupyter
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_lightning.html">
+                <a href="../index_tag_tags_lightning.html">
                     lightning
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_matplotlib.html">
+                <a href="../index_tag_tags_matplotlib.html">
                     matplotlib
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_miyadaiku.html">
+                <a href="../index_tag_tags_miyadaiku.html">
                     miyadaiku
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_numpy.html">
+                <a href="../index_tag_tags_numpy.html">
                     numpy
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_plotly.html">
+                <a href="../index_tag_tags_plotly.html">
                     plotly
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_python.html">
+                <a href="../index_tag_tags_python.html">
                     python
                 </a>
             </li>
         
             <li>
-                <a href="index_tag_tags_sql.html">
+                <a href="../index_tag_tags_sql.html">
                     sql
                 </a>
             </li>

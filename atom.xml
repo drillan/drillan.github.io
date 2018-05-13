@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>drillerの部屋</title><link href="https://drillan.github.io/" rel="alternate"></link><link href="https://drillan.github.io/atom.xml" rel="self"></link><id>https://drillan.github.io/</id><updated>2018-01-19T00:00:00+09:00</updated><entry><title>Jupyter本没原稿集#2.2 ipywidgets#2</title><link href="https://drillan.github.io/articles/jupyterbook_reject03a.html" rel="alternate"></link><published>2018-01-19T00:00:00+09:00</published><updated>2018-01-19T00:00:00+09:00</updated><id>tag:drillan.github.io,2018-01-19:/articles/jupyterbook_reject03a.html</id><summary type="html">&lt;div class="line-block"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>drillerの部屋</title><link href="https://drillan.github.io/" rel="alternate"></link><link href="https://drillan.github.io/atom.xml" rel="self"></link><id>https://drillan.github.io/</id><updated>2018-05-13T00:00:00+09:00</updated><entry><title>これからはじめる SQL 入門</title><link href="https://drillan.github.io/articles/korekara_hajimeru_sql_nyumon.html" rel="alternate"></link><published>2018-05-13T00:00:00+09:00</published><updated>2018-05-13T00:00:00+09:00</updated><id>tag:drillan.github.io,2018-05-13:/articles/korekara_hajimeru_sql_nyumon.html</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://amzn.to/2KfiNmE"&gt;Jupyter本&lt;/a&gt; の共著者である &lt;a class="reference external" href="https://twitter.com/iktakahiro"&gt;池内さん&lt;/a&gt; よりご恵贈いただきました。池内さんありがとうございます。&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://amzn.to/2wxP5Hr"&gt;&lt;img alt="http://image.gihyo.co.jp/assets/images/cover/2018/9784774196879.jpg" src="http://image.gihyo.co.jp/assets/images/cover/2018/9784774196879.jpg" style="width: 50%;"/&gt;&lt;/a&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;div class="header_target" id="h_articles_korekara_hajimeru_sql_nyumon_2erst_1"&gt;&lt;/div&gt;&lt;h1&gt;誰に向けての本か&lt;/h1&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;タイトルのとおり、これからSQLを学びたいかたにとってはぴったりな内容です。&lt;/div&gt;
+&lt;div class="line"&gt;本書のはじめににも書かれておりますが、SQLは営業やマーケティング部門も扱うようになってきました。&lt;/div&gt;
+&lt;div class="line"&gt;SQLを学ぶ上で専門用語がハードルとなりそうですが、本書では平易な表現で解説されており、ITになじみがないかたでも理解しやすい内容になっているのではないでしょうか。&lt;/div&gt;
+&lt;div class="line"&gt;&lt;br/&gt;&lt;/div&gt;
+&lt;div class="line"&gt;すでにある程度SQLに通じているかたでも、基礎から復習したい場合にもよさそうです。私自身、SQLは少々触っていますが、SQL文を記述するに当たってのお作法など、学びになった点が随所にありました。&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary></entry><entry><title>Jupyter本没原稿集#2.2 ipywidgets#2</title><link href="https://drillan.github.io/articles/jupyterbook_reject03a.html" rel="alternate"></link><published>2018-01-19T00:00:00+09:00</published><updated>2018-01-19T00:00:00+09:00</updated><id>tag:drillan.github.io,2018-01-19:/articles/jupyterbook_reject03a.html</id><summary type="html">&lt;div class="line-block"&gt;
 &lt;div class="line"&gt;ボツネタ供養の第三弾です。&lt;a class="reference external" href="https://drillan.github.io/articles/jupyterbook_reject02.html"&gt;前回&lt;/a&gt;から大分間が空いてしまいました。申し訳ありません...&lt;/div&gt;
 &lt;div class="line"&gt;今回は残りすべてのウィジェットを紹介します。&lt;/div&gt;
 &lt;/div&gt;
@@ -156,7 +165,7 @@
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="19630141-9c91-4dd9-ae47-f5a5f122755b"&gt;&lt;/div&gt;
+&lt;div id="5891edfb-da42-42b6-bdac-e6d540c891cb"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 
 &lt;/div&gt;
