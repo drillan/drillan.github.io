@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>drillerの部屋</title><link>https://drillan.github.io/</link><description></description><lastBuildDate>Sun, 13 May 2018 00:00:00 +0900</lastBuildDate><item><title>これからはじめる SQL 入門</title><link>https://drillan.github.io/articles/korekara_hajimeru_sql_nyumon.html</link><description>&lt;p&gt;&lt;a class="reference external" href="https://amzn.to/2KfiNmE"&gt;Jupyter本&lt;/a&gt; の共著者である &lt;a class="reference external" href="https://twitter.com/iktakahiro"&gt;池内さん&lt;/a&gt; よりご恵贈いただきました。池内さんありがとうございます。&lt;/p&gt;
+<rss version="2.0"><channel><title>drillerの部屋</title><link>https://drillan.github.io/</link><description></description><lastBuildDate>Sat, 30 Jun 2018 00:00:00 +0900</lastBuildDate><item><title>BokehのRangeToolをつかってみる</title><link>https://drillan.github.io/notebooks/bokeh_rangetool.html</link><description>&lt;div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;どうも、Bokeh芸人のどりらんです。&lt;/p&gt;
+&lt;p&gt;Bokeh 0.13からRangeToolが使えるようになりました。&lt;br/&gt;
+直近の時系列データみたいが、過去を遡ってみたい場合などに便利です。&lt;br/&gt;
+グラフの範囲選択ツールで、&lt;a href="https://www.highcharts.com/products/highstock/"&gt;Highstock&lt;/a&gt; などでは時系列データを可視化する際にデフォルトでついている機能だったりします。&lt;/p&gt;
+&lt;p&gt;おおまかな手順は下記のとおりです。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;RangeToolを描画するfigureインスタンス(図)を作成する&lt;/li&gt;
+&lt;li&gt;RangeToolインスタンスを作成する&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1.&lt;/code&gt; の &lt;code&gt;add_tools&lt;/code&gt; メソッドの引数に &lt;code&gt;2.&lt;/code&gt; を渡す&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;RangeTool&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><pubDate>Sat, 30 Jun 2018 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2018-06-30:/notebooks/bokeh_rangetool.html</guid></item><item><title>これからはじめる SQL 入門</title><link>https://drillan.github.io/articles/korekara_hajimeru_sql_nyumon.html</link><description>&lt;p&gt;&lt;a class="reference external" href="https://amzn.to/2KfiNmE"&gt;Jupyter本&lt;/a&gt; の共著者である &lt;a class="reference external" href="https://twitter.com/iktakahiro"&gt;池内さん&lt;/a&gt; よりご恵贈いただきました。池内さんありがとうございます。&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://amzn.to/2wxP5Hr"&gt;&lt;img alt="http://image.gihyo.co.jp/assets/images/cover/2018/9784774196879.jpg" src="http://image.gihyo.co.jp/assets/images/cover/2018/9784774196879.jpg" style="width: 50%;"/&gt;&lt;/a&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;div class="header_target" id="h_articles_korekara_hajimeru_sql_nyumon_2erst_1"&gt;&lt;/div&gt;&lt;h1&gt;誰に向けての本か&lt;/h1&gt;
@@ -128,62 +143,4 @@
 &lt;dt&gt;Jinja2 が使える&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Jinja2 は Python 製のテンプレートエンジンです。
 従来の静的サイトやブログでは記事の内容やテンプレートをベタ書きする必要がありました。
-共通部分をテンプレート化することで生産性が上がりそうです。&lt;/p&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/div&gt;</description><pubDate>Sun, 03 Sep 2017 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2017-09-03:/articles/renew_blog.html</guid></item><item><title>Jupyter Notebookサンプル</title><link>https://drillan.github.io/notebooks/bokeh_sample.html</link><description>&lt;div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;a href="https://miyadaiku.github.io"&gt;Miyadaiku&lt;/a&gt; では Jupyter Notebook の ipynb ファイルをそのままサイトまたはブログの記事として投稿できます。&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bokeh.plotting&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;output_notebook&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;show&lt;/span&gt;
-
-&lt;span class="n"&gt;output_notebook&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plot_width&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;plot_height&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;div class="bk-root"&gt;
-&lt;a class="bk-logo bk-logo-small bk-logo-notebook" href="http://bokeh.pydata.org" target="_blank"&gt;&lt;/a&gt;
-&lt;span id="b3dbc3e4-de9d-4d03-9ce6-b4573f4ee515"&gt;Loading BokehJS ...&lt;/span&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="c73c6389-a5b3-4ee8-82d3-a94ebeb7a8fd"&gt;&lt;/div&gt;
-&lt;div class="output_subarea output_javascript "&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_html rendered_html output_subarea "&gt;
-&lt;div class="bk-root"&gt;
-&lt;div class="bk-plotdiv" id="f62c60b9-5062-488c-8290-2cd645f3e770"&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;このようにJSが必要なnotebookもレンダリングされています。&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><pubDate>Sat, 02 Sep 2017 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2017-09-02:/notebooks/bokeh_sample.html</guid></item></channel></rss>
+共通部分をテンプレート化することで生産性が上がりそうです。&lt;/p&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/div&gt;</description><pubDate>Sun, 03 Sep 2017 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2017-09-03:/articles/renew_blog.html</guid></item></channel></rss>

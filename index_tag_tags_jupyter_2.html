@@ -11807,73 +11807,6 @@ div#notebook {
   <div class="articles">
     
       <div class="article-metadata">
-    <span class="article-date"> 2018-06-30 </span>
-    <span>  </span>
-    <span> jupyter,bokeh </span>
-  </div>
-      <h2 class="article-title"><a href="notebooks/bokeh_rangetool.html">BokehのRangeToolをつかってみる</a></h2>
-      <div class="article-body"><div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>どうも、Bokeh芸人のどりらんです。</p>
-<p>Bokeh 0.13からRangeToolが使えるようになりました。<br/>
-直近の時系列データみたいが、過去を遡ってみたい場合などに便利です。<br/>
-グラフの範囲選択ツールで、<a href="https://www.highcharts.com/products/highstock/">Highstock</a> などでは時系列データを可視化する際にデフォルトでついている機能だったりします。</p>
-<p>おおまかな手順は下記のとおりです。</p>
-<ol>
-<li>RangeToolを描画するfigureインスタンス(図)を作成する</li>
-<li>RangeToolインスタンスを作成する</li>
-<li><code>1.</code> の <code>add_tools</code> メソッドの引数に <code>2.</code> を渡す</li>
-</ol>
-<p><code>RangeTool</code></p></div></div></div></div></div>
-      <a href="notebooks/bokeh_rangetool.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2018-01-19 </span>
-    <span>  </span>
-    <span> python,jupyter,ipywidgets,bokeh </span>
-  </div>
-      <h2 class="article-title"><a href="articles/jupyterbook_reject03a.html">Jupyter本没原稿集#2.2 ipywidgets#2</a></h2>
-      <div class="article-body"><div class="line-block">
-<div class="line">ボツネタ供養の第三弾です。<a class="reference external" href="https://drillan.github.io/articles/jupyterbook_reject02.html">前回</a>から大分間が空いてしまいました。申し訳ありません...</div>
-<div class="line">今回は残りすべてのウィジェットを紹介します。</div>
-</div>
-<div class="section" id="togglebutton">
-<div class="header_target" id="h_articles_jupyterbook_reject03a_2erst_1"></div><h1>ToggleButton</h1>
-<p>トグルボタンです。ボタンをクリックすると真偽値が切り替わり、状態が保持されます。以下のコードでは2つの値の論理積を出力しています。</p>
-<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">ToggleButton</span>
-
-
-<span class="k">def</span> <span class="nf">x_and_y</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
-    <span class="n">clear_output</span><span class="p">()</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">toggle_button_x</span><span class="o">.</span><span class="n">value</span> <span class="o">&amp;</span> <span class="n">toggle_button_y</span><span class="o">.</span><span class="n">value</span></code></pre></div></div>
-      <a href="articles/jupyterbook_reject03a.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-16 </span>
-    <span>  </span>
-    <span> python,jupyter,bokeh </span>
-  </div>
-      <h2 class="article-title"><a href="notebooks/jupyterbook_rejected01.html">Jupyter本の没原稿集 #1 Bokehで凝った円グラフを描画する</a></h2>
-      <div class="article-body"><div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_jupyterbook_rejected01_2eipynb_1"></div><h2 id="ボツネタとは">ボツネタとは<a class="anchor-link" href="#ボツネタとは">¶</a></h2><p><a href="http://amzn.to/2x48I6J">Jupyter本</a> にはページ数の都合で入り切らなかった内容を紹介する企画第一弾です。<br/>
-涙をのみながらボツにした原稿を少しカジュアルにして本ブログで復活させます。</p>
-<div class="header_target" id="h_notebooks_jupyterbook_rejected01_2eipynb_2"></div><h2 id="Bokeh-で凝った円グラフを描画する">Bokeh で凝った円グラフを描画する<a class="anchor-link" href="#Bokeh-で凝った円グラフを描画する">¶</a></h2><p>今回は Bokeh を使用して、下記の要件を満たす円グラフを描画してみます。</p>
-<ul>
-<li>要素数が多いため、上位のみを表示する</li>
-<li>上位以外はテキストを表示せず、目立たない表示にする(徐々にグレイアウト)</li>
-<li>テキストの書式を設定する</li>
-</ul>
-<p>テンプレどおりのグラフなんてつまらない、プレゼンで差をつけたい、なんて場合にはカスタマイズしたグラフに挑戦してみましょう。</p></div></div></div></div></div>
-      <a href="notebooks/jupyterbook_rejected01.html">続きを読む</a>
-    
-      <div class="article-metadata">
     <span class="article-date"> 2017-09-11 </span>
     <span>  </span>
     <span> python,jupyter,matplotlib,bokeh </span>
@@ -11975,7 +11908,8 @@ div#notebook {
 
   <div class="index-pagination">
     
-      <span class="index-navi disabled-link">&larr;</span>
+      <a class="index-navi"
+         href="index_tag_tags_jupyter.html">&larr;</a>
     
     
     
