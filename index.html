@@ -11807,6 +11807,40 @@ div#notebook {
   <div class="articles">
     
       <div class="article-metadata">
+    <span class="article-date"> 2018-12-13 </span>
+    <span>  </span>
+    <span> finance </span>
+  </div>
+      <h2 class="article-title"><a href="notebooks/financial_risk_analysis.html">ポートフォリオのリスクを分析する</a></h2>
+      <div class="article-body"><div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_1"></div><h1 id="ポートフォリオのリスクを分析する">ポートフォリオのリスクを分析する<a class="anchor-link" href="#ポートフォリオのリスクを分析する">¶</a></h1><p><a href="https://qiita.com/advent-calendar/2018/fintech">「FinTech Advent Calendar 2018」</a>の記事です。<br/>
+Pythonのライブラリを使ってポートフォリオのリスクを分析してみます。</p>
+<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_2"></div><h2 id="データの準備">データの準備<a class="anchor-link" href="#データの準備">¶</a></h2><p>手っ取り早くデータを取りたいので、今回はQuandlを使います。<br/>
+株価のデータは有料なものがほとんどで世知辛いので、先物のデータを使います。</p>
+<ul>
+<li>天然ガス(1限月)<br/>
+なんとなく選んだ、特に意味はない</li>
+<li>E-Mini S&amp;P 500(1限月)<br/>
+ベンチマークとして使用</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">quandl</span>
+
+<span class="c1"># 天然ガス(1限月)</span>
+<span class="n">ng_df</span></pre></div></div></div></div></div></div></div>
+      <a href="notebooks/financial_risk_analysis.html">続きを読む</a>
+    
+      <div class="article-metadata">
     <span class="article-date"> 2018-06-30 </span>
     <span>  </span>
     <span> jupyter,bokeh </span>
@@ -11814,8 +11848,7 @@ div#notebook {
       <h2 class="article-title"><a href="notebooks/bokeh_rangetool.html">BokehのRangeToolをつかってみる</a></h2>
       <div class="article-body"><div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>どうも、Bokeh芸人のどりらんです。</p>
 <p>Bokeh 0.13からRangeToolが使えるようになりました。<br/>
@@ -11877,8 +11910,7 @@ div#notebook {
       <h2 class="article-title"><a href="notebooks/jupyter_advent_calendar_2017.html">あまり紹介されていない可視化ツールを試す</a></h2>
       <div class="article-body"><div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://qiita.com/advent-calendar/2017/jupyter">「Jupyter Advent Calendar 2017 10日目」</a> の記事です。</p>
 <p>今回はJupyter上から可視化できるツールのなかで、あまり日の当たってないものにスポットライトを当ててみたいと思います。<br/>
@@ -11887,27 +11919,12 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="header_target" id="h_notebooks_jupyter_advent_calendar_2017_2eipynb_1"></div><h2 id="Lightning">Lightning<a class="anchor-link" href="#Lightning">¶</a></h2><p><a href="http://lightning-viz.org">http://lightning-viz.org</a></p>
 <p>APIベースの可視化ツールです、herokuやdockerからなどから環境を構築できます。<br/>
 今回はJupyter上からの事例を紹介しますが、サーバを建てたほうが威力をはっきするかもしれません。</p></div></div></div></div></div>
       <a href="notebooks/jupyter_advent_calendar_2017.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-12-01 </span>
-    <span>  </span>
-    <span> python,docker </span>
-  </div>
-      <h2 class="article-title"><a href="articles/optimized_python.html">Optimized Pythonを試す</a></h2>
-      <div class="article-body"><p><a class="reference external" href="https://qiita.com/advent-calendar/2017/python">「python Advent Calendar 2017 10日目」</a> の記事です。</p>
-<p>TwitterのTLをぼーっと眺めていたら気になるサイトを見つけました。</p>
-<p><a class="reference external" href="https://www.revsys.com/tidbits/optimized-python/">Check This Out – Optimized Python</a></p>
-<p>なんと、このdockerイメージを使うと、公式のPythonのイメージと比較して、19%の高速化と75%の軽量化がされているようです。
-これは試さずにはいられません。</p>
-<p>ビルドされたイメージは <a class="reference external" href="https://hub.docker.com/r/revolutionsystems/python/">Docker Hub</a> に上がっており、イメージをpullするだけで最適化されたPythonが使えます。</p></div>
-      <a href="articles/optimized_python.html">続きを読む</a>
     
   </div>
 

@@ -11807,6 +11807,20 @@ div#notebook {
   <div class="articles">
     
       <div class="article-metadata">
+    <span class="article-date"> 2017-12-01 </span>
+    <span>  </span>
+    <span> python,docker </span>
+  </div>
+      <h2 class="article-title"><a href="articles/optimized_python.html">Optimized Pythonを試す</a></h2>
+      <div class="article-body"><p><a class="reference external" href="https://qiita.com/advent-calendar/2017/python">「python Advent Calendar 2017 10日目」</a> の記事です。</p>
+<p>TwitterのTLをぼーっと眺めていたら気になるサイトを見つけました。</p>
+<p><a class="reference external" href="https://www.revsys.com/tidbits/optimized-python/">Check This Out – Optimized Python</a></p>
+<p>なんと、このdockerイメージを使うと、公式のPythonのイメージと比較して、19%の高速化と75%の軽量化がされているようです。
+これは試さずにはいられません。</p>
+<p>ビルドされたイメージは <a class="reference external" href="https://hub.docker.com/r/revolutionsystems/python/">Docker Hub</a> に上がっており、イメージをpullするだけで最適化されたPythonが使えます。</p></div>
+      <a href="articles/optimized_python.html">続きを読む</a>
+    
+      <div class="article-metadata">
     <span class="article-date"> 2017-10-01 </span>
     <span>  </span>
     <span> python,numpy,matplotlib,finance </span>
@@ -11814,8 +11828,7 @@ div#notebook {
       <h2 class="article-title"><a href="notebooks/calculate_cumulative_returns.html">累積リターンをfor文を使わずに算出する冴えたやり方</a></h2>
       <div class="article-body"><div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://fin-py.connpass.com/event/66140/">fin-pyもくもく会 #8</a> で for文を使って累積リターンを算出して遅いという話をしていたら、<a href="https://twitter.com/moscow_II">2casa</a> さんより、対数収益率を計算した後に合計したらよいのではないかとアドバイスいただきました。</p>
 <p>確かに「Pythonでfor文を使ったら負け」という格言があることですし、色々試してみました。</p>
@@ -11823,8 +11836,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="header_target" id="h_notebooks_calculate_cumulative_returns_2eipynb_1"></div><h1 id="前提条件">前提条件<a class="anchor-link" href="#前提条件">¶</a></h1><p>下記のように最初の株価を100円とし、1000日分の騰落率をランダムに与えてみます。</p>
 </div>
@@ -11875,8 +11887,7 @@ div#notebook {
       <h2 class="article-title"><a href="notebooks/jupyterbook_rejected01.html">Jupyter本の没原稿集 #1 Bokehで凝った円グラフを描画する</a></h2>
       <div class="article-body"><div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="header_target" id="h_notebooks_jupyterbook_rejected01_2eipynb_1"></div><h2 id="ボツネタとは">ボツネタとは<a class="anchor-link" href="#ボツネタとは">¶</a></h2><p><a href="http://amzn.to/2x48I6J">Jupyter本</a> にはページ数の都合で入り切らなかった内容を紹介する企画第一弾です。<br/>
 涙をのみながらボツにした原稿を少しカジュアルにして本ブログで復活させます。</p>
@@ -11897,8 +11908,7 @@ div#notebook {
       <h2 class="article-title"><a href="notebooks/jupyterbook01.html">著者が語るJupyter本の読みどころ</a></h2>
       <div class="article-body"><div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>ご縁があって、 <a href="http://amzn.to/2wRwPYB">PythonユーザのためのJupyter[実践]入門</a> という書籍を共著で執筆させていただきました。</p>
 <p>本記事では本書の読みどころなどについて、勢いに任せた乱筆ですがつらつらと語っていきたいと思います。</p>
@@ -11906,103 +11916,17 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="header_target" id="h_notebooks_jupyterbook01_2eipynb_1"></div><h1 id="本書の目的">本書の目的<a class="anchor-link" href="#本書の目的">¶</a></h1><p>本書の3ページ「はじめに」を全文掲載します。まさにここに書かれていることが本書を読む動機となると思います。書店などで本書を手にとってパラパラ見ていだければ雰囲気はつかめると思います。</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote><p>本書は、「Jupyter Notebook」の使い方と「データの可視化」にフォーカスを当てた書籍です。 Jupyter NotebookはPythonで実装されたオープンソースソフトウェア（OSS）です。Jupyter Notebookはデータ分析ツールとして、あるいはPythonの学習環境として多くのユーザに利用されています。</p></blockquote></div></div></div></div></div>
       <a href="notebooks/jupyterbook01.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-03 </span>
-    <span>  </span>
-    <span> python,miyadaiku </span>
-  </div>
-      <h2 class="article-title"><a href="articles/renew_blog.html">ブログをリニューアルしました</a></h2>
-      <div class="article-body"><div class="section" id="miyadaiku">
-<div class="header_target" id="h_articles_renew_blog_2erst_1"></div><h1>Miyadaiku に乗り換えた理由</h1>
-<p>これまでは静的サイトジェネレータとして <a class="reference external" href="http://docs.getpelican.com">Pelican</a> を使用していましたが <a class="reference external" href="https://miyadaiku.github.io">Miyadaiku</a> に乗り換えました。</p>
-<p>Miyadaiku は Python 製の静的サイトジェネレータです。当初は ipynb ファイルが最初から扱える <a class="reference external" href="https://getnikola.com">Nikola</a> に乗り換える予定でしたが、下記のような理由で Miyadaiku を採用しました。</p>
-<dl class="simple">
-<dt>Jinja2 が使える</dt>
-<dd><p>Jinja2 は Python 製のテンプレートエンジンです。
-従来の静的サイトやブログでは記事の内容やテンプレートをベタ書きする必要がありました。
-共通部分をテンプレート化することで生産性が上がりそうです。</p></dd></dl></div></div>
-      <a href="articles/renew_blog.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-02 </span>
-    <span>  </span>
-    <span> jupyter,bokeh </span>
-  </div>
-      <h2 class="article-title"><a href="notebooks/bokeh_sample.html">Jupyter Notebookサンプル</a></h2>
-      <div class="article-body"><div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://miyadaiku.github.io">Miyadaiku</a> では Jupyter Notebook の ipynb ファイルをそのままサイトまたはブログの記事として投稿できます。</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [1]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="k">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">output_notebook</span><span class="p">,</span> <span class="n">show</span>
-
-<span class="n">output_notebook</span><span class="p">()</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">line</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-<span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div class="bk-root">
-<a class="bk-logo bk-logo-small bk-logo-notebook" href="http://bokeh.pydata.org" target="_blank"></a>
-<span id="b3dbc3e4-de9d-4d03-9ce6-b4573f4ee515">Loading BokehJS ...</span>
-</div>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div id="4a658f34-71ee-4808-8f91-5f5fd2524191"></div>
-<div class="output_subarea output_javascript ">
-
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div class="bk-root">
-<div class="bk-plotdiv" id="f62c60b9-5062-488c-8290-2cd645f3e770"></div>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>このようにJSが必要なnotebookもレンダリングされています。</p></div></div></div></div></div>
-      <a href="notebooks/bokeh_sample.html">続きを読む</a>
     
   </div>
 
@@ -12013,7 +11937,8 @@ div#notebook {
     
     
     
-      <span class="index-navi disabled-link">&rarr;</span>
+      <a class="index-navi"
+         href="index_3.html">&rarr;</a>
     
   </div>
 

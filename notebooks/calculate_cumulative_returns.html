@@ -11816,8 +11816,7 @@ div#notebook {
 <div class="article-body">
   <div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://fin-py.connpass.com/event/66140/">fin-pyもくもく会 #8</a> で for文を使って累積リターンを算出して遅いという話をしていたら、<a href="https://twitter.com/moscow_II">2casa</a> さんより、対数収益率を計算した後に合計したらよいのではないかとアドバイスいただきました。</p>
 <p>確かに「Pythonでfor文を使ったら負け」という格言があることですし、色々試してみました。</p>
@@ -11825,8 +11824,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="header_target" id="h_notebooks_calculate_cumulative_returns_2eipynb_1"></div><h1 id="前提条件">前提条件<a class="anchor-link" href="#前提条件">¶</a></h1><p>下記のように最初の株価を100円とし、1000日分の騰落率をランダムに与えてみます。</p>
 </div>
@@ -11863,8 +11861,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>上記の騰落率を使うと、2日目の株価は</p>
 <p>100 + 100 * 1.33158650e-02 = 101.3315865</p>
@@ -11875,8 +11872,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="header_target" id="h_notebooks_calculate_cumulative_returns_2eipynb_2"></div><h1 id="for文を使う">for文を使う<a class="anchor-link" href="#for文を使う">¶</a></h1><p>まずは古典的なfor文を使ってみます。</p>
 </div>
@@ -11887,12 +11883,12 @@ div#notebook {
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
-stock_price1 = []
-stock_price1.append(s0)
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
+<span class="n">stock_price1</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">stock_price1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s0</span><span class="p">)</span>
 
-for x in pct_change:
-    stock_price1.append(stock_price1[-1] * (1 + x))    
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pct_change</span><span class="p">:</span>
+    <span class="n">stock_price1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stock_price1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">x</span><span class="p">))</span>    
 </pre></div>
 </div>
 </div>
@@ -11911,8 +11907,7 @@ Wall time: 2.73 ms
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>前述した計算とあっているか確認してみましょう。</p>
 </div>
@@ -11940,8 +11935,7 @@ Wall time: 2.73 ms
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>あってそうですね。</p>
 <p>リストの <code>append()</code> を使う処理は重いので、<code>numpy.ndarray</code> を使ってみます。</p>
@@ -11953,12 +11947,12 @@ Wall time: 2.73 ms
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
-stock_price2 = np.empty(n)
-stock_price2[0] = s0
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
+<span class="n">stock_price2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">stock_price2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">s0</span>
 
-for i, x in enumerate(pct_change):
-    stock_price2[i + 1] = stock_price2[i] * (1 + x)
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pct_change</span><span class="p">):</span>
+    <span class="n">stock_price2</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">stock_price2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -11977,16 +11971,14 @@ Wall time: 2.39 ms
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>速度に大きな改善はありませんでしたが、コードが少しスッキリしました。</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="header_target" id="h_notebooks_calculate_cumulative_returns_2eipynb_3"></div><h1 id="累積積から算出する">累積積から算出する<a class="anchor-link" href="#累積積から算出する">¶</a></h1><p><code>cumprod()</code> メソッドを使って累積積から算出します。<br/>
 for文を使わないのでさらにスッキリしました。処理速度も改善しています。</p>
@@ -11998,10 +11990,10 @@ for文を使わないのでさらにスッキリしました。処理速度も�
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
-stock_price3 = np.ones(1000)
-stock_price3[1:] = (pct_change + 1).cumprod()
-stock_price3 = stock_price3 * s0
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
+<span class="n">stock_price3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">stock_price3</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="p">(</span><span class="n">pct_change</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span>
+<span class="n">stock_price3</span> <span class="o">=</span> <span class="n">stock_price3</span> <span class="o">*</span> <span class="n">s0</span>
 </pre></div>
 </div>
 </div>
@@ -12020,8 +12012,7 @@ Wall time: 916 µs
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="header_target" id="h_notebooks_calculate_cumulative_returns_2eipynb_4"></div><h1 id="対数収益率にした合計から算出する">対数収益率にした合計から算出する<a class="anchor-link" href="#対数収益率にした合計から算出する">¶</a></h1><p>対数収益率を使うと、累積リターンは合計(sum)から算出できます。<br/>
 なんと、1行で書くことができました！</p>
@@ -12033,8 +12024,8 @@ Wall time: 916 µs
 <div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
-stock_price4 = np.exp(np.log(pct_change + 1).cumsum()) * s0
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
+<span class="n">stock_price4</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">pct_change</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">cumsum</span><span class="p">())</span> <span class="o">*</span> <span class="n">s0</span>
 </pre></div>
 </div>
 </div>
@@ -12053,8 +12044,7 @@ Wall time: 1.01 ms
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>対数収益率にする利点としては、最後の収益を出したいだけなら合計するだけで算出できることです。</p>
 </div>
@@ -12065,8 +12055,8 @@ Wall time: 1.01 ms
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
-np.exp(np.log(pct_change + 1).sum()) * s0
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
+<span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">pct_change</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> <span class="o">*</span> <span class="n">s0</span>
 </pre></div>
 </div>
 </div>
@@ -12091,8 +12081,7 @@ Wall time: 795 µs
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="header_target" id="h_notebooks_calculate_cumulative_returns_2eipynb_5"></div><h1 id="確認作業">確認作業<a class="anchor-link" href="#確認作業">¶</a></h1><p>それぞれの累積リターンの算出が合っているか確認してみます。</p>
 </div>
@@ -12127,8 +12116,7 @@ Wall time: 795 µs
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="http://amzn.to/2fIhdjz">PythonユーザのためのJupyter[実践]入門</a> を参考に、算出した株価を可視化してみます。</p>
 </div>
@@ -12579,8 +12567,7 @@ aUoTfSwAAAAASUVORK5CYII=
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>4つの方法で算出した結果が全て重なっているので、問題なさそうですね。</p>
 </div>
