@@ -3,9 +3,9 @@
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_1"&gt;&lt;/div&gt;&lt;h1 id="ポートフォリオのリスクを分析する"&gt;ポートフォリオのリスクを分析する&lt;a class="anchor-link" href="#ポートフォリオのリスクを分析する"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;&lt;a href="https://qiita.com/advent-calendar/2018/fintech"&gt;「FinTech Advent Calendar 2018」&lt;/a&gt;の記事です。&lt;br/&gt;
+&lt;p&gt;&lt;a href="https://qiita.com/advent-calendar/2018/fintech"&gt;「FinTech Advent Calendar 2018」&lt;/a&gt;の記事です。&lt;br/&gt;
 Pythonのライブラリを使ってポートフォリオのリスクを分析してみます。&lt;/p&gt;
-&lt;div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_2"&gt;&lt;/div&gt;&lt;h2 id="データの準備"&gt;データの準備&lt;a class="anchor-link" href="#データの準備"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;手っ取り早くデータを取りたいので、今回はQuandlを使います。&lt;br/&gt;
+&lt;div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_1"&gt;&lt;/div&gt;&lt;h2 id="データの準備"&gt;データの準備&lt;a class="anchor-link" href="#データの準備"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;手っ取り早くデータを取りたいので、今回はQuandlを使います。&lt;br/&gt;
 株価のデータは有料なものがほとんどで世知辛いので、先物のデータを使います。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;天然ガス(1限月)&lt;br/&gt;
@@ -24,7 +24,7 @@ Pythonのライブラリを使ってポートフォリオのリスクを分析�
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;quandl&lt;/span&gt;
 
 &lt;span class="c1"&gt;# 天然ガス(1限月)&lt;/span&gt;
-&lt;span class="n"&gt;ng_df&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><pubDate>Thu, 13 Dec 2018 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2018-12-13:/notebooks/financial_risk_analysis.html</guid></item><item><title>BokehのRangeToolをつかってみる</title><link>https://drillan.github.io/notebooks/bokeh_rangetool.html</link><description>&lt;div&gt;
+&lt;span class="n"&gt;ng_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;quandl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"CHRIS/CME_NG1"&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><pubDate>Thu, 13 Dec 2018 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2018-12-13:/notebooks/financial_risk_analysis.html</guid></item><item><title>BokehのRangeToolをつかってみる</title><link>https://drillan.github.io/notebooks/bokeh_rangetool.html</link><description>&lt;div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
