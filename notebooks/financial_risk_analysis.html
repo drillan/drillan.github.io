@@ -11820,7 +11820,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://qiita.com/advent-calendar/2018/fintech">「FinTech Advent Calendar 2018」</a>の記事です。<br/>
 Pythonのライブラリを使ってポートフォリオのリスクを分析してみます。</p>
-<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_1"></div><h2 id="データの準備">データの準備<a class="anchor-link" href="#データの準備">¶</a></h2><p>手っ取り早くデータを取りたいので、今回はQuandlを使います。<br/>
+<div class="md_header_block" id="h_%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E6%BA%96%E5%82%99"><a class="md_header_anchor" id="a_%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E6%BA%96%E5%82%99"></a><h2 id="データの準備">データの準備<a class="anchor-link" href="#データの準備">¶</a></h2></div><p>手っ取り早くデータを取りたいので、今回はQuandlを使います。<br/>
 株価のデータは有料なものがほとんどで世知辛いので、先物のデータを使います。</p>
 <ul>
 <li>天然ガス(1限月)<br/>
@@ -11869,8 +11869,8 @@ Pythonのライブラリを使ってポートフォリオのリスクを分析�
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_2"></div><h2 id="empyrical"><a href="http://quantopian.github.io/empyrical/">empyrical</a><a class="anchor-link" href="#empyrical">¶</a></h2><p>さまざまなリスクメトリクスを算出できます。</p>
-<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_3"></div><h3 id="Alpha">Alpha<a class="anchor-link" href="#Alpha">¶</a></h3><p>ベンチマークをどれだけ超過できるか</p>
+<div class="md_header_block" id="h_empyrical"><a class="md_header_anchor" id="a_empyrical"></a><h2 id="empyrical"><a href="http://quantopian.github.io/empyrical/">empyrical</a><a class="anchor-link" href="#empyrical">¶</a></h2></div><p>さまざまなリスクメトリクスを算出できます。</p>
+<div class="md_header_block" id="h_Alpha"><a class="md_header_anchor" id="a_Alpha"></a><h3 id="Alpha">Alpha<a class="anchor-link" href="#Alpha">¶</a></h3></div><p>ベンチマークをどれだけ超過できるか</p>
 $$
 \mathrm{SCL} : R_{i,t} - R_{f} = \alpha_i + \beta_i\,  ( R_{M,t} - R_{f} ) + \epsilon_{i,t} \frac{}{}
 $$
@@ -11903,7 +11903,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_4"></div><h3 id="Beta">Beta<a class="anchor-link" href="#Beta">¶</a></h3><p>ベンチマークに対する相関</p>
+<div class="md_header_block" id="h_Beta"><a class="md_header_anchor" id="a_Beta"></a><h3 id="Beta">Beta<a class="anchor-link" href="#Beta">¶</a></h3></div><p>ベンチマークに対する相関</p>
 $$
 \beta = \frac {\mathrm{Cov}(r_a,r_b)}{\mathrm{Var}(r_b)},
 $$
@@ -11962,7 +11962,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_5"></div><h3 id="maximum-drawdown">maximum drawdown<a class="anchor-link" href="#maximum-drawdown">¶</a></h3><p>最大ドローダウン</p>
+<div class="md_header_block" id="h_maximumdrawdown"><a class="md_header_anchor" id="a_maximumdrawdown"></a><h3 id="maximum-drawdown">maximum drawdown<a class="anchor-link" href="#maximum-drawdown">¶</a></h3></div><p>最大ドローダウン</p>
 </div>
 </div>
 </div>
@@ -11990,7 +11990,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_6"></div><h3 id="annual-growth-rate-of-returns">annual growth rate of returns<a class="anchor-link" href="#annual-growth-rate-of-returns">¶</a></h3><p>年平均成長率</p>
+<div class="md_header_block" id="h_annualgrowthrateofreturns"><a class="md_header_anchor" id="a_annualgrowthrateofreturns"></a><h3 id="annual-growth-rate-of-returns">annual growth rate of returns<a class="anchor-link" href="#annual-growth-rate-of-returns">¶</a></h3></div><p>年平均成長率</p>
 </div>
 </div>
 </div>
@@ -12018,7 +12018,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_7"></div><h3 id="annual-volatility-of-a-strategy">annual volatility of a strategy<a class="anchor-link" href="#annual-volatility-of-a-strategy">¶</a></h3><p>年間変動率</p>
+<div class="md_header_block" id="h_annualvolatilityofastrategy"><a class="md_header_anchor" id="a_annualvolatilityofastrategy"></a><h3 id="annual-volatility-of-a-strategy">annual volatility of a strategy<a class="anchor-link" href="#annual-volatility-of-a-strategy">¶</a></h3></div><p>年間変動率</p>
 </div>
 </div>
 </div>
@@ -12046,7 +12046,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_8"></div><h3 id="Calmar-ratio">Calmar ratio<a class="anchor-link" href="#Calmar-ratio">¶</a></h3><p>最大損失率に対する年間平均収益の比率</p>
+<div class="md_header_block" id="h_Calmarratio"><a class="md_header_anchor" id="a_Calmarratio"></a><h3 id="Calmar-ratio">Calmar ratio<a class="anchor-link" href="#Calmar-ratio">¶</a></h3></div><p>最大損失率に対する年間平均収益の比率</p>
 </div>
 </div>
 </div>
@@ -12074,7 +12074,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_9"></div><h3 id="Omega-ratio">Omega ratio<a class="anchor-link" href="#Omega-ratio">¶</a></h3><p>負のリターンに対する正のリターンの比率
+<div class="md_header_block" id="h_Omegaratio"><a class="md_header_anchor" id="a_Omegaratio"></a><h3 id="Omega-ratio">Omega ratio<a class="anchor-link" href="#Omega-ratio">¶</a></h3></div><p>負のリターンに対する正のリターンの比率
 $$
 \Omega(r) = \frac{\int_{r}^\infty (1-F(x))\,dx}{\int_{-\infty}^r F(x)dx}
 $$</p>
@@ -12105,7 +12105,7 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_10"></div><h3 id="Sharpe-ratio">Sharpe ratio<a class="anchor-link" href="#Sharpe-ratio">¶</a></h3><p>標準偏差に対するリターンの比率
+<div class="md_header_block" id="h_Sharperatio"><a class="md_header_anchor" id="a_Sharperatio"></a><h3 id="Sharpe-ratio">Sharpe ratio<a class="anchor-link" href="#Sharpe-ratio">¶</a></h3></div><p>標準偏差に対するリターンの比率
 $$
 S_a = \frac{E[R_a-R_b]}{\sigma_a} = \frac{E[R_a-R_b]}{\sqrt{\mathrm{var}[R_a-R_b]}},
 $$</p>
@@ -12136,7 +12136,7 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_11"></div><h3 id="Sortino-ratio">Sortino ratio<a class="anchor-link" href="#Sortino-ratio">¶</a></h3><p>下方リスクに対するリターンの比率
+<div class="md_header_block" id="h_Sortinoratio"><a class="md_header_anchor" id="a_Sortinoratio"></a><h3 id="Sortino-ratio">Sortino ratio<a class="anchor-link" href="#Sortino-ratio">¶</a></h3></div><p>下方リスクに対するリターンの比率
 $$
 S = \frac{R-T}{DR}
 $$</p>
@@ -12170,7 +12170,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_12"></div><h3 id="downside-deviation-below-a-threshold">downside deviation below a threshold<a class="anchor-link" href="#downside-deviation-below-a-threshold">¶</a></h3><p>設定したしきい値(デフォルトは0)に対する下方リスク</p>
+<div class="md_header_block" id="h_downsidedeviationbelowathreshold"><a class="md_header_anchor" id="a_downsidedeviationbelowathreshold"></a><h3 id="downside-deviation-below-a-threshold">downside deviation below a threshold<a class="anchor-link" href="#downside-deviation-below-a-threshold">¶</a></h3></div><p>設定したしきい値(デフォルトは0)に対する下方リスク</p>
 </div>
 </div>
 </div>
@@ -12198,7 +12198,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_13"></div><h2 id="R-squared-of-a-linear-fit-to-the-cumulative-log-returns">R-squared of a linear fit to the cumulative log returns<a class="anchor-link" href="#R-squared-of-a-linear-fit-to-the-cumulative-log-returns">¶</a></h2><p>対数収益を直線に回帰したときの決定係数</p>
+<div class="md_header_block" id="h_Rsquaredofalinearfittothecumulat"><a class="md_header_anchor" id="a_Rsquaredofalinearfittothecumulat"></a><h2 id="R-squared-of-a-linear-fit-to-the-cumulative-log-returns">R-squared of a linear fit to the cumulative log returns<a class="anchor-link" href="#R-squared-of-a-linear-fit-to-the-cumulative-log-returns">¶</a></h2></div><p>対数収益を直線に回帰したときの決定係数</p>
 </div>
 </div>
 </div>
@@ -12226,7 +12226,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_14"></div><h2 id="Tail-ratio">Tail ratio<a class="anchor-link" href="#Tail-ratio">¶</a></h2><p>5パーセンタイル値と95パーセンタイル値の比率</p>
+<div class="md_header_block" id="h_Tailratio"><a class="md_header_anchor" id="a_Tailratio"></a><h2 id="Tail-ratio">Tail ratio<a class="anchor-link" href="#Tail-ratio">¶</a></h2></div><p>5パーセンタイル値と95パーセンタイル値の比率</p>
 </div>
 </div>
 </div>
@@ -12254,7 +12254,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_15"></div><h2 id="compound-annual-growth-rate">compound annual growth rate<a class="anchor-link" href="#compound-annual-growth-rate">¶</a></h2><p>(CAGR)年平均成長率</p>
+<div class="md_header_block" id="h_compoundannualgrowthrate"><a class="md_header_anchor" id="a_compoundannualgrowthrate"></a><h2 id="compound-annual-growth-rate">compound annual growth rate<a class="anchor-link" href="#compound-annual-growth-rate">¶</a></h2></div><p>(CAGR)年平均成長率</p>
 </div>
 </div>
 </div>
@@ -12282,7 +12282,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="header_target" id="h_notebooks_financial_risk_analysis_2eipynb_16"></div><h2 id="pyfolio"><a href="https://quantopian.github.io/pyfolio/">pyfolio</a><a class="anchor-link" href="#pyfolio">¶</a></h2><p>empyricalは数値を算出するだけでしたが、pyfolioを使うとさまざまなリスク分析を可視化を交えてレポーティングしてくれます。</p>
+<div class="md_header_block" id="h_pyfolio"><a class="md_header_anchor" id="a_pyfolio"></a><h2 id="pyfolio"><a href="https://quantopian.github.io/pyfolio/">pyfolio</a><a class="anchor-link" href="#pyfolio">¶</a></h2></div><p>empyricalは数値を算出するだけでしたが、pyfolioを使うとさまざまなリスク分析を可視化を交えてレポーティングしてくれます。</p>
 <p>ドキュメントどおりにpip installするとエラーがでる(0.9.0)ので、GitHubのリポジトリからインストールします。</p>
 <div class="highlight"><pre><span></span>git clone https://github.com/quantopian/pyfolio.git
 pip install pyfolio
@@ -12631,6 +12631,12 @@ https://pandas.pydata.org/pandas-docs/stable/indexing.html#deprecate-loc-reindex
             <li>
                 <a href="../index_tag_tags_numpy.html">
                     numpy
+                </a>
+            </li>
+        
+            <li>
+                <a href="../index_tag_tags_pandas.html">
+                    pandas
                 </a>
             </li>
         
