@@ -11807,13 +11807,33 @@ div#notebook {
   <div class="articles">
     
       <div class="article-metadata">
+    <span class="article-date"> 2018-01-19 </span>
+    <span>  </span>
+    <span> python,jupyter,ipywidgets,bokeh </span>
+  </div>
+      <h2 class="article-title"><a href="articles/jupyterbook_reject03a.html">Jupyter本没原稿集#2.2 ipywidgets#2</a></h2>
+      <div class="article-body"><div class="line-block">
+<div class="line">ボツネタ供養の第三弾です。<a class="reference external" href="https://drillan.github.io/articles/jupyterbook_reject02.html">前回</a>から大分間が空いてしまいました。申し訳ありません...</div>
+<div class="line">今回は残りすべてのウィジェットを紹介します。</div>
+</div>
+<div class="section" id="togglebutton">
+<div class="md_header_block" id="h_ToggleButton"><a class="md_header_anchor" id="a_ToggleButton"></a><h1>ToggleButton</h1></div>
+<p>トグルボタンです。ボタンをクリックすると真偽値が切り替わり、状態が保持されます。以下のコードでは2つの値の論理積を出力しています。</p>
+<pre class="code python literal-block"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">ToggleButton</span>
+
+
+<span class="k">def</span> <span class="nf">x_and_y</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+    <span class="n">clear_output</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">toggle_button_x</span><span class="o">.</span><span class="n">value</span> <span class="o">&amp;</span> <span class="n">toggle_button_y</span><span class="o">.</span><span class="n">value</span></code></pre></div></div>
+      <a href="articles/jupyterbook_reject03a.html">続きを読む</a>
+    
+      <div class="article-metadata">
     <span class="article-date"> 2017-12-20 </span>
     <span>  </span>
     <span> jupyter,lightning,plotly,highcharts </span>
   </div>
       <h2 class="article-title"><a href="notebooks/jupyter_advent_calendar_2017.html">あまり紹介されていない可視化ツールを試す</a></h2>
-      <div class="article-body"><div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+      <div class="article-body"><div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://qiita.com/advent-calendar/2017/jupyter">「Jupyter Advent Calendar 2017 10日目」</a> の記事です。</p>
@@ -11850,8 +11870,7 @@ div#notebook {
     <span> python,numpy,matplotlib,finance </span>
   </div>
       <h2 class="article-title"><a href="notebooks/calculate_cumulative_returns.html">累積リターンをfor文を使わずに算出する冴えたやり方</a></h2>
-      <div class="article-body"><div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+      <div class="article-body"><div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://fin-py.connpass.com/event/66140/">fin-pyもくもく会 #8</a> で for文を使って累積リターンを算出して遅いという話をしていたら、<a href="https://twitter.com/moscow_II">2casa</a> さんより、対数収益率を計算した後に合計したらよいのではないかとアドバイスいただきました。</p>
@@ -11871,7 +11890,7 @@ div#notebook {
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 
 <span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span>  <span class="c1"># データ数</span>
@@ -11902,27 +11921,6 @@ div#notebook {
 <li>IntSlider</li>
 <li>FloatSlider</li></ul></div>
       <a href="articles/jupyterbook_reject02.html">続きを読む</a>
-    
-      <div class="article-metadata">
-    <span class="article-date"> 2017-09-16 </span>
-    <span>  </span>
-    <span> python,jupyter,bokeh </span>
-  </div>
-      <h2 class="article-title"><a href="notebooks/jupyterbook_rejected01.html">Jupyter本の没原稿集 #1 Bokehで凝った円グラフを描画する</a></h2>
-      <div class="article-body"><div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="md_header_block" id="h_%E3%83%9C%E3%83%84%E3%83%8D%E3%82%BF%E3%81%A8%E3%81%AF"><a class="md_header_anchor" id="a_%E3%83%9C%E3%83%84%E3%83%8D%E3%82%BF%E3%81%A8%E3%81%AF"></a><h2 id="ボツネタとは">ボツネタとは<a class="anchor-link" href="#ボツネタとは">¶</a></h2></div><p><a href="http://amzn.to/2x48I6J">Jupyter本</a> にはページ数の都合で入り切らなかった内容を紹介する企画第一弾です。<br/>
-涙をのみながらボツにした原稿を少しカジュアルにして本ブログで復活させます。</p>
-<div class="md_header_block" id="h_Bokeh%E3%81%A7%E5%87%9D%E3%81%A3%E3%81%9F%E5%86%86%E3%82%B0%E3%83%A9%E3%83%95%E3%82%92%E6%8F%8F%E7%94%BB%E3%81%99%E3%82%8B"><a class="md_header_anchor" id="a_Bokeh%E3%81%A7%E5%87%9D%E3%81%A3%E3%81%9F%E5%86%86%E3%82%B0%E3%83%A9%E3%83%95%E3%82%92%E6%8F%8F%E7%94%BB%E3%81%99%E3%82%8B"></a><h2 id="Bokeh-で凝った円グラフを描画する">Bokeh で凝った円グラフを描画する<a class="anchor-link" href="#Bokeh-で凝った円グラフを描画する">¶</a></h2></div><p>今回は Bokeh を使用して、下記の要件を満たす円グラフを描画してみます。</p>
-<ul>
-<li>要素数が多いため、上位のみを表示する</li>
-<li>上位以外はテキストを表示せず、目立たない表示にする(徐々にグレイアウト)</li>
-<li>テキストの書式を設定する</li>
-</ul>
-<p>テンプレどおりのグラフなんてつまらない、プレゼンで差をつけたい、なんて場合にはカスタマイズしたグラフに挑戦してみましょう。</p></div></div></div></div></div>
-      <a href="notebooks/jupyterbook_rejected01.html">続きを読む</a>
     
   </div>
 
@@ -12042,6 +12040,12 @@ div#notebook {
             <li>
                 <a href="index_tag_tags_sql.html">
                     sql
+                </a>
+            </li>
+        
+            <li>
+                <a href="index_tag_tags_vaex.html">
+                    vaex
                 </a>
             </li>
         

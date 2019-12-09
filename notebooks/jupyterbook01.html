@@ -11814,8 +11814,7 @@ div#notebook {
 </h1>
 
 <div class="article-body">
-  <div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+  <div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>ご縁があって、 <a href="http://amzn.to/2wRwPYB">PythonユーザのためのJupyter[実践]入門</a> という書籍を共著で執筆させていただきました。</p>
@@ -11892,7 +11891,7 @@ div#notebook {
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">base_url</span> <span class="o">=</span> <span class="s1">'https://raw.githubusercontent.com/practical-jupyter/sample-data/master/anime/'</span>
@@ -11998,7 +11997,7 @@ div#notebook {
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">anime_stock_price_csv</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="s1">'anime_stock_price.csv'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">anime_stock_price_csv</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="s1">'anime_stock_price.csv'</span><span class="p">)</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">anime_stock_price_csv</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">'Date'</span><span class="p">])</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -12085,7 +12084,7 @@ div#notebook {
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 単にplotメソッドを呼び出すとこんな感じになってしまう</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 単にplotメソッドを呼び出すとこんな感じになってしまう</span>
 
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -12102,7 +12101,7 @@ div#notebook {
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXoAAAFFCAYAAADijCboAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XlcVHXbP/DPACKogA645J6YN6KhooEh3bG5ZkqW2F1a
 qZlWv8wlN1Jv10dDETQzzZSsrLz1yVBxecLHFQIFMhfcQM2QTRiRHYQzvz945sQI6ogz5wyHz/v1
@@ -12368,7 +12367,7 @@ EZHCsXRDRKRwTPRERArHRE9EpHBM9ERECsdET0SkcP8fU0idWXImWfIAAAAASUVORK5CYII=
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">anime_genre_top10_pivoted_df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">anime_genre_top10_pivoted_df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -12379,7 +12378,7 @@ EZHCsXRDRKRwTPRERArHRE9EpHBM9ERECsdET0SkcP8fU0idWXImWfIAAAAASUVORK5CYII=
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcQAAAFFCAYAAABys51iAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XlYlXX+//Eni6goooDLmKmJOYpryKijTrJV6mWFVrZM
 WdqUVt9Mc43SyVFHB0XMzFxS28tsXCptmqFRKxhRcMyU3DUHUREQcQFZzvn94Y8TR1wQD/d9g6/H
@@ -12652,7 +12651,7 @@ uaxnDmgAAAAASUVORK5CYII=
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -12675,7 +12674,7 @@ uaxnDmgAAAAASUVORK5CYII=
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">anime_master_csv</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="s1">'anime_master.csv'</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">anime_master_csv</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">'anime_id'</span><span class="p">)</span>
@@ -12703,7 +12702,7 @@ uaxnDmgAAAAASUVORK5CYII=
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfsAAAF6CAYAAAAeZ/GvAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3Xt4FPW9x/H3JktCltzYLJcmXGoEqiAKEiASLiEuYAE1
 th4QRQ5V7NFYKGCt9HKQiihCaZCLBykW29KWlmoTwWprREKVAw0E5apAAYtwIFdC7pDsnj8wW1JQ
@@ -12976,7 +12975,7 @@ XkRExOQU9iIiIiansBcRETG5/wfiRVX8wr54cQAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">'default'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">'default'</span><span class="p">)</span>
 
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
@@ -13001,7 +13000,7 @@ XkRExOQU9iIiIiansBcRETG5/wfiRVX8wr54cQAAAABJRU5ErkJggg==
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqMAAAEYCAYAAABoev9DAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAAPYQAAD2EBqD+naQAAIABJREFUeJzt3XlcVdXex/EvKGMqiCaKA2qa1xFxnm7ak2YO5ZBDNmhO
 XW0w9clSM8dKyymfrMzMqUkrr1OmqCSZRiKohZp2TcwRslQQVFBYzx9cThzPOQgEbofP+/U6Lw97
@@ -13244,7 +13243,7 @@ Notebook 上でグリグリ操作できるというのも利点です。</p>
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="k">import</span> <span class="n">output_notebook</span><span class="p">,</span> <span class="n">figure</span><span class="p">,</span> <span class="n">show</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="k">import</span> <span class="n">output_notebook</span><span class="p">,</span> <span class="n">figure</span><span class="p">,</span> <span class="n">show</span>
 
 <span class="n">output_notebook</span><span class="p">()</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
@@ -13259,7 +13258,7 @@ Notebook 上でグリグリ操作できるというのも利点です。</p>
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
+<div class="output_html rendered_html output_subarea">
 <div class="bk-root">
 <a class="bk-logo bk-logo-small bk-logo-notebook" href="https://bokeh.pydata.org" target="_blank"></a>
 <span id="0fa1187e-efb9-4c42-9875-ab5bb710cfe9">Loading BokehJS ...</span>
@@ -13268,10 +13267,10 @@ Notebook 上でグリグリ操作できるというのも利点です。</p>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div id="2cb1ddf8-3e7e-4244-814b-efa3f1f81206"></div>
-<div class="output_subarea output_javascript ">
+<div id="aa7f51e6-9660-49ec-99dc-3cae9dd85dac"></div>
+<div class="output_subarea output_javascript">
 <script type="text/javascript">
-var element = $('#2cb1ddf8-3e7e-4244-814b-efa3f1f81206');
+var element = $('#aa7f51e6-9660-49ec-99dc-3cae9dd85dac');
 
 (function(root) {
   function now() {
@@ -13425,7 +13424,7 @@ var element = $('#2cb1ddf8-3e7e-4244-814b-efa3f1f81206');
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
+<div class="output_html rendered_html output_subarea">
 <div class="bk-root">
 <div class="bk-plotdiv" id="1f7d276d-f982-4880-b17b-e7e6b4fee212"></div>
 </div>
@@ -13590,7 +13589,7 @@ var element = $('#2cb1ddf8-3e7e-4244-814b-efa3f1f81206');
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.palettes</span> <span class="k">import</span> <span class="n">d3</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.palettes</span> <span class="k">import</span> <span class="n">d3</span>
 
 <span class="n">top10_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="s1">'anime_genre_top10.csv'</span><span class="p">))</span>
 
@@ -13630,7 +13629,7 @@ var element = $('#2cb1ddf8-3e7e-4244-814b-efa3f1f81206');
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
+<div class="output_html rendered_html output_subarea">
 <div class="bk-root">
 <div class="bk-plotdiv" id="d61dcdd8-f5a7-4475-9fe6-c8a2b56a69e4"></div>
 </div>
@@ -13797,7 +13796,7 @@ Bokeh については 6章よりも 7章を特に読み込んでいただくこ�
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="k">import</span> <span class="n">HoverTool</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="k">import</span> <span class="n">HoverTool</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
@@ -13822,7 +13821,7 @@ Bokeh については 6章よりも 7章を特に読み込んでいただくこ�
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
+<div class="output_html rendered_html output_subarea">
 <div class="bk-root">
 <div class="bk-plotdiv" id="3b5cc953-855a-4ad7-a724-e00bfd022278"></div>
 </div>
@@ -13994,7 +13993,7 @@ Bokeh については 6章よりも 7章を特に読み込んでいただくこ�
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">YouTubeVideo</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">YouTubeVideo</span>
 
 <span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">"MR09Jb9cf9A"</span><span class="p">)</span>
 </pre></div>
@@ -14207,6 +14206,12 @@ Bokeh については 6章よりも 7章を特に読み込んでいただくこ�
             <li>
                 <a href="../index_tag_tags_sql.html">
                     sql
+                </a>
+            </li>
+        
+            <li>
+                <a href="../index_tag_tags_vaex.html">
+                    vaex
                 </a>
             </li>
         
