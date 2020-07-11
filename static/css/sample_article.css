@@ -10,10 +10,6 @@ p {
   margin: 0px;
 }
 
-h3 {
-  color: #FEEDD2;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -49,7 +45,7 @@ a {
   margin: 10px 0 2rem;
 }
 
-.container {
+.sample-container {
   margin: 10px;
   width: 960px;
   margin: 20px auto;
@@ -68,16 +64,3 @@ a {
   width: 300px;
 }
 
-.index-pagination {
-   font-size: 20px;
-}
-
-.index-navi {
-  border-style: solid;
-  padding: 3px;
-}
-
-.disabled-link {
-  pointer-events: none;
-  color: #d0d0d0;
-}
