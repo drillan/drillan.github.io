@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>drillerの部屋</title><link>https://drillan.github.io/</link><description></description><lastBuildDate>Wed, 11 Dec 2019 00:00:00 +0900</lastBuildDate><item><title>Vaexで移動平均を計算</title><link>https://drillan.github.io/notebooks/sma_by_vaex.html</link><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<rss version="2.0"><channel><title>drillerの部屋</title><link>https://drillan.github.io/</link><description></description><lastBuildDate>Wed, 11 Dec 2019 00:00:00 +0900</lastBuildDate><item><title>Vaexで移動平均を計算</title><link>https://drillan.github.io/notebooks/sma_by_vaex.html</link><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;どりらんです。この記事は&lt;a href="https://adventar.org/calendars/4331"&gt;fintalk Advent Calendar 2019&lt;/a&gt;の11日目です。&lt;br/&gt;
 ここのボスになんか書けと言われたので書きました。&lt;/p&gt;
-&lt;div class="md_header_block" id="h_Vaex%E3%81%A8%E3%81%AF"&gt;&lt;a class="md_header_anchor" id="a_Vaex%E3%81%A8%E3%81%AF"&gt;&lt;/a&gt;&lt;h1 id="Vaexとは"&gt;Vaexとは&lt;a class="anchor-link" href="#Vaexとは"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;/div&gt;&lt;p&gt;pandasのようなテーブルデータ（DataFrame）を扱うライブラリです。Out-of-Core（メモリにのらない大きなデータ）を遅延処理で計算できるのが特徴です。&lt;/p&gt;
+&lt;h2 class="md_header_block" id="Vaexとは"&gt;Vaexとは&lt;a class="anchor-link" href="#Vaexとは"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;pandasのようなテーブルデータ（DataFrame）を扱うライブラリです。Out-of-Core（メモリにのらない大きなデータ）を遅延処理で計算できるのが特徴です。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://towardsdatascience.com/vaex-a-dataframe-with-super-strings-789b92e8d861"&gt;pandasの1000倍速い&lt;/a&gt;と言われており、シャア少佐もびっくりです。気になったのでちょろっと試してみました。金融ネタということで、今回は移動平均を算出してみます。&lt;/p&gt;
-&lt;div class="md_header_block" id="h_%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%AA%E3%81%A9"&gt;&lt;a class="md_header_anchor" id="a_%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%AA%E3%81%A9"&gt;&lt;/a&gt;&lt;h1 id="インストールなど"&gt;インストールなど&lt;a class="anchor-link" href="#インストールなど"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;/div&gt;&lt;p&gt;&lt;a href="https://vaex.readthedocs.io/en/latest/index.html"&gt;公式ドキュ&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><pubDate>Wed, 11 Dec 2019 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2019-12-11 00:00:00.000000:/notebooks/sma_by_vaex.html</guid></item><item><title>pandasクックブック ―Pythonによるデータ処理のレシピ―</title><link>https://drillan.github.io/articles/pandas_cookbook.html</link><description>&lt;p&gt;&lt;a class="reference external" href="https://twitter.com/AsakuraPub"&gt;朝倉書店様&lt;/a&gt; より &lt;a class="reference external" href="https://amzn.to/2TegrNO"&gt;「pandasクックブック ―Pythonによるデータ処理のレシピ―」&lt;/a&gt; をご恵贈いただきました。朝倉書店様、ご紹介いただいた &lt;a class="reference external" href="https://twitter.com/CardinalXaro"&gt;Hayao(-ε-δ)さん&lt;/a&gt; ありがとうございます。&lt;/p&gt;
+&lt;h2 class="md_header_block" id="インストールなど"&gt;インストールなど&lt;a class="anchor-link" href="#インストールなど"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href="https://vaex.readthedocs.io/en/latest/index.html"&gt;公式ドキュ&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><pubDate>Wed, 11 Dec 2019 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2019-12-11 00:00:00.000000:/notebooks/sma_by_vaex.html</guid></item><item><title>pandasクックブック ―Pythonによるデータ処理のレシピ―</title><link>https://drillan.github.io/articles/pandas_cookbook.html</link><description>&lt;div class="section" id="pandas"&gt;
+&lt;h1 class="md_header_block" id="h_articles_pandas_cookbook_rst_本書をマスターすればpandas中級者_"&gt;本書をマスターすればpandas中級者!&lt;/h1&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://twitter.com/AsakuraPub"&gt;朝倉書店様&lt;/a&gt; より &lt;a class="reference external" href="https://amzn.to/2TegrNO"&gt;「pandasクックブック ―Pythonによるデータ処理のレシピ―」&lt;/a&gt; をご恵贈いただきました。朝倉書店様、ご紹介いただいた &lt;a class="reference external" href="https://twitter.com/CardinalXaro"&gt;Hayao(-ε-δ)さん&lt;/a&gt; ありがとうございます。&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://amzn.to/2TegrNO"&gt;&lt;img alt="http://www.asakura.co.jp/goods_img/115751.jpg" src="http://www.asakura.co.jp/goods_img/115751.jpg" style="width: 25%;"/&gt;&lt;/a&gt;
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;&lt;br/&gt;&lt;/div&gt;
@@ -14,12 +16,12 @@
 &lt;div class="line"&gt;&lt;br/&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;pandasに関しては共著: &lt;a class="reference external" href="https://amzn.to/2NJ3qpf"&gt;PythonユーザのためのJupyter[実践]入門&lt;/a&gt; （以降はJupyter本とします）の第3章でもいつくか解説されていますが、pandasがメインの書籍ではありません。
-本書はその名のとおり、pandasに焦点を当てて詳しく解説されているため、Jupyter本でp&lt;/p&gt;</description><pubDate>Tue, 05 Mar 2019 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2019-03-05 00:00:00.000000:/articles/pandas_cookbook.html</guid></item><item><title>ポートフォリオのリスクを分析する</title><link>https://drillan.github.io/notebooks/financial_risk_analysis.html</link><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+本書はその名のとおり、pandasに焦点を当てて詳しく&lt;/p&gt;&lt;/div&gt;</description><pubDate>Tue, 05 Mar 2019 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2019-03-05 00:00:00.000000:/articles/pandas_cookbook.html</guid></item><item><title>ポートフォリオのリスクを分析する</title><link>https://drillan.github.io/notebooks/financial_risk_analysis.html</link><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;&lt;a href="https://qiita.com/advent-calendar/2018/fintech"&gt;「FinTech Advent Calendar 2018」&lt;/a&gt;の記事です。&lt;br/&gt;
 Pythonのライブラリを使ってポートフォリオのリスクを分析してみます。&lt;/p&gt;
-&lt;div class="md_header_block" id="h_%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E6%BA%96%E5%82%99"&gt;&lt;a class="md_header_anchor" id="a_%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E6%BA%96%E5%82%99"&gt;&lt;/a&gt;&lt;h1 id="データの準備"&gt;データの準備&lt;a class="anchor-link" href="#データの準備"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;/div&gt;&lt;p&gt;手っ取り早くデータを取りたいので、今回はQuandlを使います。&lt;br/&gt;
+&lt;h2 class="md_header_block" id="データの準備"&gt;データの準備&lt;a class="anchor-link" href="#データの準備"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;手っ取り早くデータを取りたいので、今回はQuandlを使います。&lt;br/&gt;
 株価のデータは有料なものがほとんどで世知辛いので、先物のデータを使います。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;天然ガス(1限月)&lt;br/&gt;
@@ -35,10 +37,17 @@ Pythonのライブラリを使ってポートフォリオのリスクを分析�
 &lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
-&lt;div class="highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;quandl&lt;/span&gt;
-
-&lt;span class="c1"&gt;# 天然ガス(1限月)&lt;/span&gt;
-&lt;span class="n"&gt;ng_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;quandl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"CHRIS/CME_NG&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><pubDate>Thu, 13 Dec 2018 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2018-12-13 00:00:00.000000:/notebooks/financial_risk_analysis.html</guid></item><item><title>BokehのRangeToolをつかってみる</title><link>https://drillan.github.io/notebooks/bokeh_rangetool.html</link><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;div class="highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;pip install quandl
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;Requirement already satisfied: quandl i&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><pubDate>Thu, 13 Dec 2018 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2018-12-13 00:00:00.000000:/notebooks/financial_risk_analysis.html</guid></item><item><title>BokehのRangeToolをつかってみる</title><link>https://drillan.github.io/notebooks/bokeh_rangetool.html</link><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;どうも、Bokeh芸人のどりらんです。&lt;/p&gt;
@@ -51,10 +60,10 @@ Pythonのライブラリを使ってポートフォリオのリスクを分析�
 &lt;li&gt;RangeToolインスタンスを作成する&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;1.&lt;/code&gt; の &lt;code&gt;add_tools&lt;/code&gt; メソッドの引数に &lt;code&gt;2.&lt;/code&gt; を渡す&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;code&gt;RangeTool&lt;/code&gt; クラスにキ&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><pubDate>Sat, 30 Jun 2018 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2018-06-30 00:00:00.000000:/notebooks/bokeh_rangetool.html</guid></item><item><title>これからはじめる SQL 入門</title><link>https://drillan.github.io/articles/korekara_hajimeru_sql_nyumon.html</link><description>&lt;p&gt;&lt;a class="reference external" href="https://amzn.to/2KfiNmE"&gt;Jupyter本&lt;/a&gt; の共著者である &lt;a class="reference external" href="https://twitter.com/iktakahiro"&gt;池内さん&lt;/a&gt; よりご恵贈いただきました。池内さんありがとうございます。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;RangeTool&lt;/code&gt; クラスにキ&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><pubDate>Sat, 30 Jun 2018 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2018-06-30 00:00:00.000000:/notebooks/bokeh_rangetool.html</guid></item><item><title>これからはじめる SQL 入門</title><link>https://drillan.github.io/articles/korekara_hajimeru_sql_nyumon.html</link><description>&lt;p&gt;&lt;a class="reference external" href="https://amzn.to/2KfiNmE"&gt;Jupyter本&lt;/a&gt; の共著者である &lt;a class="reference external" href="https://twitter.com/iktakahiro"&gt;池内さん&lt;/a&gt; よりご恵贈いただきました。池内さんありがとうございます。&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://amzn.to/2wxP5Hr"&gt;&lt;img alt="http://image.gihyo.co.jp/assets/images/cover/2018/9784774196879.jpg" src="http://image.gihyo.co.jp/assets/images/cover/2018/9784774196879.jpg" style="width: 50%;"/&gt;&lt;/a&gt;
 &lt;div class="section" id="id2"&gt;
-&lt;div class="md_header_block" id="h_%E8%AA%B0%E3%81%AB%E5%90%91%E3%81%91%E3%81%A6%E3%81%AE%E6%9C%AC%E3%81%8B"&gt;&lt;a class="md_header_anchor" id="a_%E8%AA%B0%E3%81%AB%E5%90%91%E3%81%91%E3%81%A6%E3%81%AE%E6%9C%AC%E3%81%8B"&gt;&lt;/a&gt;&lt;h1&gt;誰に向けての本か&lt;/h1&gt;&lt;/div&gt;
+&lt;h1 class="md_header_block" id="h_articles_korekara_hajimeru_sql_nyumon_rst_誰に向けての本か"&gt;誰に向けての本か&lt;/h1&gt;
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;タイトルのとおり、これからSQLを学びたいかたにとってはぴったりな内容です。&lt;/div&gt;
 &lt;div class="line"&gt;本書のはじめににも書かれておりますが、SQLは営業やマーケティング部門も扱うようになってきました。&lt;/div&gt;
@@ -65,14 +74,14 @@ Pythonのライブラリを使ってポートフォリオのリスクを分析�
 &lt;div class="line"&gt;今回は残りすべてのウィジェットを紹介します。&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="togglebutton"&gt;
-&lt;div class="md_header_block" id="h_ToggleButton"&gt;&lt;a class="md_header_anchor" id="a_ToggleButton"&gt;&lt;/a&gt;&lt;h1&gt;ToggleButton&lt;/h1&gt;&lt;/div&gt;
+&lt;h1 class="md_header_block" id="h_articles_jupyterbook_reject03a_rst_ToggleButton"&gt;ToggleButton&lt;/h1&gt;
 &lt;p&gt;トグルボタンです。ボタンをクリックすると真偽値が切り替わり、状態が保持されます。以下のコードでは2つの値の論理積を出力しています。&lt;/p&gt;
 &lt;pre class="code python literal-block"&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;ipywidgets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;ToggleButton&lt;/span&gt;
 
 
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;x_and_y&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;change&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;clear_output&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;toggle_button_x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;toggle_button_y&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Fri, 19 Jan 2018 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2018-01-19 00:00:00.000000:/articles/jupyterbook_reject03a.html</guid></item><item><title>あまり紹介されていない可視化ツールを試す</title><link>https://drillan.github.io/notebooks/jupyter_advent_calendar_2017.html</link><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;toggle_button_x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;toggle_button_y&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><pubDate>Fri, 19 Jan 2018 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2018-01-19 00:00:00.000000:/articles/jupyterbook_reject03a.html</guid></item><item><title>あまり紹介されていない可視化ツールを試す</title><link>https://drillan.github.io/notebooks/jupyter_advent_calendar_2017.html</link><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;&lt;a href="https://qiita.com/advent-calendar/2017/jupyter"&gt;「Jupyter Advent Calendar 2017 10日目」&lt;/a&gt; の記事です。&lt;/p&gt;
@@ -84,7 +93,7 @@ Pythonのライブラリを使ってポートフォリオのリスクを分析�
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;div class="md_header_block" id="h_Lightning"&gt;&lt;a class="md_header_anchor" id="a_Lightning"&gt;&lt;/a&gt;&lt;h1 id="Lightning"&gt;Lightning&lt;a class="anchor-link" href="#Lightning"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;/div&gt;&lt;p&gt;&lt;a href="http://lightning-viz.org"&gt;http://lightning-viz.org&lt;/a&gt;&lt;/p&gt;
+&lt;h2 class="md_header_block" id="Lightning"&gt;Lightning&lt;a class="anchor-link" href="#Lightning"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href="http://lightning-viz.org"&gt;http://lightning-viz.org&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;APIベースの可視化ツールです、herokuやdockerからなどから環境を構築できます。&lt;br/&gt;
 今回はJupyter上からの事例を紹介しますが、サーバを建てたほうが威力をはっきするかもしれません。&lt;/p&gt;
 &lt;/div&gt;
@@ -93,13 +102,13 @@ Pythonのライブラリを使ってポートフォリオのリスクを分析�
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;div class="md_header_block" id="h_Jupyter%E3%81%AB%E5%87%BA%E5%8A%9B"&gt;&lt;a class="md_header_anchor" id="a_Jupyter%E3%81%AB%E5%87%BA%E5%8A%9B"&gt;&lt;/a&gt;&lt;h2 id="Jupyterに出力"&gt;J&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><pubDate>Wed, 20 Dec 2017 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2017-12-20 00:00:00.000000:/notebooks/jupyter_advent_calendar_2017.html</guid></item><item><title>Optimized Pythonを試す</title><link>https://drillan.github.io/articles/optimized_python.html</link><description>&lt;p&gt;&lt;a class="reference external" href="https://qiita.com/advent-calendar/2017/python"&gt;「python Advent Calendar 2017 10日目」&lt;/a&gt; の記事です。&lt;/p&gt;
+&lt;h3 class="md_header_block" id="Jupyterに出力"&gt;J&lt;/h3&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><pubDate>Wed, 20 Dec 2017 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2017-12-20 00:00:00.000000:/notebooks/jupyter_advent_calendar_2017.html</guid></item><item><title>Optimized Pythonを試す</title><link>https://drillan.github.io/articles/optimized_python.html</link><description>&lt;p&gt;&lt;a class="reference external" href="https://qiita.com/advent-calendar/2017/python"&gt;「python Advent Calendar 2017 10日目」&lt;/a&gt; の記事です。&lt;/p&gt;
 &lt;p&gt;TwitterのTLをぼーっと眺めていたら気になるサイトを見つけました。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://www.revsys.com/tidbits/optimized-python/"&gt;Check This Out – Optimized Python&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;なんと、このdockerイメージを使うと、公式のPythonのイメージと比較して、19%の高速化と75%の軽量化がされているようです。
 これは試さずにはいられません。&lt;/p&gt;
 &lt;p&gt;ビルドされたイメージは &lt;a class="reference external" href="https://hub.docker.com/r/revolutionsystems/python/"&gt;Docker Hub&lt;/a&gt; に上がっており、イメージをpullするだけで最適化されたPythonが使えます。&lt;/p&gt;
-&lt;p&gt;Pythonのバージョンは3&lt;/p&gt;</description><pubDate>Fri, 01 Dec 2017 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2017-12-01 00:00:00.000000:/articles/optimized_python.html</guid></item><item><title>累積リターンをfor文を使わずに算出する冴えたやり方</title><link>https://drillan.github.io/notebooks/calculate_cumulative_returns.html</link><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;p&gt;Pythonのバージョンは3&lt;/p&gt;</description><pubDate>Fri, 01 Dec 2017 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2017-12-01 00:00:00.000000:/articles/optimized_python.html</guid></item><item><title>累積リターンをfor文を使わずに算出する冴えたやり方</title><link>https://drillan.github.io/notebooks/calculate_cumulative_returns.html</link><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;&lt;a href="https://fin-py.connpass.com/event/66140/"&gt;fin-pyもくもく会 #8&lt;/a&gt; で for文を使って累積リターンを算出して遅いという話をしていたら、&lt;a href="https://twitter.com/moscow_II"&gt;2casa&lt;/a&gt; さんより、対数収益率を計算した後に合計したらよいのではないかとアドバイスいただきました。&lt;/p&gt;
@@ -110,7 +119,7 @@ Pythonのライブラリを使ってポートフォリオのリスクを分析�
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;div class="md_header_block" id="h_%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6"&gt;&lt;a class="md_header_anchor" id="a_%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6"&gt;&lt;/a&gt;&lt;h1 id="前提条件"&gt;前提条件&lt;a class="anchor-link" href="#前提条件"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;/div&gt;&lt;p&gt;下記のように最初の株価を100円とし、1000日分の騰落率をランダムに与えてみます。&lt;/p&gt;
+&lt;h2 class="md_header_block" id="前提条件"&gt;前提条件&lt;a class="anchor-link" href="#前提条件"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;下記のように最初の株価を100円とし、1000日分の騰落率をランダムに与えてみます。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -125,8 +134,8 @@ Pythonのライブラリを使ってポートフォリオのリスクを分析�
 &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;  &lt;span class="c1"&gt;# データ数&lt;/span&gt;
 &lt;span class="n"&gt;s0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;  &lt;span class="c1"&gt;# 最初の株価&lt;/span&gt;
 &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;pct_c&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><pubDate>Sun, 01 Oct 2017 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2017-10-01 00:00:00.000000:/notebooks/calculate_cumulative_returns.html</guid></item><item><title>Jupyter本没原稿集#2.1 ipywidgets#1</title><link>https://drillan.github.io/articles/jupyterbook_reject02.html</link><description>&lt;p&gt;ボツネタ供養の第二弾です。ipywidgets のほぼ全てのウィジェットを大盤振る舞いして紹介しちゃいます。&lt;/p&gt;
-&lt;div class="md_header_block" id="h_%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88%E4%B8%80%E8%A6%A7"&gt;&lt;a class="md_header_anchor" id="a_%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88%E4%B8%80%E8%A6%A7"&gt;&lt;/a&gt;&lt;h2&gt;ウィジェット一覧&lt;/h2&gt;&lt;/div&gt;
+&lt;span class="n"&gt;pct_c&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><pubDate>Sun, 01 Oct 2017 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:drillan.github.io,2017-10-01 00:00:00.000000:/notebooks/calculate_cumulative_returns.html</guid></item><item><title>Jupyter本没原稿集#2.1 ipywidgets#1</title><link>https://drillan.github.io/articles/jupyterbook_reject02.html</link><description>&lt;p&gt;ボツネタ供養の第二弾です。ipywidgets のほぼ全てのウィジェットを大盤振る舞いして紹介しちゃいます。&lt;/p&gt;
+&lt;h2 class="md_header_block" id="h_articles_jupyterbook_reject02_md_ウィジェット一覧"&gt;ウィジェット一覧&lt;/h2&gt;
 &lt;p&gt;ipywidgets にはさまざまなウィジェットクラスが用意されています。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Numeric ウィジェット&lt;/li&gt;
@@ -136,7 +145,7 @@ Pythonのライブラリを使ってポートフォリオのリスクを分析�
 &lt;li&gt;Layout ウィジェット&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;今回は Numeric ウィジェットの説明と使い方の事例を紹介します。&lt;/p&gt;
-&lt;div class="md_header_block" id="h_Numeric%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88"&gt;&lt;a class="md_header_anchor" id="a_Numeric%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88"&gt;&lt;/a&gt;&lt;h3&gt;Numeric ウィジェット&lt;/h3&gt;&lt;/div&gt;
+&lt;h3 class="md_header_block" id="h_articles_jupyterbook_reject02_md_Numeric_ウィジェット"&gt;Numeric ウィジェット&lt;/h3&gt;
 &lt;p&gt;数値型の値を扱うウィジェットです。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;IntSlider&lt;/li&gt;

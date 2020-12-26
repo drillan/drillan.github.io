@@ -64,7 +64,7 @@ MathJax.Hub.Config({
 <link rel="stylesheet" href="../static/newblog/main.css">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../static/img/amx004.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../static/amx004.png">
 
 
 <link href="https://drillan.github.io/all.atom.xml" type="application/atom+xml" rel="alternate" title="drillerの部屋 Atom Feed" />
@@ -76,49 +76,63 @@ MathJax.Hub.Config({
 
 <meta property="og:title" content="Vaexで移動平均を計算 - drillerの部屋" />
 
-<meta name="description" content="default page desctiption here"/>
-<meta property="og:description" content="default page desctiption here" />
-
+<meta name="description" content="どりらんの落書き帳"/>
+<meta property="og:description" content="どりらんの落書き帳" />
+<meta property="og:image" content="https://drillan.github.io/static/amx004.png" />
 <meta property="article:published_time" content="2019-12-11T00:00:00+09:00" />
 
 
 
 
-  <link rel="stylesheet" href="../static/custom.css">
+  <style>
+    .topblock {
+      background-color: #f5f5f5;
+    }
 
+    .topblock h1 {
+      color: #0f0f0f;
+    }
+
+    .navbar {
+      background-color: #6E777C !important;
+    }
+  </style>
 
 </head>
 
 <body>
-  
    
 <div>
 
 
-
 <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="../index.html"
-        >
-        
-          <img src="../static/img/amx004.png" width="32" height="32"/>
-        
-        drillerの部屋 </a
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html"
       >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-    </nav>
-  </div>
+      
+        <img src="../static/amx004.png" width="32" height="32"/>
+      
+      drillerの部屋 </a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="../about.html">このサイトについて</a>
+      </div>
+    </div>
+  </nav>
+</div>
 
  
 
@@ -139,15 +153,15 @@ MathJax.Hub.Config({
         
 
         <div class="article_body">
-          <div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+          <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>どりらんです。この記事は<a href="https://adventar.org/calendars/4331">fintalk Advent Calendar 2019</a>の11日目です。<br/>
 ここのボスになんか書けと言われたので書きました。</p>
-<div class="md_header_block" id="h_Vaex%E3%81%A8%E3%81%AF"><a class="md_header_anchor" id="a_Vaex%E3%81%A8%E3%81%AF"></a><h1 id="Vaexとは">Vaexとは<a class="anchor-link" href="#Vaexとは">¶</a></h1></div><p>pandasのようなテーブルデータ（DataFrame）を扱うライブラリです。Out-of-Core（メモリにのらない大きなデータ）を遅延処理で計算できるのが特徴です。</p>
+<h2 class="md_header_block" id="Vaexとは">Vaexとは<a class="anchor-link" href="#Vaexとは">¶</a></h2><p>pandasのようなテーブルデータ（DataFrame）を扱うライブラリです。Out-of-Core（メモリにのらない大きなデータ）を遅延処理で計算できるのが特徴です。</p>
 <p><a href="https://towardsdatascience.com/vaex-a-dataframe-with-super-strings-789b92e8d861">pandasの1000倍速い</a>と言われており、シャア少佐もびっくりです。気になったのでちょろっと試してみました。金融ネタということで、今回は移動平均を算出してみます。</p>
-<div class="md_header_block" id="h_%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%AA%E3%81%A9"><a class="md_header_anchor" id="a_%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%AA%E3%81%A9"></a><h1 id="インストールなど">インストールなど<a class="anchor-link" href="#インストールなど">¶</a></h1></div><p><a href="https://vaex.readthedocs.io/en/latest/index.html">公式ドキュメント</a>に書いてあるので割愛します。</p>
-<div class="md_header_block" id="h_%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%87%E3%83%BC%E3%82%BF"><a class="md_header_anchor" id="a_%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%87%E3%83%BC%E3%82%BF"></a><h1 id="サンプルデータ">サンプルデータ<a class="anchor-link" href="#サンプルデータ">¶</a></h1></div><p>時系列データを用意するのが大変なので、今回は乱数で代用します。</p>
+<h2 class="md_header_block" id="インストールなど">インストールなど<a class="anchor-link" href="#インストールなど">¶</a></h2><p><a href="https://vaex.readthedocs.io/en/latest/index.html">公式ドキュメント</a>に書いてあるので割愛します。</p>
+<h2 class="md_header_block" id="サンプルデータ">サンプルデータ<a class="anchor-link" href="#サンプルデータ">¶</a></h2><p>時系列データを用意するのが大変なので、今回は乱数で代用します。</p>
 </div>
 </div>
 </div>
@@ -192,17 +206,17 @@ MathJax.Hub.Config({
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <style scoped="">
-    .dataframe tbody tr th:only-of-type {
+    .dataframe tbody tr th:only-of-type &#123;
         vertical-align: middle;
-    }
+    &#125;
 
-    .dataframe tbody tr th {
+    .dataframe tbody tr th &#123;
         vertical-align: top;
-    }
+    &#125;
 
-    .dataframe thead th {
+    .dataframe thead th &#123;
         text-align: right;
-    }
+    &#125;
 </style>
 <table border="1" class="dataframe">
 <thead>
@@ -400,7 +414,7 @@ MathJax.Hub.Config({
 </div>
 </div>
 </div>
-</div>
+
         </div>
       </div>
       
@@ -435,7 +449,7 @@ MathJax.Hub.Config({
   <div class="row">
     <div class="col-md-9"></div>
     <div class="col-md-3 copyright">
-      <p class="copyright-text">Copyright  © 2017 driller</p>
+      <p class="copyright-text">Copyright  © 2020 driller</p>
       <p class="copyright-text">Powered by <a href="https://github.com/miyadaiku/miyadaiku">miyadaiku</a></p>
     </div>
   </div>
@@ -444,36 +458,6 @@ MathJax.Hub.Config({
 
 
 </div>
-
-
-
-
-
-<div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="../index.html"
-        >
-        
-          <img src="../static/img/amx004.png" width="32" height="32"/>
-        
-        drillerの部屋 </a
-      >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-    </nav>
-  </div>
-
-
 
 
 </body>

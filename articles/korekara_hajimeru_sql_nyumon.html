@@ -64,7 +64,7 @@ MathJax.Hub.Config({
 <link rel="stylesheet" href="../static/newblog/main.css">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../static/img/amx004.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../static/amx004.png">
 
 
 <link href="https://drillan.github.io/all.atom.xml" type="application/atom+xml" rel="alternate" title="drillerの部屋 Atom Feed" />
@@ -76,49 +76,63 @@ MathJax.Hub.Config({
 
 <meta property="og:title" content="これからはじめる SQL 入門 - drillerの部屋" />
 
-<meta name="description" content="default page desctiption here"/>
-<meta property="og:description" content="default page desctiption here" />
-
+<meta name="description" content="どりらんの落書き帳"/>
+<meta property="og:description" content="どりらんの落書き帳" />
+<meta property="og:image" content="https://drillan.github.io/static/amx004.png" />
 <meta property="article:published_time" content="2018-05-13T00:00:00+09:00" />
 
 
 
 
-  <link rel="stylesheet" href="../static/custom.css">
+  <style>
+    .topblock {
+      background-color: #f5f5f5;
+    }
 
+    .topblock h1 {
+      color: #0f0f0f;
+    }
+
+    .navbar {
+      background-color: #6E777C !important;
+    }
+  </style>
 
 </head>
 
 <body>
-  
    
 <div>
 
 
-
 <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="../index.html"
-        >
-        
-          <img src="../static/img/amx004.png" width="32" height="32"/>
-        
-        drillerの部屋 </a
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html"
       >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-    </nav>
-  </div>
+      
+        <img src="../static/amx004.png" width="32" height="32"/>
+      
+      drillerの部屋 </a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="../about.html">このサイトについて</a>
+      </div>
+    </div>
+  </nav>
+</div>
 
  
 
@@ -142,7 +156,7 @@ MathJax.Hub.Config({
           <p><a class="reference external" href="https://amzn.to/2KfiNmE">Jupyter本</a> の共著者である <a class="reference external" href="https://twitter.com/iktakahiro">池内さん</a> よりご恵贈いただきました。池内さんありがとうございます。</p>
 <a class="reference external image-reference" href="https://amzn.to/2wxP5Hr"><img alt="http://image.gihyo.co.jp/assets/images/cover/2018/9784774196879.jpg" src="http://image.gihyo.co.jp/assets/images/cover/2018/9784774196879.jpg" style="width: 50%;"/></a>
 <div class="section" id="id2">
-<div class="md_header_block" id="h_%E8%AA%B0%E3%81%AB%E5%90%91%E3%81%91%E3%81%A6%E3%81%AE%E6%9C%AC%E3%81%8B"><a class="md_header_anchor" id="a_%E8%AA%B0%E3%81%AB%E5%90%91%E3%81%91%E3%81%A6%E3%81%AE%E6%9C%AC%E3%81%8B"></a><h1>誰に向けての本か</h1></div>
+<h1 class="md_header_block" id="h_articles_korekara_hajimeru_sql_nyumon_rst_誰に向けての本か">誰に向けての本か</h1>
 <div class="line-block">
 <div class="line">タイトルのとおり、これからSQLを学びたいかたにとってはぴったりな内容です。</div>
 <div class="line">本書のはじめににも書かれておりますが、SQLは営業やマーケティング部門も扱うようになってきました。</div>
@@ -154,7 +168,7 @@ MathJax.Hub.Config({
 </div>
 </div>
 <div class="section" id="id3">
-<div class="md_header_block" id="h_%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89"><a class="md_header_anchor" id="a_%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89"></a><h1>環境構築</h1></div>
+<h1 class="md_header_block" id="h_articles_korekara_hajimeru_sql_nyumon_rst_環境構築">環境構築</h1>
 <div class="line-block">
 <div class="line">SQLを学ぶに当たって、最初に乗り越えないといけない壁が環境構築です。プラットフォームやOSのバージョンなどによって導入手順がことなることがあるため、書籍で解説しようとすると非常に悩ましところですが、本書では仮想マシン(VirtualBos)を採用することで手順を統一化しています。</div>
 <div class="line"><br/></div>
@@ -163,10 +177,10 @@ MathJax.Hub.Config({
 </div>
 </div>
 <div class="section" id="id5">
-<div class="md_header_block" id="h_%E6%9C%AC%E6%9B%B8%E3%81%AE%E9%AD%85%E5%8A%9B"><a class="md_header_anchor" id="a_%E6%9C%AC%E6%9B%B8%E3%81%AE%E9%AD%85%E5%8A%9B"></a><h1>本書の魅力</h1></div>
+<h1 class="md_header_block" id="h_articles_korekara_hajimeru_sql_nyumon_rst_本書の魅力">本書の魅力</h1>
 <p>さいごに本書を通読して、個人的に参考になった点を挙げてみます。読者によっては別な視点での学びがあると思います。SQLを学びたいかた、復習したいかたはぜひ本書を手にとって見てください。</p>
-<div class="section" id="sql">
-<div class="md_header_block" id="h_SQL%E6%96%87%E3%81%AE%E3%81%8A%E4%BD%9C%E6%B3%95"><a class="md_header_anchor" id="a_SQL%E6%96%87%E3%81%AE%E3%81%8A%E4%BD%9C%E6%B3%95"></a><h2>SQL文のお作法</h2></div>
+<div class="section" id="id6">
+<h2 class="md_header_block" id="h_articles_korekara_hajimeru_sql_nyumon_rst_SQL文のお作法">SQL文のお作法</h2>
 <p>はじめの内は下記のようなSQLを書いてしまうことはままありますが、注意する点や推奨する書き方が解説されていたので参考になりました。</p>
 <ul class="simple">
 <li><p>可読性の低下</p></li>
@@ -174,12 +188,12 @@ MathJax.Hub.Config({
 <li><p>無駄なコスト</p></li>
 </ul>
 </div>
-<div class="section" id="id6">
-<div class="md_header_block" id="h_%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B%E3%81%AE%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91"><a class="md_header_anchor" id="a_%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B%E3%81%AE%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91"></a><h2>データ型の使い分け</h2></div>
+<div class="section" id="id7">
+<h2 class="md_header_block" id="h_articles_korekara_hajimeru_sql_nyumon_rst_データ型の使い分け">データ型の使い分け</h2>
 <p>データ型について紙面を割いて丁寧に解説されています。特にJSON型については知らなかったため、今後使ってみようと思いました。</p>
 </div>
-<div class="section" id="id7">
-<div class="md_header_block" id="h_%E8%A4%87%E9%9B%91%E3%81%AA%E3%82%AF%E3%82%A8%E3%83%AA"><a class="md_header_anchor" id="a_%E8%A4%87%E9%9B%91%E3%81%AA%E3%82%AF%E3%82%A8%E3%83%AA"></a><h2>複雑なクエリ</h2></div>
+<div class="section" id="id8">
+<h2 class="md_header_block" id="h_articles_korekara_hajimeru_sql_nyumon_rst_複雑なクエリ">複雑なクエリ</h2>
 <p>本書の後半ではJOINやサブクエリなど、SQL文が複雑になってきます。使いこなせば便利なのはわかっているが、なかなか使いこなせないというケースはままありそうです。本書では長いSQL文を分割して実行し、解説されているため、いままで挫折した人も改めて挑戦してもよいのではないでしょうか。</p>
 <dl class="footnote brackets">
 <dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
@@ -188,6 +202,7 @@ MathJax.Hub.Config({
 </dl>
 </div>
 </div>
+
         </div>
       </div>
       
@@ -220,7 +235,7 @@ MathJax.Hub.Config({
   <div class="row">
     <div class="col-md-9"></div>
     <div class="col-md-3 copyright">
-      <p class="copyright-text">Copyright  © 2017 driller</p>
+      <p class="copyright-text">Copyright  © 2020 driller</p>
       <p class="copyright-text">Powered by <a href="https://github.com/miyadaiku/miyadaiku">miyadaiku</a></p>
     </div>
   </div>
@@ -229,36 +244,6 @@ MathJax.Hub.Config({
 
 
 </div>
-
-
-
-
-
-<div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="../index.html"
-        >
-        
-          <img src="../static/img/amx004.png" width="32" height="32"/>
-        
-        drillerの部屋 </a
-      >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-    </nav>
-  </div>
-
-
 
 
 </body>

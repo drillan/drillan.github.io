@@ -64,7 +64,7 @@ MathJax.Hub.Config({
 <link rel="stylesheet" href="../static/newblog/main.css">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../static/img/amx004.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../static/amx004.png">
 
 
 <link href="https://drillan.github.io/all.atom.xml" type="application/atom+xml" rel="alternate" title="drillerの部屋 Atom Feed" />
@@ -76,49 +76,63 @@ MathJax.Hub.Config({
 
 <meta property="og:title" content="Jupyter本没原稿集#2.1 ipywidgets#1 - drillerの部屋" />
 
-<meta name="description" content="default page desctiption here"/>
-<meta property="og:description" content="default page desctiption here" />
-
+<meta name="description" content="どりらんの落書き帳"/>
+<meta property="og:description" content="どりらんの落書き帳" />
+<meta property="og:image" content="https://drillan.github.io/static/amx004.png" />
 <meta property="article:published_time" content="2017-09-23T14:00:00+09:00" />
 
 
 
 
-  <link rel="stylesheet" href="../static/custom.css">
+  <style>
+    .topblock {
+      background-color: #f5f5f5;
+    }
 
+    .topblock h1 {
+      color: #0f0f0f;
+    }
+
+    .navbar {
+      background-color: #6E777C !important;
+    }
+  </style>
 
 </head>
 
 <body>
-  
    
 <div>
 
 
-
 <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="../index.html"
-        >
-        
-          <img src="../static/img/amx004.png" width="32" height="32"/>
-        
-        drillerの部屋 </a
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html"
       >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-    </nav>
-  </div>
+      
+        <img src="../static/amx004.png" width="32" height="32"/>
+      
+      drillerの部屋 </a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="../about.html">このサイトについて</a>
+      </div>
+    </div>
+  </nav>
+</div>
 
  
 
@@ -140,7 +154,7 @@ MathJax.Hub.Config({
 
         <div class="article_body">
           <p>ボツネタ供養の第二弾です。ipywidgets のほぼ全てのウィジェットを大盤振る舞いして紹介しちゃいます。</p>
-<div class="md_header_block" id="h_%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88%E4%B8%80%E8%A6%A7"><a class="md_header_anchor" id="a_%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88%E4%B8%80%E8%A6%A7"></a><h2>ウィジェット一覧</h2></div>
+<h2 class="md_header_block" id="h_articles_jupyterbook_reject02_md_ウィジェット一覧">ウィジェット一覧</h2>
 <p>ipywidgets にはさまざまなウィジェットクラスが用意されています。</p>
 <ul>
 <li>Numeric ウィジェット</li>
@@ -150,7 +164,7 @@ MathJax.Hub.Config({
 <li>Layout ウィジェット</li>
 </ul>
 <p>今回は Numeric ウィジェットの説明と使い方の事例を紹介します。</p>
-<div class="md_header_block" id="h_Numeric%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88"><a class="md_header_anchor" id="a_Numeric%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88"></a><h3>Numeric ウィジェット</h3></div>
+<h3 class="md_header_block" id="h_articles_jupyterbook_reject02_md_Numeric_ウィジェット">Numeric ウィジェット</h3>
 <p>数値型の値を扱うウィジェットです。</p>
 <ul>
 <li>IntSlider</li>
@@ -198,7 +212,7 @@ MathJax.Hub.Config({
 </tr>
 </tbody>
 </table>
-<div class="md_header_block" id="h_IntSlider%E3%81%AE%E4%BD%BF%E7%94%A8%E4%BE%8B"><a class="md_header_anchor" id="a_IntSlider%E3%81%AE%E4%BD%BF%E7%94%A8%E4%BE%8B"></a><h3>IntSlider の使用例</h3></div>
+<h3 class="md_header_block" id="h_articles_jupyterbook_reject02_md_IntSlider_の使用例">IntSlider の使用例</h3>
 <p>int型を扱うスライダです。下記のコードでは値を2乗した結果を出力しています。</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">clear_output</span>
 <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">IntSlider</span>
@@ -214,7 +228,7 @@ MathJax.Hub.Config({
 <span class="n">display</span><span class="p">(</span><span class="n">int_slider</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="IntSlider のサンプルコード" src="./img/IntSlider-sample-out.png"/></p>
-<div class="md_header_block" id="h_FloatSlider"><a class="md_header_anchor" id="a_FloatSlider"></a><h3>FloatSlider</h3></div>
+<h3 class="md_header_block" id="h_articles_jupyterbook_reject02_md_FloatSlider">FloatSlider</h3>
 <p>float型を扱うスライダです。下記のコードでは値を2乗した結果を出力しています。</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">FloatSlider</span>
 
@@ -223,7 +237,7 @@ MathJax.Hub.Config({
 <span class="n">display</span><span class="p">(</span><span class="n">float_slider</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="FloatSlider のサンプルコード" src="./img/FloatSlider-sample-out.png"/></p>
-<div class="md_header_block" id="h_IntRangeSlider"><a class="md_header_anchor" id="a_IntRangeSlider"></a><h3>IntRangeSlider</h3></div>
+<h3 class="md_header_block" id="h_articles_jupyterbook_reject02_md_IntRangeSlider">IntRangeSlider</h3>
 <p>2つの int型の値を扱うスライダです。下記のコードでは2つの値の差を出力しています。</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">IntRangeSlider</span>
 
@@ -237,7 +251,7 @@ MathJax.Hub.Config({
 <span class="n">display</span><span class="p">(</span><span class="n">int_range_slider</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="IntRangeSlider のサンプルコード" src="./img/IntRangeSlider-sample-out.png"/></p>
-<div class="md_header_block" id="h_FloatRangeSlider"><a class="md_header_anchor" id="a_FloatRangeSlider"></a><h3>FloatRangeSlider</h3></div>
+<h3 class="md_header_block" id="h_articles_jupyterbook_reject02_md_FloatRangeSlider">FloatRangeSlider</h3>
 <p>2つの float型の値を扱うスライダです。下記のコードでは2つの値の差を出力しています。</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">FloatRangeSlider</span>
 
@@ -246,7 +260,7 @@ MathJax.Hub.Config({
 <span class="n">display</span><span class="p">(</span><span class="n">float_range_slider</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="FloatRangeSlider のサンプルコード" src="./img/FloatRangeSlider-sample-out.png"/></p>
-<div class="md_header_block" id="h_IntProgress"><a class="md_header_anchor" id="a_IntProgress"></a><h3>IntProgress</h3></div>
+<h3 class="md_header_block" id="h_articles_jupyterbook_reject02_md_IntProgress">IntProgress</h3>
 <p>int型のプログレスバーです。<code>value</code> プロパティに値を加算することで、プログレスバーの内容が更新されます。</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">IntProgress</span>
 <span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
@@ -261,7 +275,7 @@ MathJax.Hub.Config({
     <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="IntProgress のサンプルコード" src="./img/IntProgress-sample-out.png"/></p>
-<div class="md_header_block" id="h_FloatProgress"><a class="md_header_anchor" id="a_FloatProgress"></a><h3>FloatProgress</h3></div>
+<h3 class="md_header_block" id="h_articles_jupyterbook_reject02_md_FloatProgress">FloatProgress</h3>
 <p>float型のプログレスバーです。<code>value</code> プロパティに値を加算することで、プログレスバーの内容が更新されます。</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">FloatProgress</span>
 
@@ -275,7 +289,7 @@ MathJax.Hub.Config({
     <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="FloatProgress のサンプルコード" src="./img/FloatProgress-sample-out.png"/></p>
-<div class="md_header_block" id="h_BoundedIntText"><a class="md_header_anchor" id="a_BoundedIntText"></a><h3>BoundedIntText</h3></div>
+<h3 class="md_header_block" id="h_articles_jupyterbook_reject02_md_BoundedIntText">BoundedIntText</h3>
 <p>int型の数値を入力するテキストボックスです。最小値や最大値を設定して、入力範囲を制限できます。下記のコードでは値を2乗した結果を出力しています。</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">BoundedIntText</span>
 
@@ -286,7 +300,7 @@ MathJax.Hub.Config({
 <span class="n">display</span><span class="p">(</span><span class="n">bounded_int_text</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="BoundedIntText のサンプルコード" src="./img/BoundedIntText-sample-out.png"/></p>
-<div class="md_header_block" id="h_BoundedFloatText"><a class="md_header_anchor" id="a_BoundedFloatText"></a><h3>BoundedFloatText</h3></div>
+<h3 class="md_header_block" id="h_articles_jupyterbook_reject02_md_BoundedFloatText">BoundedFloatText</h3>
 <p>float型の数値を入力するテキストボックスです。最小値や最大値を設定して、入力範囲を制限できます。下記のコードでは値を2乗した結果を出力しています。</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">BoundedFloatText</span>
 
@@ -295,7 +309,7 @@ MathJax.Hub.Config({
 <span class="n">display</span><span class="p">(</span><span class="n">bounded_float_text</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="BoundedFloatText のサンプルコード" src="./img/BoundedFloatText-sample-out.png"/></p>
-<div class="md_header_block" id="h_IntText"><a class="md_header_anchor" id="a_IntText"></a><h3>IntText</h3></div>
+<h3 class="md_header_block" id="h_articles_jupyterbook_reject02_md_IntText">IntText</h3>
 <p>int型の数値を入力するテキストボックスです。<code>BoundedIntText</code> と異なり、値の制限はありません。下記のコードでは値を2乗した結果を出力しています。</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">IntText</span>
 
@@ -304,7 +318,7 @@ MathJax.Hub.Config({
 <span class="n">display</span><span class="p">(</span><span class="n">int_text</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="IntText のサンプルコード" src="./img/IntText-sample-out.png"/></p>
-<div class="md_header_block" id="h_FloatText"><a class="md_header_anchor" id="a_FloatText"></a><h3>FloatText</h3></div>
+<h3 class="md_header_block" id="h_articles_jupyterbook_reject02_md_FloatText">FloatText</h3>
 <p>float型の数値を入力するテキストボックスです。<code>BoundedFloatText</code> と異なり、値の制限はありません。下記のコードでは値を2乗した結果を出力しています。</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">BoundedFloatText</span>
 
@@ -350,7 +364,7 @@ MathJax.Hub.Config({
   <div class="row">
     <div class="col-md-9"></div>
     <div class="col-md-3 copyright">
-      <p class="copyright-text">Copyright  © 2017 driller</p>
+      <p class="copyright-text">Copyright  © 2020 driller</p>
       <p class="copyright-text">Powered by <a href="https://github.com/miyadaiku/miyadaiku">miyadaiku</a></p>
     </div>
   </div>
@@ -359,36 +373,6 @@ MathJax.Hub.Config({
 
 
 </div>
-
-
-
-
-
-<div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="../index.html"
-        >
-        
-          <img src="../static/img/amx004.png" width="32" height="32"/>
-        
-        drillerの部屋 </a
-      >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-    </nav>
-  </div>
-
-
 
 
 </body>
